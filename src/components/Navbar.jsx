@@ -73,7 +73,7 @@ export default function Navbar() {
         </nav>
 
         <div className="navActions">
-          <button type="button" className="btn btnPrimary" onClick={goToCita}>
+          <button type="button" className="btn btnPrimary navCta" onClick={goToCita}>
             Agendar Cita
           </button>
 

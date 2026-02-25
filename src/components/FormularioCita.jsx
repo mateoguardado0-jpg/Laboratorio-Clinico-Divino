@@ -109,7 +109,7 @@ export default function FormularioCita() {
   }
 
   return (
-    <div className="card">
+    <div className="card formWrap">
       <div className="cardPad">
         <div className="stackLg">
           <div className="stack">

@@ -36,27 +36,14 @@ export default function Footer() {
 
           <div className="stack">
             <div className="eyebrow">Contacto</div>
-            <div className="stack">
-              <div className="card cardPad">
-                <div className="stack">
-                  <div>
-                    <strong>Teléfono:</strong> <span className="muted">+503 0000 0000</span>
-                  </div>
-                  <div>
-                    <strong>Correo:</strong>{' '}
-                    <span className="muted">citas@tulaboratorio.com</span>
-                  </div>
-                  <div>
-                    <strong>Dirección:</strong>{' '}
-                    <span className="muted">Tu dirección aquí</span>
-                  </div>
-                </div>
-              </div>
-              <p className="help">
-                Reemplaza estos datos por los reales. El formulario de cita envía al correo que
-                configures en EmailJS.
-              </p>
+            <div className="stack" style={{ gap: '6px' }}>
+              <div><strong>Teléfono</strong><br /><span className="muted">+503 0000 0000</span></div>
+              <div><strong>Correo</strong><br /><span className="muted">citas@tulaboratorio.com</span></div>
+              <div><strong>Dirección</strong><br /><span className="muted">Tu dirección aquí</span></div>
             </div>
+            <p className="help" style={{ marginTop: '4px' }}>
+              Reemplaza estos datos por los reales.
+            </p>
           </div>
         </div>
 

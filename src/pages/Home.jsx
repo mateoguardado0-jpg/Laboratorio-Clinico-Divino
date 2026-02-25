@@ -21,14 +21,13 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="grid2">
-            <div className="stackLg">
+            <div className="stackLg heroContent">
               <div className="eyebrow">Laboratorio Clínico</div>
               <h1 className="h1">Precisión clínica con una experiencia moderna</h1>
               <p className="lead">
                 Un sitio pensado para inspirar confianza: navegación clara, secciones limpias,
                 y un flujo de agendamiento sencillo desde cualquier dispositivo.
               </p>
-
               <div className="btnRow">
                 <Link to="/contacto#cita" className="btn btnPrimary">
                   Agendar Cita
@@ -37,7 +36,6 @@ export default function Home() {
                   Ver servicios
                 </Link>
               </div>
-
               <div className="kpiRow">
                 <div className="kpi">
                   <strong>Atención cercana</strong>
@@ -48,13 +46,12 @@ export default function Home() {
                   <span>Información directa y útil</span>
                 </div>
                 <div className="kpi">
-                  <strong>Diseño responsive</strong>
-                  <span>Se ve bien en móvil y desktop</span>
+                  <strong>Resultados confiables</strong>
+                  <span>Control de calidad y trazabilidad</span>
                 </div>
               </div>
             </div>
-
-            <div className="imgPlaceholder imgHero" aria-label="Imagen principal (placeholder)" />
+            <div className="imgPlaceholder imgHero heroImage" aria-label="Imagen principal (placeholder)" />
           </div>
         </div>
       </section>
@@ -95,7 +92,7 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <div className="card">
+          <div className="ctaSection card">
             <div className="cardPad">
               <div className="grid2Reverse">
                 <div className="imgPlaceholder imgWide" aria-label="Imagen CTA (placeholder)" />
@@ -103,8 +100,7 @@ export default function Home() {
                   <div className="eyebrow">Listo para atenderte</div>
                   <h2 className="h2">Agenda tu cita en menos de un minuto</h2>
                   <p className="lead">
-                    Un llamado a la acción con fondo suave y un botón con hover animado.
-                    Integraremos EmailJS para que las citas lleguen directo a tu correo.
+                    Coordina tu visita de forma sencilla. Las citas se envían directo a nuestro equipo.
                   </p>
                   <div className="btnRow">
                     <Link to="/contacto#cita" className="btn btnPrimary">
