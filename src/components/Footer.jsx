@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi'
+import { HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker, HiOutlineClock } from 'react-icons/hi'
 
 export default function Footer() {
   return (
@@ -11,10 +11,16 @@ export default function Footer() {
               <span className="brandName">Laboratorio Clínico Divino Niño Jesus</span>
               <span className="brandTag">Cuidado clínico con calidez humana</span>
             </div>
-            <p className="lead muted">
-              Horario de atención: lunes a viernes de 6:30&nbsp;a.m. a 4:00&nbsp;p.m. y sábado de
-              6:30&nbsp;a.m. a 12:00&nbsp;m.d.
-            </p>
+            <div className="flexIcon footerSchedule">
+              <HiOutlineClock className="iconSm" aria-hidden />
+              <div>
+                <strong>Horario de atención</strong>
+                <br />
+                <span className="muted">Lunes a viernes: 6:30&nbsp;a.m. a 4:00&nbsp;p.m.</span>
+                <br />
+                <span className="muted">Sábado: 6:30&nbsp;a.m. a 12:00&nbsp;m.d.</span>
+              </div>
+            </div>
           </div>
 
           <div className="stack">

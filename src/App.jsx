@@ -8,6 +8,7 @@ import Nosotros from './pages/Nosotros.jsx'
 import Servicios from './pages/Servicios.jsx'
 import ServicioDetalle from './pages/ServicioDetalle.jsx'
 import Contacto from './pages/Contacto.jsx'
+import Preguntas from './pages/Preguntas.jsx'
 import './App.css'
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/servicios/:slug" element={<ServicioDetalle />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/preguntas" element={<Preguntas />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
