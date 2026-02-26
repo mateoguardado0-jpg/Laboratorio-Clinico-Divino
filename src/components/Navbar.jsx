@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useEffect, useMemo, useState } from 'react'
+import logo from '../../imagenlogo.png'
 
 function MenuIcon({ open }) {
   return (
@@ -61,11 +62,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'navScrolled' : ''}`.trim()}>
       <div className="container navInner">
         <NavLink to="/" className="brand" aria-label="Ir al inicio" onClick={() => setOpen(false)}>
-          <img
-            src="/imagenlogo.png"
-            alt="Logo Laboratorio Clínico Divino Niño Jesus"
-            className="brandLogo"
-          />
+          <img src={logo} alt="Logo Laboratorio Clínico Divino Niño Jesus" className="brandLogo" />
           <span className="brandName">Laboratorio Clínico Divino Niño Jesus</span>
           <span className="brandTag">Atención profesional y resultados confiables</span>
         </NavLink>
