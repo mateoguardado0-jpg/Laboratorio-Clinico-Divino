@@ -51,9 +51,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const goToCita = () => {
+  const goToConsultas = () => {
     setOpen(false)
-    navigate('/contacto#cita')
+    navigate('/contacto#consultas')
   }
 
   return (
@@ -73,8 +73,8 @@ export default function Navbar() {
         </nav>
 
         <div className="navActions">
-          <button type="button" className="btn btnPrimary navCta" onClick={goToCita}>
-            Agendar Cita
+          <button type="button" className="btn btnPrimary navCta" onClick={goToConsultas}>
+            Consultas
           </button>
 
           <button
@@ -104,8 +104,8 @@ export default function Navbar() {
               </NavLink>
             ))}
             <div className="dividerSoft" />
-            <button type="button" className="btn btnPrimary" onClick={goToCita}>
-              Agendar Cita
+            <button type="button" className="btn btnPrimary" onClick={goToConsultas}>
+              Consultas
             </button>
           </div>
         </div>

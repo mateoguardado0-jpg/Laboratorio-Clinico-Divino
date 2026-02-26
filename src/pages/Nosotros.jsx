@@ -45,8 +45,8 @@ export default function Nosotros() {
                 que nos permiten mantener altos estándares de calidad y plazos de entrega claros.
               </p>
               <div className="btnRow">
-                <a className="btn btnSoft" href="/contacto#cita">
-                  Agendar Cita
+                <a className="btn btnSoft" href="/contacto#consultas">
+                  Consultas
                 </a>
                 <a className="btn" href="/servicios">
                   Ver servicios

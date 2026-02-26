@@ -159,8 +159,8 @@ export default function Servicios() {
                     <p className="lead muted">{s.desc}</p>
                   </div>
                   <div className="btnRow">
-                    <Link to="/contacto#cita" className="btn btnPrimary">
-                      Agendar Cita
+                    <Link to="/contacto#consultas" className="btn btnPrimary">
+                      Consultas
                     </Link>
                     <Link to={`/servicios/${s.slug}`} className="btn btnSoft">
                       Consultar

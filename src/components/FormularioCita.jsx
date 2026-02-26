@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { HiOutlineUser, HiOutlinePhone, HiOutlineMail, HiOutlineCalendar, HiOutlineClock, HiOutlineDocumentText } from 'react-icons/hi'
+import { HiOutlineUser, HiOutlinePhone, HiOutlineMail, HiOutlineDocumentText } from 'react-icons/hi'
 
 function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim())
@@ -15,8 +15,6 @@ export default function FormularioCita() {
     nombreCompleto: '',
     telefono: '',
     email: '',
-    fecha: '',
-    hora: '',
     comentarios: '',
   })
 
@@ -43,8 +41,6 @@ export default function FormularioCita() {
     if (!form.nombreCompleto.trim()) e.nombreCompleto = 'Ingresa tu nombre completo.'
     if (!normalizePhone(form.telefono)) e.telefono = 'Ingresa un teléfono válido.'
     if (!isEmail(form.email)) e.email = 'Ingresa un correo válido.'
-    if (!form.fecha) e.fecha = 'Selecciona una fecha.'
-    if (!form.hora) e.hora = 'Selecciona una hora.'
     return e
   }, [form])
 
@@ -82,27 +78,23 @@ export default function FormularioCita() {
           nombreCompleto: form.nombreCompleto.trim(),
           telefono: normalizePhone(form.telefono),
           email: form.email.trim(),
-          fecha: form.fecha,
-          hora: form.hora,
           comentarios: form.comentarios.trim(),
         },
         { publicKey: emailJs.publicKey },
       )
 
-      setStatus({ type: 'success', message: 'Cita enviada. Te contactaremos pronto.' })
+      setStatus({ type: 'success', message: 'Consulta enviada. Te contactaremos pronto.' })
       setForm({
         nombreCompleto: '',
         telefono: '',
         email: '',
-        fecha: '',
-        hora: '',
         comentarios: '',
       })
     } catch {
       setStatus({
         type: 'error',
         message:
-          'No se pudo enviar la cita. Verifica tu configuración de EmailJS e inténtalo de nuevo.',
+          'No se pudo enviar la consulta. Verifica tu configuración de EmailJS e inténtalo de nuevo.',
       })
     } finally {
       setSubmitting(false)
@@ -114,10 +106,10 @@ export default function FormularioCita() {
       <div className="cardPad">
         <div className="stackLg">
           <div className="stack">
-            <div className="eyebrow">Formulario de cita</div>
-            <h2 className="h2">Agenda con tus datos básicos</h2>
+            <div className="eyebrow">Consultas</div>
+            <h2 className="h2">Envía tu consulta con tus datos</h2>
             <p className="lead muted">
-              Sin DUI, sin tipo de examen. Solo lo necesario para coordinar tu visita.
+              Nombre, teléfono, correo y comentarios. Te responderemos a la brevedad.
             </p>
           </div>
 
@@ -183,40 +175,6 @@ export default function FormularioCita() {
                 />
                 {errors.email ? <span className="help">{errors.email}</span> : null}
               </label>
-
-              <div className="grid2" style={{ gap: 16 }}>
-                <label className="label">
-                  <span className="flexIcon">
-                    <HiOutlineCalendar className="iconSm" aria-hidden />
-                    Fecha *
-                  </span>
-                  <input
-                    className="input"
-                    type="date"
-                    value={form.fecha}
-                    onChange={onChange('fecha')}
-                    required
-                    aria-invalid={Boolean(errors.fecha)}
-                  />
-                  {errors.fecha ? <span className="help">{errors.fecha}</span> : null}
-                </label>
-
-                <label className="label">
-                  <span className="flexIcon">
-                    <HiOutlineClock className="iconSm" aria-hidden />
-                    Hora *
-                  </span>
-                  <input
-                    className="input"
-                    type="time"
-                    value={form.hora}
-                    onChange={onChange('hora')}
-                    required
-                    aria-invalid={Boolean(errors.hora)}
-                  />
-                  {errors.hora ? <span className="help">{errors.hora}</span> : null}
-                </label>
-              </div>
             </div>
 
             <label className="label">
@@ -240,7 +198,7 @@ export default function FormularioCita() {
                 disabled={submitting}
                 aria-disabled={submitting}
               >
-                {submitting ? 'Enviando…' : 'Enviar cita'}
+                {submitting ? 'Enviando…' : 'Enviar consulta'}
               </button>
               <button
                 type="button"
@@ -250,8 +208,6 @@ export default function FormularioCita() {
                     nombreCompleto: '',
                     telefono: '',
                     email: '',
-                    fecha: '',
-                    hora: '',
                     comentarios: '',
                   })
                 }

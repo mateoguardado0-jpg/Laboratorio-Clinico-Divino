@@ -71,8 +71,8 @@ export default function ServicioDetalle() {
               </div>
 
               <div className="btnRow" style={{ marginTop: 'var(--space-6)' }}>
-                <Link to="/contacto#cita" className="btn btnPrimary">
-                  Agendar Cita
+                <Link to="/contacto#consultas" className="btn btnPrimary">
+                  Consultas
                 </Link>
                 <Link to="/servicios" className="btn btnSoft">
                   Ver todos los servicios

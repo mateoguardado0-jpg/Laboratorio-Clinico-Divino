@@ -9,10 +9,10 @@ export default function Contacto() {
           <div className="grid2">
             <div className="stackLg">
               <div className="eyebrow">Contacto</div>
-              <h1 className="h1">Conversemos y coordinemos tu cita</h1>
+              <h1 className="h1">Conversemos y coordinemos tu consulta</h1>
               <p className="lead">
-                Teléfono, correo, horarios y ubicación. En la sección inferior puedes agendar
-                tu cita con el formulario.
+                Teléfono, correo, horarios y ubicación. En la sección inferior puedes enviar
+                tu consulta con el formulario.
               </p>
 
               <div className="gridCards">
@@ -60,12 +60,12 @@ export default function Contacto() {
                 <div className="cardPad stack">
                   <div className="eyebrow">Mensaje</div>
                   <p className="lead">
-                    ¿Dudas o comentarios? Usa el formulario de cita más abajo o contáctanos por
+                    ¿Dudas o comentarios? Usa el formulario de consultas más abajo o contáctanos por
                     teléfono y correo.
                   </p>
                   <div className="btnRow">
-                    <a className="btn btnSoft" href="#cita">
-                      Ir a formulario de cita
+                    <a className="btn btnSoft" href="#consultas">
+                      Ir a consultas
                     </a>
                     <a className="btn" href="/servicios">
                       Ver servicios
@@ -78,7 +78,7 @@ export default function Contacto() {
         </div>
       </section>
 
-      <section className="sectionTight" id="cita">
+      <section className="sectionTight" id="consultas">
         <div className="container">
           <FormularioCita />
         </div>

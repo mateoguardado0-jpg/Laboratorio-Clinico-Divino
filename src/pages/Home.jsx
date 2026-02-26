@@ -26,12 +26,12 @@ export default function Home() {
               <div className="eyebrow">Laboratorio Clínico Divino Niño Jesus</div>
               <h1 className="h1">Precisión clínica con una experiencia moderna</h1>
               <p className="lead">
-                Resultados confiables, atención cercana y agendamiento sencillo. Conoce nuestros
-                servicios y agenda tu cita desde aquí.
+                Resultados confiables, atención cercana y consultas sencillas. Conoce nuestros
+                servicios y envía tu consulta desde aquí.
               </p>
               <div className="btnRow">
-                <Link to="/contacto#cita" className="btn btnPrimary">
-                  Agendar Cita
+                <Link to="/contacto#consultas" className="btn btnPrimary">
+                  Consultas
                 </Link>
                 <Link to="/servicios" className="btn btnSoft">
                   Ver servicios
@@ -88,8 +88,8 @@ export default function Home() {
                       <Link to="/servicios" className="btn btnSoft">
                         Ver más
                       </Link>
-                      <Link to="/contacto#cita" className="btn btnPrimary">
-                        Agendar
+                      <Link to="/contacto#consultas" className="btn btnPrimary">
+                        Consultas
                       </Link>
                     </div>
                   </div>
@@ -105,16 +105,16 @@ export default function Home() {
           <div className="ctaSection card">
             <div className="cardPad">
               <div className="grid2Reverse">
-                <div className="imgPlaceholder imgWide" aria-label="Agendar cita" />
+                <div className="imgPlaceholder imgWide" aria-label="Consultas" />
                 <div className="stackLg">
                   <div className="eyebrow">Listo para atenderte</div>
-                  <h2 className="h2">Agenda tu cita en menos de un minuto</h2>
+                  <h2 className="h2">Envía tu consulta en menos de un minuto</h2>
                   <p className="lead">
-                    Coordina tu visita de forma sencilla. Las citas se envían directo a nuestro equipo.
+                    Escribe tus datos y tu consulta. Te responderemos a la brevedad.
                   </p>
                   <div className="btnRow">
-                    <Link to="/contacto#cita" className="btn btnPrimary">
-                      Agendar Cita
+                    <Link to="/contacto#consultas" className="btn btnPrimary">
+                      Consultas
                     </Link>
                     <Link to="/contacto" className="btn">
                       Contacto

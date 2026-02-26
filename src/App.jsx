@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import ScrollToHash from './components/ScrollToHash.jsx'
+import WhatsAppButton from './components/WhatsAppButton.jsx'
 import Home from './pages/Home.jsx'
 import Nosotros from './pages/Nosotros.jsx'
 import Servicios from './pages/Servicios.jsx'
@@ -25,6 +26,7 @@ export default function App() {
       </Routes>
 
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }
