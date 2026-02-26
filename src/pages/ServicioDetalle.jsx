@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
-import { HiOutlineBeaker, HiOutlineArrowLeft } from 'react-icons/hi'
+import { HiOutlineArrowLeft } from 'react-icons/hi'
 import { servicios } from '../data/servicios.js'
 
 export default function ServicioDetalle() {
@@ -24,10 +24,7 @@ export default function ServicioDetalle() {
               Volver a Servicios
             </Link>
 
-            <div className="flexIcon" style={{ marginBottom: '8px' }}>
-              <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-              <div className="eyebrow" style={{ marginBottom: 0 }}>Servicio</div>
-            </div>
+            <div className="eyebrow" style={{ marginBottom: '8px' }}>Servicio</div>
             <h1 className="h1">{servicio.title}</h1>
             <p className="lead">{servicio.desc}</p>
 

@@ -186,21 +186,39 @@ select {
   }
 }
 
+/* Panel de servicios: en escritorio se ve como panel; en móvil todo vertical */
+.servicesPanel {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+@media (min-width: 720px) {
+  .servicesPanel {
+    padding: var(--space-8);
+  }
+}
+
 .gridCards {
   display: grid;
   gap: var(--space-6);
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* móvil: una columna (vertical) */
 }
 
 @media (min-width: 720px) {
   .gridCards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* tablet/escritorio: panel en 2 columnas */
   }
 }
 
 @media (min-width: 1040px) {
   .gridCards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* escritorio ancho: panel en 3 columnas */
   }
 }
 
@@ -247,6 +265,7 @@ select {
 /* --- Tipografía (jerarquía clara) --- */
 .eyebrow {
   display: inline-block;
+  width: 70px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;

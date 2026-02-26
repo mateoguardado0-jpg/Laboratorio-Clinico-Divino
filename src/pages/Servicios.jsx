@@ -260,8 +260,8 @@ export default function Servicios() {
           </h2>
           <div className="stackLg" style={{ gap: 'var(--space-8)' }}>
             {serviciosPorArea().map(({ area, servicios: list }) => (
-              <section key={area.id} aria-labelledby={`area-${area.id}`}>
-                <h3 id={`area-${area.id}`} className="h3" style={{ marginBottom: 'var(--space-4)' }}>
+              <section key={area.id} className="servicesPanel" aria-labelledby={`area-${area.id}`}>
+                <h3 id={`area-${area.id}`} className="h3" style={{ margin: 0 }}>
                   {area.label}
                 </h3>
                 <div className="gridCards">
@@ -270,23 +270,20 @@ export default function Servicios() {
                       <div className="cardPad stack">
                         <div className="imgPlaceholder imgWide" aria-hidden="true" />
                         <div className="stack">
-                          <span className="flexIcon">
-                            <HiOutlineBeaker className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-                            <div className="eyebrow" style={{ marginBottom: 0 }}>{s.title}</div>
-                          </span>
+                          <div className="eyebrow" style={{ marginBottom: 0 }}>{s.title}</div>
                           <p className="lead muted">{s.desc}</p>
                         </div>
-                        <div className="btnRow">
-                          <Link to="/contacto#consultas" className="btn btnPrimary">
-                            Consultas
-                          </Link>
-                          <Link to={`/servicios/${s.slug}`} className="btn btnSoft">
-                            Consultar
-                          </Link>
-                        </div>
+                        <Link to={`/servicios/${s.slug}`} className="btn btnSoft">
+                          Consultar
+                        </Link>
                       </div>
                     </article>
                   ))}
+                </div>
+                <div className="btnRow">
+                  <Link to="/contacto#consultas" className="btn btnPrimary">
+                    Consultas
+                  </Link>
                 </div>
               </section>
             ))}
