@@ -1,3 +1,12 @@
+import { HiOutlineHeart, HiOutlineBadgeCheck, HiOutlineFlag, HiOutlineHand } from 'react-icons/hi'
+
+const valores = [
+  { titulo: 'Confianza', desc: 'Trabajamos con transparencia y rigor para que pacientes y médicos confíen en nuestros resultados.', icon: HiOutlineHeart },
+  { titulo: 'Calidad', desc: 'Procesos estandarizados y control continuo en cada etapa del análisis.', icon: HiOutlineBadgeCheck },
+  { titulo: 'Compromiso', desc: 'Dedicación con cada paciente y con el cumplimiento de plazos y estándares.', icon: HiOutlineFlag },
+  { titulo: 'Respeto', desc: 'Trato digno, confidencialidad y escucha en cada interacción.', icon: HiOutlineHand },
+]
+
 const team = [
   { name: 'Dra. Equipo 1', role: 'Dirección técnica', bio: 'Experiencia y supervisión clínica.' },
   { name: 'Lic. Equipo 2', role: 'Laboratorio', bio: 'Control de calidad y procesos.' },
@@ -72,6 +81,34 @@ export default function Nosotros() {
               </div>
             </div>
             <div className="imgPlaceholder imgWide" aria-label="Imagen misión/visión (placeholder)" />
+          </div>
+        </div>
+      </section>
+
+      <section className="sectionTight">
+        <div className="container">
+          <div className="stackLg">
+            <div className="eyebrow">Nuestros valores</div>
+            <h2 className="h2">Valores</h2>
+            <p className="lead muted">
+              Los principios que guían nuestro trabajo día a día.
+            </p>
+            <div className="gridCards">
+              {valores.map((v) => {
+                const Icon = v.icon
+                return (
+                  <article key={v.titulo} className="card cardHover">
+                    <div className="cardPad stack">
+                      <span className="flexIcon">
+                        <Icon className="iconLg" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                        <div className="eyebrow" style={{ marginBottom: 0 }}>{v.titulo}</div>
+                      </span>
+                      <p className="lead muted">{v.desc}</p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>

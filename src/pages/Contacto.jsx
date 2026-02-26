@@ -1,4 +1,5 @@
 import FormularioCita from '../components/FormularioCita.jsx'
+import { HiOutlinePhone, HiOutlineMail, HiOutlineClock, HiOutlineMap } from 'react-icons/hi'
 
 export default function Contacto() {
   return (
@@ -16,17 +17,26 @@ export default function Contacto() {
 
               <div className="gridCards">
                 <div className="card cardPad">
-                  <div className="eyebrow">Teléfono</div>
+                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                    <HiOutlinePhone className="iconMd" aria-hidden />
+                    <div className="eyebrow" style={{ marginBottom: 0 }}>Teléfono</div>
+                  </div>
                   <p className="lead">+503 0000 0000</p>
                   <p className="help">Actualiza este dato por el número real.</p>
                 </div>
                 <div className="card cardPad">
-                  <div className="eyebrow">Correo</div>
+                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                    <HiOutlineMail className="iconMd" aria-hidden />
+                    <div className="eyebrow" style={{ marginBottom: 0 }}>Correo</div>
+                  </div>
                   <p className="lead">citas@tulaboratorio.com</p>
                   <p className="help">El formulario enviará a tu correo vía EmailJS.</p>
                 </div>
                 <div className="card cardPad">
-                  <div className="eyebrow">Horario</div>
+                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                    <HiOutlineClock className="iconMd" aria-hidden />
+                    <div className="eyebrow" style={{ marginBottom: 0 }}>Horario</div>
+                  </div>
                   <p className="lead">Lun–Sáb: 7:00–17:00</p>
                   <p className="help">Ajusta según tu operación.</p>
                 </div>
@@ -36,7 +46,10 @@ export default function Contacto() {
             <div className="stackLg">
               <div className="card">
                 <div className="cardPad stack">
-                  <div className="eyebrow">Mapa</div>
+                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                    <HiOutlineMap className="iconMd" aria-hidden />
+                    <div className="eyebrow" style={{ marginBottom: 0 }}>Mapa</div>
+                  </div>
                   <div
                     className="imgPlaceholder imgWide"
                     aria-label="Mapa (placeholder)"

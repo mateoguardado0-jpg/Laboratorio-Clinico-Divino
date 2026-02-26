@@ -1,5 +1,5 @@
 /* ============================================
-   Laboratorio Clínico — Sistema de diseño
+   Laboratorio Clínico Jesús Divino Niño — Sistema de diseño
    Formal, corporativo, paleta sobria
    ============================================ */
 
@@ -695,4 +695,32 @@ select {
 /* --- Form wrapper (max-width para legibilidad) --- */
 .formWrap {
   max-width: 640px;
+}
+
+/* Iconos (react-icons) */
+.iconSm {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.iconMd {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.iconLg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.flexIcon {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
 }

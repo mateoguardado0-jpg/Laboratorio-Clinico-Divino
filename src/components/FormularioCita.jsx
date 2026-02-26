@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { HiOutlineUser, HiOutlinePhone, HiOutlineMail, HiOutlineCalendar, HiOutlineClock, HiOutlineDocumentText } from 'react-icons/hi'
 
 function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim())
@@ -134,7 +135,10 @@ export default function FormularioCita() {
           <form onSubmit={onSubmit} className="stackLg" noValidate>
             <div className="grid2">
               <label className="label">
-                Nombre completo *
+                <span className="flexIcon">
+                  <HiOutlineUser className="iconSm" aria-hidden />
+                  Nombre completo *
+                </span>
                 <input
                   className="input"
                   value={form.nombreCompleto}
@@ -147,7 +151,10 @@ export default function FormularioCita() {
               </label>
 
               <label className="label">
-                Teléfono *
+                <span className="flexIcon">
+                  <HiOutlinePhone className="iconSm" aria-hidden />
+                  Teléfono *
+                </span>
                 <input
                   className="input"
                   value={form.telefono}
@@ -162,7 +169,10 @@ export default function FormularioCita() {
 
             <div className="grid2Reverse">
               <label className="label">
-                Correo electrónico *
+                <span className="flexIcon">
+                  <HiOutlineMail className="iconSm" aria-hidden />
+                  Correo electrónico *
+                </span>
                 <input
                   className="input"
                   value={form.email}
@@ -176,7 +186,10 @@ export default function FormularioCita() {
 
               <div className="grid2" style={{ gap: 16 }}>
                 <label className="label">
-                  Fecha *
+                  <span className="flexIcon">
+                    <HiOutlineCalendar className="iconSm" aria-hidden />
+                    Fecha *
+                  </span>
                   <input
                     className="input"
                     type="date"
@@ -189,7 +202,10 @@ export default function FormularioCita() {
                 </label>
 
                 <label className="label">
-                  Hora *
+                  <span className="flexIcon">
+                    <HiOutlineClock className="iconSm" aria-hidden />
+                    Hora *
+                  </span>
                   <input
                     className="input"
                     type="time"
@@ -204,7 +220,10 @@ export default function FormularioCita() {
             </div>
 
             <label className="label">
-              Comentarios (opcional)
+              <span className="flexIcon">
+                <HiOutlineDocumentText className="iconSm" aria-hidden />
+                Comentarios (opcional)
+              </span>
               <textarea
                 className="input textarea"
                 value={form.comentarios}

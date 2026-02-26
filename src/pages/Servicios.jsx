@@ -1,3 +1,5 @@
+import { HiOutlineBeaker } from 'react-icons/hi'
+
 const services = [
   {
     title: 'Hematología completa',
@@ -44,7 +46,10 @@ export default function Servicios() {
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
-              <div className="eyebrow">Servicios</div>
+              <span className="flexIcon" style={{ marginBottom: '8px' }}>
+                <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                <div className="eyebrow" style={{ marginBottom: 0 }}>Servicios</div>
+              </span>
               <h1 className="h1">Un catálogo claro, moderno y fácil de explorar</h1>
               <p className="lead">
                 Grid de servicios con cards modernas e interacción sutil al pasar el mouse.
@@ -64,7 +69,10 @@ export default function Servicios() {
                 <div className="cardPad stack">
                   <div className="imgPlaceholder imgWide" aria-hidden="true" />
                   <div className="stack">
-                    <div className="eyebrow">{s.title}</div>
+                    <span className="flexIcon">
+                      <HiOutlineBeaker className="iconSm" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                      <div className="eyebrow" style={{ marginBottom: 0 }}>{s.title}</div>
+                    </span>
                     <p className="lead muted">{s.desc}</p>
                   </div>
                   <div className="btnRow">

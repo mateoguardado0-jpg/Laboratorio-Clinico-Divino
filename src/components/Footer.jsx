@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi'
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="footerGrid">
           <div className="stack">
             <div className="brand">
-              <span className="brandName">Laboratorio Clínico Divino Niño</span>
+              <span className="brandName">Laboratorio Clínico Jesús Divino Niño</span>
               <span className="brandTag">Cuidado clínico con calidez humana</span>
             </div>
             <p className="lead muted">
@@ -36,10 +37,19 @@ export default function Footer() {
 
           <div className="stack">
             <div className="eyebrow">Contacto</div>
-            <div className="stack" style={{ gap: '6px' }}>
-              <div><strong>Teléfono</strong><br /><span className="muted">+503 0000 0000</span></div>
-              <div><strong>Correo</strong><br /><span className="muted">citas@tulaboratorio.com</span></div>
-              <div><strong>Dirección</strong><br /><span className="muted">Tu dirección aquí</span></div>
+            <div className="stack" style={{ gap: '10px' }}>
+              <div className="flexIcon">
+                <HiOutlinePhone className="iconSm" aria-hidden />
+                <div><strong>Teléfono</strong><br /><span className="muted">+503 0000 0000</span></div>
+              </div>
+              <div className="flexIcon">
+                <HiOutlineMail className="iconSm" aria-hidden />
+                <div><strong>Correo</strong><br /><span className="muted">citas@tulaboratorio.com</span></div>
+              </div>
+              <div className="flexIcon">
+                <HiOutlineLocationMarker className="iconSm" aria-hidden />
+                <div><strong>Dirección</strong><br /><span className="muted">Tu dirección aquí</span></div>
+              </div>
             </div>
             <p className="help" style={{ marginTop: '4px' }}>
               Reemplaza estos datos por los reales.
@@ -48,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="footerSmall">
-          © {new Date().getFullYear()} Laboratorio Clínico Divino Niño. Todos los derechos
+          © {new Date().getFullYear()} Laboratorio Clínico Jesús Divino Niño. Todos los derechos
           reservados.
         </div>
       </div>

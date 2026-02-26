@@ -60,7 +60,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'navScrolled' : ''}`.trim()}>
       <div className="container navInner">
         <NavLink to="/" className="brand" aria-label="Ir al inicio" onClick={() => setOpen(false)}>
-          <span className="brandName">Laboratorio Clínico Divino Niño</span>
+          <span className="brandName">Laboratorio Clínico Jesús Divino Niño</span>
           <span className="brandTag">Atención profesional y resultados confiables</span>
         </NavLink>
 

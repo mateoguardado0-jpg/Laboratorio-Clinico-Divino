@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { HiOutlineUserGroup, HiOutlineClipboardList, HiOutlineShieldCheck } from 'react-icons/hi'
 
 const featured = [
   {
@@ -38,15 +39,24 @@ export default function Home() {
               </div>
               <div className="kpiRow">
                 <div className="kpi">
-                  <strong>Atención cercana</strong>
+                  <span className="flexIcon">
+                    <HiOutlineUserGroup className="iconMd" aria-hidden />
+                    <strong>Atención cercana</strong>
+                  </span>
                   <span>Enfoque humano y profesional</span>
                 </div>
                 <div className="kpi">
-                  <strong>Procesos claros</strong>
+                  <span className="flexIcon">
+                    <HiOutlineClipboardList className="iconMd" aria-hidden />
+                    <strong>Procesos claros</strong>
+                  </span>
                   <span>Información directa y útil</span>
                 </div>
                 <div className="kpi">
-                  <strong>Resultados confiables</strong>
+                  <span className="flexIcon">
+                    <HiOutlineShieldCheck className="iconMd" aria-hidden />
+                    <strong>Resultados confiables</strong>
+                  </span>
                   <span>Control de calidad y trazabilidad</span>
                 </div>
               </div>
