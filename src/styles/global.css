@@ -8,6 +8,7 @@
   --c-blue: #4a90e2;
   --c-pink: #f8c8dc;
   --c-pink2: #f5d0e6;
+  --c-pink-soft: #b86b8a;
   --c-cream: #fdf6ec;
   --c-lav: #c8b6e2;
 
@@ -124,6 +125,10 @@ select {
   padding: var(--space-12) 0;
 }
 
+#cita {
+  text-align: center;
+}
+
 /* Grids */
 .grid2 {
   display: grid;
@@ -214,7 +219,7 @@ select {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--c-blue);
+  color: var(--c-pink-soft);
   margin-bottom: var(--space-2);
 }
 
@@ -319,6 +324,7 @@ select {
 
 .cardPad {
   padding: var(--space-6);
+  text-align: left;
 }
 
 .cardHover:hover {

@@ -64,7 +64,7 @@ export default function Contacto() {
                     teléfono y correo.
                   </p>
                   <div className="btnRow">
-                    <a className="btn btnSoft" href="#consultas">
+                    <a className="btn btnSoft" href="#cita">
                       Ir a consultas
                     </a>
                     <a className="btn" href="/servicios">
@@ -78,7 +78,7 @@ export default function Contacto() {
         </div>
       </section>
 
-      <section className="sectionTight" id="consultas">
+      <section className="sectionTight" id="cita">
         <div className="container">
           <FormularioCita />
         </div>
