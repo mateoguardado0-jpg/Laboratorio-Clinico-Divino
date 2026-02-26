@@ -260,7 +260,7 @@ export default function Servicios() {
           </h2>
           <div className="stackLg" style={{ gap: 'var(--space-8)' }}>
             {serviciosPorArea().map(({ area, servicios: list }) => (
-              <section key={area.id} className="servicesPanel" aria-labelledby={`area-${area.id}`}>
+              <section key={area.id} className="stackLg" aria-labelledby={`area-${area.id}`}>
                 <h3 id={`area-${area.id}`} className="h3" style={{ margin: 0 }}>
                   {area.label}
                 </h3>
