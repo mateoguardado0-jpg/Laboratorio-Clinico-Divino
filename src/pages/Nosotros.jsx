@@ -99,7 +99,7 @@ export default function Nosotros() {
                   <article key={v.titulo} className="card cardHover">
                     <div className="cardPad stack">
                       <span className="flexIcon">
-                        <Icon className="iconLg" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                        <Icon className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
                         <div className="eyebrow" style={{ marginBottom: 0 }}>{v.titulo}</div>
                       </span>
                       <p className="lead muted">{v.desc}</p>

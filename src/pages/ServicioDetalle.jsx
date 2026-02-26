@@ -25,7 +25,7 @@ export default function ServicioDetalle() {
             </Link>
 
             <div className="flexIcon" style={{ marginBottom: '8px' }}>
-              <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-blue)' }} />
+              <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
               <div className="eyebrow" style={{ marginBottom: 0 }}>Servicio</div>
             </div>
             <h1 className="h1">{servicio.title}</h1>

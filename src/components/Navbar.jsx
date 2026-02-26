@@ -76,7 +76,6 @@ export default function Navbar() {
           <button type="button" className="btn btnPrimary navCta" onClick={goToConsultas}>
             Consultas
           </button>
-
           <button
             type="button"
             className="menuBtn"

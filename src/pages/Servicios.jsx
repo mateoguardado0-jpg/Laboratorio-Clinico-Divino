@@ -61,7 +61,7 @@ export default function Servicios() {
           <div className="grid2">
             <div className="stackLg">
               <span className="flexIcon" style={{ marginBottom: '8px' }}>
-                <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
                 <div className="eyebrow" style={{ marginBottom: 0 }}>Servicios</div>
               </span>
               <h1 className="h1">Catálogo de servicios y exámenes</h1>
@@ -80,7 +80,7 @@ export default function Servicios() {
           <div ref={wrapperRef} className="stackLg" style={{ position: 'relative', marginBottom: 'var(--space-6)' }}>
             <label className="label" htmlFor="buscar-examen">
               <span className="flexIcon">
-                <HiOutlineSearch className="iconSm" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                <HiOutlineSearch className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
                 Buscar examen
               </span>
             </label>
@@ -153,7 +153,7 @@ export default function Servicios() {
                   <div className="imgPlaceholder imgWide" aria-hidden="true" />
                   <div className="stack">
                     <span className="flexIcon">
-                      <HiOutlineBeaker className="iconSm" aria-hidden style={{ color: 'var(--c-blue)' }} />
+                      <HiOutlineBeaker className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
                       <div className="eyebrow" style={{ marginBottom: 0 }}>{s.title}</div>
                     </span>
                     <p className="lead muted">{s.desc}</p>
