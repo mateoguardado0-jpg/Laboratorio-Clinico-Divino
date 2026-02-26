@@ -186,17 +186,23 @@ select {
   }
 }
 
-/* Panel de servicios: en escritorio se ve como panel; en móvil todo vertical */
 .gridCards {
   display: grid;
   gap: var(--space-6);
-  grid-template-columns: 1fr; /* móvil: una columna */
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 720px) {
   .gridCards {
-    grid-template-columns: repeat(3, 1fr); /* escritorio: 3 tarjetas por fila */
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Servicios: cuantas tarjetas quepan en fila, el resto abajo */
+.gridCardsWrap {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .gridTeam {

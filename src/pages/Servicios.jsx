@@ -264,7 +264,7 @@ export default function Servicios() {
                 <h3 id={`area-${area.id}`} className="h3" style={{ margin: 0 }}>
                   {area.label}
                 </h3>
-                <div className="gridCards">
+                <div className="gridCardsWrap">
                   {list.map((s) => (
                     <article key={s.slug} className="card cardHover">
                       <div className="cardPad stack">
@@ -279,11 +279,6 @@ export default function Servicios() {
                       </div>
                     </article>
                   ))}
-                </div>
-                <div className="btnRow">
-                  <Link to="/contacto#consultas" className="btn btnPrimary">
-                    Consultas
-                  </Link>
                 </div>
               </section>
             ))}
