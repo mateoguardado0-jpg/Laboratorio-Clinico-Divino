@@ -1,94 +1,192 @@
 /**
+ * Áreas del Laboratorio. Orden y etiquetas para agrupar servicios.
+ */
+export const areasLaboratorio = [
+  { id: 'hematologia', label: 'Hematología' },
+  { id: 'quimica-clinica', label: 'Química Clínica' },
+  { id: 'uroanalisis', label: 'Uroanálisis' },
+  { id: 'coprologia', label: 'Coprología' },
+  { id: 'inmunologia-serologia', label: 'Inmunología y Serología' },
+  { id: 'hormonas-tiroides', label: 'Hormonas y Tiroides' },
+  { id: 'perfiles-preventivos', label: 'Perfiles Preventivos' },
+]
+
+/**
  * Catálogo de servicios con exámenes, requisitos y tiempo de entrega por examen.
- * Origen único para la lista (Servicios) y el detalle (ServicioDetalle).
+ * Cada servicio pertenece a un área del laboratorio.
  */
 export const servicios = [
+  // —— 1️⃣ Hematología ——
   {
-    slug: 'hematologia-completa',
-    title: 'Hematología completa',
-    desc: 'Indicadores esenciales para un seguimiento confiable.',
+    areaId: 'hematologia',
+    slug: 'hematologia',
+    title: 'Hematología',
+    desc: 'Estudios de sangre para seguimiento y diagnóstico.',
     examenes: [
-      { nombre: 'Biometría hemática', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Velocidad de sedimentación globular (VSG)', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Frotis de sangre periférica', requisitos: ['Ayuno no requerido.', 'Indicar medicación actual si aplica.'], tiempoEntrega: '24-48 horas' },
+      {
+        nombre: 'Hemograma Completo',
+        requisitos: ['No requiere ayuno (salvo indicación médica).'],
+        tiempoEntrega: 'Mismo día o 24 horas',
+      },
+      {
+        nombre: 'Grupo Sanguíneo y RH',
+        requisitos: ['No requiere preparación.'],
+        tiempoEntrega: 'Mismo día',
+      },
+      {
+        nombre: 'Tiempo de Protrombina (TP / INR)',
+        requisitos: ['Informar si toma anticoagulantes.'],
+        tiempoEntrega: 'Mismo día',
+      },
     ],
   },
+  // —— 2️⃣ Química Clínica ——
   {
+    areaId: 'quimica-clinica',
     slug: 'quimica-clinica',
-    title: 'Química clínica',
-    desc: 'Paneles metabólicos y pruebas de rutina.',
+    title: 'Química Clínica',
+    desc: 'Paneles metabólicos, glucosa, perfil lipídico y función renal y hepática.',
     examenes: [
-      { nombre: 'Panel metabólico básico', requisitos: ['Ayuno de 8-12 horas.', 'Solo agua permitida.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Panel metabólico completo', requisitos: ['Ayuno de 8-12 horas.', 'Indicar medicación actual.'], tiempoEntrega: '24-48 horas' },
-      { nombre: 'Creatinina y BUN', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24 horas' },
+      {
+        nombre: 'Glucosa en Ayunas',
+        requisitos: ['Ayuno de 8–12 horas.'],
+        tiempoEntrega: 'Mismo día',
+      },
+      {
+        nombre: 'Perfil Lipídico',
+        requisitos: ['Ayuno de 8–12 horas.'],
+        tiempoEntrega: '24 horas',
+      },
+      {
+        nombre: 'Creatinina y Urea',
+        requisitos: ['Ayuno recomendado 8 horas.'],
+        tiempoEntrega: 'Mismo día',
+      },
+      {
+        nombre: 'Pruebas Hepáticas',
+        requisitos: ['Ayuno de 8 horas.'],
+        tiempoEntrega: '24 horas',
+      },
     ],
   },
+  // —— 3️⃣ Uroanálisis ——
   {
-    slug: 'perfil-lipidico',
-    title: 'Perfil lipídico',
-    desc: 'Control y prevención con resultados claros.',
+    areaId: 'uroanalisis',
+    slug: 'uroanalisis',
+    title: 'Uroanálisis',
+    desc: 'Análisis de orina y prueba de embarazo.',
     examenes: [
-      { nombre: 'Colesterol total', requisitos: ['Ayuno de 9-12 horas.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Perfil lipídico completo (HDL, LDL, VLDL, triglicéridos)', requisitos: ['Ayuno de 9-12 horas.', 'Evitar alcohol 24 h antes.'], tiempoEntrega: '24-48 horas' },
+      {
+        nombre: 'Examen General de Orina',
+        requisitos: ['Primera orina de la mañana, muestra limpia en frasco estéril.'],
+        tiempoEntrega: 'Mismo día',
+      },
+      {
+        nombre: 'Prueba de Embarazo en Orina',
+        requisitos: ['Primera orina del día recomendada.'],
+        tiempoEntrega: 'Mismo día',
+      },
     ],
   },
+  // —— 4️⃣ Coprología ——
   {
-    slug: 'glicemia-hba1c',
-    title: 'Glicemia y HbA1c',
-    desc: 'Monitoreo y control con enfoque preventivo.',
+    areaId: 'coprologia',
+    slug: 'coprologia',
+    title: 'Coprología',
+    desc: 'Estudios de heces: general, parasitológico y sangre oculta.',
     examenes: [
-      { nombre: 'Glicemia en ayunas', requisitos: ['Ayuno de 8-12 horas.', 'Solo agua permitida.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Hemoglobina glicada (HbA1c)', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24-48 horas' },
-      { nombre: 'Curva de tolerancia a la glucosa', requisitos: ['Ayuno de 8-12 horas.', 'Asistir con cita programada.'], tiempoEntrega: 'Mismo día (interpretación 24 h)' },
+      {
+        nombre: 'Examen General de Heces',
+        requisitos: ['Muestra reciente en recipiente limpio.'],
+        tiempoEntrega: 'Mismo día',
+      },
+      {
+        nombre: 'Parasitológico',
+        requisitos: ['Puede requerir muestra seriada (3 días).'],
+        tiempoEntrega: '24–48 horas',
+      },
+      {
+        nombre: 'Sangre Oculta en Heces',
+        requisitos: ['Evitar carnes rojas y ciertos medicamentos 48 horas antes.'],
+        tiempoEntrega: '24 horas',
+      },
     ],
   },
+  // —— 5️⃣ Inmunología y Serología ——
   {
-    slug: 'inmunologia',
-    title: 'Inmunología',
-    desc: 'Apoyo diagnóstico con procesos estandarizados.',
+    areaId: 'inmunologia-serologia',
+    slug: 'inmunologia-serologia',
+    title: 'Inmunología y Serología',
+    desc: 'VIH, hepatitis, sífilis y dengue.',
     examenes: [
-      { nombre: 'PCR cuantitativa', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Factor reumatoide', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24-48 horas' },
-      { nombre: 'Anticuerpos específicos (según solicitud)', requisitos: ['Indicar estudio solicitado por el médico.'], tiempoEntrega: 'Según disponibilidad' },
+      {
+        nombre: 'VIH',
+        requisitos: ['No requiere ayuno.'],
+        tiempoEntrega: '24 horas',
+      },
+      {
+        nombre: 'Hepatitis B y C',
+        requisitos: ['No requiere preparación especial.'],
+        tiempoEntrega: '24–48 horas',
+      },
+      {
+        nombre: 'VDRL (Sífilis)',
+        requisitos: ['No requiere ayuno.'],
+        tiempoEntrega: '24 horas',
+      },
+      {
+        nombre: 'Dengue',
+        requisitos: ['No requiere preparación especial.'],
+        tiempoEntrega: 'Mismo día o 24 horas',
+      },
     ],
   },
+  // —— 6️⃣ Hormonas y Tiroides ——
   {
-    slug: 'orina-heces',
-    title: 'Orina y heces',
-    desc: 'Pruebas básicas con lectura cuidadosa y oportuna.',
+    areaId: 'hormonas-tiroides',
+    slug: 'hormonas-tiroides',
+    title: 'Hormonas y Tiroides',
+    desc: 'TSH, T3, T4 e insulina.',
     examenes: [
-      { nombre: 'Examen general de orina', requisitos: ['Muestra de primera orina de la mañana.', 'Limpieza del área genital.'], tiempoEntrega: '24 horas' },
-      { nombre: 'Coproparasitológico', requisitos: ['Muestra reciente (menos de 2 horas).', 'Evitar laxantes 72 h antes.'], tiempoEntrega: '24-48 horas' },
-      { nombre: 'Sangre oculta en heces', requisitos: ['Dieta sin carnes rojas 3 días antes.', 'Indicar medicación.'], tiempoEntrega: '48 horas' },
+      {
+        nombre: 'TSH',
+        requisitos: ['No requiere ayuno (preferible en la mañana).'],
+        tiempoEntrega: '24 horas',
+      },
+      {
+        nombre: 'T3 y T4',
+        requisitos: ['No requiere preparación especial.'],
+        tiempoEntrega: '24–48 horas',
+      },
+      {
+        nombre: 'Insulina',
+        requisitos: ['Ayuno de 8 horas.'],
+        tiempoEntrega: '24 horas',
+      },
     ],
   },
+  // —— 7️⃣ Perfiles Preventivos ——
   {
-    slug: 'marcadores-generales',
-    title: 'Marcadores generales',
-    desc: 'Opciones de apoyo clínico según disponibilidad.',
+    areaId: 'perfiles-preventivos',
+    slug: 'perfiles-preventivos',
+    title: 'Perfiles Preventivos',
+    desc: 'Chequeo general, perfil diabético y perfil tiroideo.',
     examenes: [
-      { nombre: 'Marcadores tumorales (según solicitud)', requisitos: ['Ayuno según tipo de marcador.', 'Traer orden médica.'], tiempoEntrega: '48-72 horas' },
-      { nombre: 'Proteína C reactiva', requisitos: ['Ayuno no requerido.'], tiempoEntrega: '24 horas' },
-    ],
-  },
-  {
-    slug: 'pruebas-rapidas',
-    title: 'Pruebas rápidas',
-    desc: 'Tiempo de respuesta ágil con comunicación clara.',
-    examenes: [
-      { nombre: 'Prueba rápida de embarazo', requisitos: ['Muestra de orina preferiblemente matutina.'], tiempoEntrega: 'Mismo día' },
-      { nombre: 'Glucómetro (glicemia capilar)', requisitos: ['Indicar si en ayunas o posprandial.'], tiempoEntrega: 'Mismo día' },
-      { nombre: 'Pruebas rápidas de dengue/COVID (según disponibilidad)', requisitos: ['Consultar requisitos al agendar.'], tiempoEntrega: 'Mismo día' },
-    ],
-  },
-  {
-    slug: 'paquetes-preventivos',
-    title: 'Paquetes preventivos',
-    desc: 'Chequeos recomendados para control periódico.',
-    examenes: [
-      { nombre: 'Check-up básico (hematología + química básica)', requisitos: ['Ayuno de 8-12 horas.'], tiempoEntrega: '24-48 horas' },
-      { nombre: 'Check-up ejecutivo (perfil ampliado)', requisitos: ['Ayuno de 9-12 horas.', 'Traer orden o indicar paquete.'], tiempoEntrega: '48 horas' },
-      { nombre: 'Perfil tiroideo', requisitos: ['Ayuno no requerido.', 'Indicar si toma hormonas tiroideas.'], tiempoEntrega: '24-48 horas' },
+      {
+        nombre: 'Chequeo General',
+        requisitos: ['Incluye: Hemograma, glucosa, perfil lipídico y orina.', 'Ayuno de 8–12 horas.'],
+        tiempoEntrega: '24 horas',
+      },
+      {
+        nombre: 'Perfil Diabético',
+        requisitos: ['Incluye: Glucosa y HbA1c.', 'Ayuno de 8 horas.'],
+        tiempoEntrega: '24 horas',
+      },
+      {
+        nombre: 'Perfil Tiroideo',
+        requisitos: ['Incluye: TSH, T3 y T4.', 'No requiere ayuno.'],
+        tiempoEntrega: '24–48 horas',
+      },
     ],
   },
 ]

@@ -7,12 +7,16 @@ const featured = [
     desc: 'Análisis con control de calidad y entrega oportuna.',
   },
   {
-    title: 'Química clínica',
-    desc: 'Paneles esenciales con interpretación clara para tu médico.',
+    title: 'Química Clínica',
+    desc: 'Paneles metabólicos, perfil lipídico y glicemia.',
   },
   {
-    title: 'Inmunología',
+    title: 'Inmunología y Serología',
     desc: 'Pruebas orientadas a prevención y seguimiento.',
+  },
+  {
+    title: 'Perfiles Preventivos',
+    desc: 'Check-up básico, ejecutivo y perfiles por género.',
   },
 ]
 
@@ -71,8 +75,8 @@ export default function Home() {
           <div className="stackLg">
             <h2 className="h2">Servicios destacados</h2>
             <p className="lead muted">
-              Hematología, química clínica, perfil lipídico e inmunología. Cada servicio con
-              exámenes, requisitos y tiempos de entrega claros.
+              Áreas: Hematología, Química Clínica, Uroanálisis, Coprología, Inmunología y Serología,
+              Hormonas y Tiroides, Perfiles Preventivos. Cada servicio con exámenes, requisitos y tiempos de entrega claros.
             </p>
 
             <div className="gridCards">
