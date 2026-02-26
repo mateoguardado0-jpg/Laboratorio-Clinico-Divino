@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footerGrid">
           <div className="stack">
             <div className="brand">
-              <span className="brandName">Laboratorio Clínico Jesús Divino Niño</span>
+              <span className="brandName">Laboratorio Clínico Divino Niño Jesus</span>
               <span className="brandTag">Cuidado clínico con calidez humana</span>
             </div>
             <p className="lead muted">
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="footerSmall">
-          © {new Date().getFullYear()} Laboratorio Clínico Jesús Divino Niño. Todos los derechos
+          © {new Date().getFullYear()} Laboratorio Clínico Divino Niño Jesus. Todos los derechos
           reservados.
         </div>
       </div>

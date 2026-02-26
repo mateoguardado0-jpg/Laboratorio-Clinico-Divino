@@ -11,8 +11,8 @@ export default function Contacto() {
               <div className="eyebrow">Contacto</div>
               <h1 className="h1">Conversemos y coordinemos tu cita</h1>
               <p className="lead">
-                Aquí va tu información oficial: teléfono, correo, dirección y horarios. Incluimos
-                un espacio para mapa y el formulario de cita con EmailJS.
+                Teléfono, correo, horarios y ubicación. En la sección inferior puedes agendar
+                tu cita con el formulario.
               </p>
 
               <div className="gridCards">
@@ -22,15 +22,13 @@ export default function Contacto() {
                     <div className="eyebrow" style={{ marginBottom: 0 }}>Teléfono</div>
                   </div>
                   <p className="lead">+503 0000 0000</p>
-                  <p className="help">Actualiza este dato por el número real.</p>
                 </div>
                 <div className="card cardPad">
                   <div className="flexIcon" style={{ marginBottom: '6px' }}>
                     <HiOutlineMail className="iconMd" aria-hidden />
                     <div className="eyebrow" style={{ marginBottom: 0 }}>Correo</div>
                   </div>
-                  <p className="lead">citas@tulaboratorio.com</p>
-                  <p className="help">El formulario enviará a tu correo vía EmailJS.</p>
+                  <p className="lead">citas@laboratoriodivinojesus.com</p>
                 </div>
                 <div className="card cardPad">
                   <div className="flexIcon" style={{ marginBottom: '6px' }}>
@@ -38,7 +36,6 @@ export default function Contacto() {
                     <div className="eyebrow" style={{ marginBottom: 0 }}>Horario</div>
                   </div>
                   <p className="lead">Lun–Sáb: 7:00–17:00</p>
-                  <p className="help">Ajusta según tu operación.</p>
                 </div>
               </div>
             </div>
@@ -52,12 +49,10 @@ export default function Contacto() {
                   </div>
                   <div
                     className="imgPlaceholder imgWide"
-                    aria-label="Mapa (placeholder)"
+                    aria-label="Ubicación del laboratorio"
                     role="img"
                   />
-                  <p className="help">
-                    Sustituye este bloque por un mapa embebido (Google Maps) cuando lo necesites.
-                  </p>
+                  <p className="help">Ubicación y direcciones. Puedes integrar Google Maps aquí.</p>
                 </div>
               </div>
 
@@ -65,8 +60,8 @@ export default function Contacto() {
                 <div className="cardPad stack">
                   <div className="eyebrow">Mensaje</div>
                   <p className="lead">
-                    Si prefieres un formulario de contacto simple aparte del de cita, puedes
-                    reutilizar este diseño y enviar a tu correo.
+                    ¿Dudas o comentarios? Usa el formulario de cita más abajo o contáctanos por
+                    teléfono y correo.
                   </p>
                   <div className="btnRow">
                     <a className="btn btnSoft" href="#cita">

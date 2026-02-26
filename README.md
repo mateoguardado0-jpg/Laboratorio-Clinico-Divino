@@ -1,4 +1,4 @@
-# Laboratorio Clínico Jesús Divino Niño (Vite + React)
+# Laboratorio Clínico Divino Niño Jesus (Vite + React)
 
 Sitio web profesional, moderno y responsive, preparado para **GitHub** y despliegue en **Vercel** (SPA con React Router).
 

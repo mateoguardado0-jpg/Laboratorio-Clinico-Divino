@@ -8,10 +8,10 @@ const valores = [
 ]
 
 const team = [
-  { name: 'Dra. Equipo 1', role: 'Dirección técnica', bio: 'Experiencia y supervisión clínica.' },
-  { name: 'Lic. Equipo 2', role: 'Laboratorio', bio: 'Control de calidad y procesos.' },
-  { name: 'Asistente 3', role: 'Atención al paciente', bio: 'Acompañamiento y orientación.' },
-  { name: 'Soporte 4', role: 'Recepción', bio: 'Gestión de citas y seguimiento.' },
+  { name: 'Dirección técnica', role: 'Supervisión clínica', bio: 'Experiencia y supervisión de resultados.' },
+  { name: 'Área de laboratorio', role: 'Análisis y control', bio: 'Control de calidad y procesos estandarizados.' },
+  { name: 'Atención al paciente', role: 'Orientación', bio: 'Acompañamiento y requisitos de cada estudio.' },
+  { name: 'Recepción', role: 'Citas y seguimiento', bio: 'Gestión de citas y entrega de resultados.' },
 ]
 
 export default function Nosotros() {
@@ -24,12 +24,11 @@ export default function Nosotros() {
               <div className="eyebrow">Nosotros</div>
               <h1 className="h1">Un laboratorio con enfoque humano y profesional</h1>
               <p className="lead">
-                Este espacio está diseñado para contar tu historia con claridad, reforzar confianza
-                y explicar tu forma de trabajo. Reemplaza los textos por los oficiales del
-                laboratorio.
+                Somos un laboratorio comprometido con la calidad, el trato humano y la entrega
+                oportuna de resultados. Conoce nuestra historia, misión y equipo.
               </p>
             </div>
-            <div className="imgPlaceholder imgHero" aria-label="Imagen institucional (placeholder)" />
+            <div className="imgPlaceholder imgHero" aria-label="Laboratorio Divino Niño Jesus" />
           </div>
         </div>
       </section>
@@ -37,13 +36,13 @@ export default function Nosotros() {
       <section className="sectionTight">
         <div className="container">
           <div className="grid2Reverse">
-            <div className="imgPlaceholder imgWide" aria-label="Imagen historia (placeholder)" />
+            <div className="imgPlaceholder imgWide" aria-label="Nuestra historia" />
             <div className="stackLg">
               <h2 className="h2">Historia</h2>
               <p className="lead">
-                Un texto breve, honesto y directo sobre el origen del laboratorio, su crecimiento y
-                su compromiso con la calidad. Mantén el contenido escaneable: párrafos cortos y
-                ideas claras.
+                Nacimos con el propósito de ofrecer análisis clínicos confiables y una atención
+                cercana a la comunidad. Con el tiempo hemos incorporado tecnología y procesos
+                que nos permiten mantener altos estándares de calidad y plazos de entrega claros.
               </p>
               <div className="btnRow">
                 <a className="btn btnSoft" href="/contacto#cita">
@@ -80,7 +79,7 @@ export default function Nosotros() {
                 </div>
               </div>
             </div>
-            <div className="imgPlaceholder imgWide" aria-label="Imagen misión/visión (placeholder)" />
+            <div className="imgPlaceholder imgWide" aria-label="Misión y visión" />
           </div>
         </div>
       </section>
@@ -118,12 +117,12 @@ export default function Nosotros() {
           <div className="stackLg">
             <h2 className="h2">Equipo</h2>
             <p className="lead muted">
-              Cards con espacio para foto. Sustituye nombres/roles por los reales.
+              Profesionales dedicados a la calidad analítica y a la atención al paciente.
             </p>
 
             <div className="gridTeam">
               {team.map((m) => (
-                <article key={m.name} className="card cardHover">
+                <article key={m.role} className="card cardHover">
                   <div className="cardPad stack">
                     <div className="imgPlaceholder imgSquare" aria-hidden="true" />
                     <div className="stack">

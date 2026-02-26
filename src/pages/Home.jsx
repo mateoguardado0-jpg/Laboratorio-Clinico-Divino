@@ -23,11 +23,11 @@ export default function Home() {
         <div className="container">
           <div className="grid2">
             <div className="stackLg heroContent">
-              <div className="eyebrow">Laboratorio Clínico</div>
+              <div className="eyebrow">Laboratorio Clínico Divino Niño Jesus</div>
               <h1 className="h1">Precisión clínica con una experiencia moderna</h1>
               <p className="lead">
-                Un sitio pensado para inspirar confianza: navegación clara, secciones limpias,
-                y un flujo de agendamiento sencillo desde cualquier dispositivo.
+                Resultados confiables, atención cercana y agendamiento sencillo. Conoce nuestros
+                servicios y agenda tu cita desde aquí.
               </p>
               <div className="btnRow">
                 <Link to="/contacto#cita" className="btn btnPrimary">
@@ -61,7 +61,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="imgPlaceholder imgHero heroImage" aria-label="Imagen principal (placeholder)" />
+            <div className="imgPlaceholder imgHero heroImage" aria-label="Laboratorio Clínico Divino Niño Jesus" />
           </div>
         </div>
       </section>
@@ -71,8 +71,8 @@ export default function Home() {
           <div className="stackLg">
             <h2 className="h2">Servicios destacados</h2>
             <p className="lead muted">
-              Cards modernas con espacios para imagen. Puedes reemplazar los placeholders por
-              fotos reales o ilustraciones.
+              Hematología, química clínica, perfil lipídico e inmunología. Cada servicio con
+              exámenes, requisitos y tiempos de entrega claros.
             </p>
 
             <div className="gridCards">
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="ctaSection card">
             <div className="cardPad">
               <div className="grid2Reverse">
-                <div className="imgPlaceholder imgWide" aria-label="Imagen CTA (placeholder)" />
+                <div className="imgPlaceholder imgWide" aria-label="Agendar cita" />
                 <div className="stackLg">
                   <div className="eyebrow">Listo para atenderte</div>
                   <h2 className="h2">Agenda tu cita en menos de un minuto</h2>
