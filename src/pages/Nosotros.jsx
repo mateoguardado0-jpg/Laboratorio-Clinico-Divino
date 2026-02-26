@@ -1,10 +1,36 @@
 import { HiOutlineHeart, HiOutlineBadgeCheck, HiOutlineFlag, HiOutlineHand } from 'react-icons/hi'
 
 const valores = [
-  { titulo: 'Confianza', desc: 'Trabajamos con transparencia y rigor para que pacientes y médicos confíen en nuestros resultados.', icon: HiOutlineHeart },
-  { titulo: 'Calidad', desc: 'Procesos estandarizados y control continuo en cada etapa del análisis.', icon: HiOutlineBadgeCheck },
-  { titulo: 'Compromiso', desc: 'Dedicación con cada paciente y con el cumplimiento de plazos y estándares.', icon: HiOutlineFlag },
-  { titulo: 'Respeto', desc: 'Trato digno, confidencialidad y escucha en cada interacción.', icon: HiOutlineHand },
+  {
+    titulo: 'Precisión',
+    desc: 'Trabajamos con exactitud científica para garantizar resultados confiables en cada análisis.',
+    icon: HiOutlineBadgeCheck,
+  },
+  {
+    titulo: 'Confidencialidad',
+    desc: 'Protegemos la información de nuestros pacientes con absoluta discreción y seguridad.',
+    icon: HiOutlineHand,
+  },
+  {
+    titulo: 'Responsabilidad',
+    desc: 'Asumimos cada estudio con compromiso ético y cumplimiento riguroso de los estándares sanitarios.',
+    icon: HiOutlineFlag,
+  },
+  {
+    titulo: 'Profesionalismo',
+    desc: 'Contamos con personal altamente capacitado que actúa con ética, respeto y excelencia técnica.',
+    icon: HiOutlineHeart,
+  },
+  {
+    titulo: 'Innovación',
+    desc: 'Incorporamos tecnología moderna y procesos actualizados para ofrecer diagnósticos más precisos y oportunos.',
+    icon: HiOutlineBadgeCheck,
+  },
+  {
+    titulo: 'Compromiso con la salud',
+    desc: 'Contribuimos activamente al bienestar de la comunidad a través de un servicio humano y confiable.',
+    icon: HiOutlineHeart,
+  },
 ]
 
 const team = [
@@ -40,9 +66,20 @@ export default function Nosotros() {
             <div className="stackLg">
               <h2 className="h2">Historia</h2>
               <p className="lead">
-                Nacimos con el propósito de ofrecer análisis clínicos confiables y una atención
-                cercana a la comunidad. Con el tiempo hemos incorporado tecnología y procesos
-                que nos permiten mantener altos estándares de calidad y plazos de entrega claros.
+                Nuestro laboratorio nació con el propósito de ofrecer a la comunidad un servicio de
+                análisis clínicos confiable, accesible y realizado con responsabilidad. Desde
+                nuestros inicios, entendimos que detrás de cada muestra existe una persona que
+                espera respuestas claras y oportunas para cuidar su salud.
+              </p>
+              <p className="lead">
+                Con el paso del tiempo, hemos crecido incorporando tecnología moderna y
+                fortaleciendo nuestro equipo profesional, manteniendo siempre el mismo
+                compromiso: brindar resultados precisos con un trato humano y respetuoso.
+              </p>
+              <p className="lead">
+                Hoy continuamos evolucionando, adaptándonos a los avances del sector salud, pero
+                conservando la esencia que nos define: confianza, ética y cercanía con nuestros
+                pacientes.
               </p>
               <div className="btnRow">
                 <a className="btn btnSoft" href="/contacto#consultas">
@@ -66,15 +103,17 @@ export default function Nosotros() {
                 <div className="card cardPad">
                   <div className="eyebrow">Misión</div>
                   <p className="lead">
-                    Brindar servicios clínicos confiables, con procesos claros, atención cercana y
-                    enfoque en la seguridad del paciente.
+                    Ofrecer servicios de análisis clínicos con altos estándares de calidad, combinando
+                    tecnología confiable y un equipo profesional comprometido, brindando a cada
+                    paciente una atención respetuosa, clara y cercana.
                   </p>
                 </div>
                 <div className="card cardPad">
                   <div className="eyebrow">Visión</div>
                   <p className="lead">
-                    Ser un referente local por la calidad, la innovación y una experiencia de
-                    atención moderna y accesible.
+                    Ser un laboratorio reconocido por la precisión de nuestros resultados y por el
+                    trato humano que ofrecemos, convirtiéndonos en un referente de confianza y
+                    excelencia en el cuidado de la salud.
                   </p>
                 </div>
               </div>

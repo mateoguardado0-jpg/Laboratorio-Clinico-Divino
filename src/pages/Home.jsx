@@ -23,20 +23,12 @@ export default function Home() {
         <div className="container">
           <div className="grid2">
             <div className="stackLg heroContent">
-              <div className="eyebrow">Laboratorio Clínico Divino Niño Jesus</div>
               <h1 className="h1">Precisión clínica con una experiencia moderna</h1>
               <p className="lead">
-                Resultados confiables, atención cercana y consultas sencillas. Conoce nuestros
-                servicios y envía tu consulta desde aquí.
+                Bienvenido a un espacio donde la precisión y el compromiso se unen para cuidar tu salud.
+                Ofrecemos análisis clínicos confiables, tecnología moderna y una atención cercana que
+                te brinda la tranquilidad que necesitas.
               </p>
-              <div className="btnRow">
-                <Link to="/contacto#consultas" className="btn btnPrimary">
-                  Consultas
-                </Link>
-                <Link to="/servicios" className="btn btnSoft">
-                  Ver servicios
-                </Link>
-              </div>
               <div className="kpiRow">
                 <div className="kpi">
                   <span className="flexIcon">
@@ -59,6 +51,14 @@ export default function Home() {
                   </span>
                   <span>Control de calidad y trazabilidad</span>
                 </div>
+              </div>
+              <div className="btnRow">
+                <Link to="/contacto#consultas" className="btn btnPrimary">
+                  Consultas
+                </Link>
+                <Link to="/servicios" className="btn btnSoft">
+                  Ver servicios
+                </Link>
               </div>
             </div>
             <div className="imgPlaceholder imgHero heroImage" aria-label="Laboratorio Clínico Divino Niño Jesus" />

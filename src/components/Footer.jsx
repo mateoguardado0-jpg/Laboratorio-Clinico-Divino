@@ -12,8 +12,8 @@ export default function Footer() {
               <span className="brandTag">Cuidado clínico con calidez humana</span>
             </div>
             <p className="lead muted">
-              Horarios y datos de contacto pueden ajustarse según tu operación. Deja tus
-              canales oficiales visibles y facilita el agendamiento desde cualquier dispositivo.
+              Horario de atención: lunes a viernes de 6:30&nbsp;a.m. a 4:00&nbsp;p.m. y sábado de
+              6:30&nbsp;a.m. a 12:00&nbsp;m.d.
             </p>
           </div>
 
