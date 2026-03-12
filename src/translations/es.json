@@ -1,0 +1,512 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "consultas": "Consultas",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mainNav": "Navegación principal",
+    "mobileMenu": "Menú móvil",
+    "goHome": "Ir al inicio",
+    "languageLabel": "Idioma"
+  },
+  "brand": {
+    "name": "Laboratorio Clínico Divino Niño Jesus",
+    "tagline": "Atención profesional y resultados confiables",
+    "footerTagline": "Cuidado clínico con calidez humana"
+  },
+  "common": {
+    "buttons": {
+      "consultas": "Consultas",
+      "viewServices": "Ver servicios",
+      "viewMore": "Ver más",
+      "contact": "Contacto",
+      "search": "Buscar examen",
+      "check": "Consultar",
+      "cancel": "Cancelar",
+      "clear": "Limpiar",
+      "sendInquiry": "Enviar consulta",
+      "sending": "Enviando…",
+      "goToConsultas": "Ir a consultas",
+      "allServices": "Ver todos los servicios"
+    },
+    "labels": {
+      "service": "Servicio",
+      "examens": "Exámenes",
+      "requirements": "Requisitos",
+      "deliveryTime": "Tiempo de entrega",
+      "map": "Mapa",
+      "message": "Mensaje"
+    }
+  },
+  "home": {
+    "heroTitle": "Precisión clínica con una experiencia moderna",
+    "heroLead": "Bienvenido a un espacio donde la precisión y el compromiso se unen para cuidar tu salud. Ofrecemos análisis clínicos confiables, tecnología moderna y una atención cercana que te brinda la tranquilidad que necesitas.",
+    "kpis": [
+      {
+        "title": "Atención cercana",
+        "desc": "Enfoque humano y profesional"
+      },
+      {
+        "title": "Procesos claros",
+        "desc": "Información directa y útil"
+      },
+      {
+        "title": "Resultados confiables",
+        "desc": "Control de calidad y trazabilidad"
+      }
+    ],
+    "featuredTitle": "Servicios destacados",
+    "featuredLead": "Áreas: Hematología, Química Clínica, Uroanálisis, Coprología, Inmunología y Serología, Hormonas y Tiroides, Perfiles Preventivos. Cada servicio con exámenes, requisitos y tiempos de entrega claros.",
+    "featured": [
+      {
+        "title": "Hematología",
+        "desc": "Análisis con control de calidad y entrega oportuna."
+      },
+      {
+        "title": "Química Clínica",
+        "desc": "Paneles metabólicos, perfil lipídico y glicemia."
+      },
+      {
+        "title": "Inmunología y Serología",
+        "desc": "Pruebas orientadas a prevención y seguimiento."
+      },
+      {
+        "title": "Perfiles Preventivos",
+        "desc": "Check-up básico, ejecutivo y perfiles por género."
+      }
+    ],
+    "ctaEyebrow": "Listo para atenderte",
+    "ctaTitle": "Envía tu consulta en menos de un minuto",
+    "ctaLead": "Escribe tus datos y tu consulta. Te responderemos a la brevedad.",
+    "heroImageLabel": "Laboratorio Clínico Divino Niño Jesus",
+    "ctaImageLabel": "Consultas"
+  },
+  "about": {
+    "eyebrow": "Nosotros",
+    "title": "Un laboratorio con enfoque humano y profesional",
+    "lead": "Somos un laboratorio comprometido con la calidad, el trato humano y la entrega oportuna de resultados. Conoce nuestra historia, misión y equipo.",
+    "historyTitle": "Historia",
+    "history": [
+      "Nuestro laboratorio nació con el propósito de ofrecer a la comunidad un servicio de análisis clínicos confiable, accesible y realizado con responsabilidad. Desde nuestros inicios, entendimos que detrás de cada muestra existe una persona que espera respuestas claras y oportunas para cuidar su salud.",
+      "Con el paso del tiempo, hemos crecido incorporando tecnología moderna y fortaleciendo nuestro equipo profesional, manteniendo siempre el mismo compromiso: brindar resultados precisos con un trato humano y respetuoso.",
+      "Hoy continuamos evolucionando, adaptándonos a los avances del sector salud, pero conservando la esencia que nos define: confianza, ética y cercanía con nuestros pacientes."
+    ],
+    "missionVisionTitle": "Misión y visión",
+    "missionTitle": "Misión",
+    "mission": "Ofrecer servicios de análisis clínicos con altos estándares de calidad, combinando tecnología confiable y un equipo profesional comprometido, brindando a cada paciente una atención respetuosa, clara y cercana.",
+    "visionTitle": "Visión",
+    "vision": "Ser un laboratorio reconocido por la precisión de nuestros resultados y por el trato humano que ofrecemos, convirtiéndonos en un referente de confianza y excelencia en el cuidado de la salud.",
+    "valuesEyebrow": "Nuestros valores",
+    "valuesTitle": "Valores",
+    "valuesLead": "Los principios que guían nuestro trabajo día a día.",
+    "values": [
+      {
+        "title": "Precisión",
+        "desc": "Trabajamos con exactitud científica para garantizar resultados confiables en cada análisis."
+      },
+      {
+        "title": "Confidencialidad",
+        "desc": "Protegemos la información de nuestros pacientes con absoluta discreción y seguridad."
+      },
+      {
+        "title": "Responsabilidad",
+        "desc": "Asumimos cada estudio con compromiso ético y cumplimiento riguroso de los estándares sanitarios."
+      },
+      {
+        "title": "Profesionalismo",
+        "desc": "Contamos con personal altamente capacitado que actúa con ética, respeto y excelencia técnica."
+      },
+      {
+        "title": "Innovación",
+        "desc": "Incorporamos tecnología moderna y procesos actualizados para ofrecer diagnósticos más precisos y oportunos."
+      },
+      {
+        "title": "Compromiso con la salud",
+        "desc": "Contribuimos activamente al bienestar de la comunidad a través de un servicio humano y confiable."
+      }
+    ],
+    "teamTitle": "Equipo",
+    "teamLead": "Profesionales dedicados a la calidad analítica y a la atención al paciente.",
+    "team": [
+      {
+        "name": "Dirección técnica",
+        "role": "Supervisión clínica",
+        "bio": "Experiencia y supervisión de resultados."
+      },
+      {
+        "name": "Área de laboratorio",
+        "role": "Análisis y control",
+        "bio": "Control de calidad y procesos estandarizados."
+      },
+      {
+        "name": "Atención al paciente",
+        "role": "Orientación",
+        "bio": "Acompañamiento y requisitos de cada estudio."
+      },
+      {
+        "name": "Recepción",
+        "role": "Citas y seguimiento",
+        "bio": "Gestión de citas y entrega de resultados."
+      }
+    ],
+    "historyImageLabel": "Nuestra historia",
+    "heroImageLabel": "Laboratorio Divino Niño Jesus",
+    "missionImageLabel": "Misión y visión"
+  },
+  "servicesPage": {
+    "eyebrow": "Servicios",
+    "title": "Catálogo de servicios y exámenes",
+    "lead": "Áreas: Hematología, Química Clínica, Uroanálisis, Coprología, Inmunología y Serología, Hormonas y Tiroides, Perfiles Preventivos. Busca un examen por nombre o explora cada área.",
+    "heroImageLabel": "Servicios del laboratorio",
+    "searchPlaceholder": "Ej: hemograma, glucosa, hematología, perfil lipídico, VIH...",
+    "noResults": "No se encontraron exámenes. Prueba con otras palabras o sin acentos (ej. hematologia, perfil lipidico).",
+    "areasTitle": "Áreas del Laboratorio"
+  },
+  "serviceDetail": {
+    "backToServices": "Volver a Servicios",
+    "lead": "Requisitos y tiempo de entrega por examen. Consulta con el laboratorio para condiciones especiales."
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Resolvemos tus dudas más habituales",
+    "lead": "Encuentra respuestas claras sobre preparación, tiempos de entrega y aspectos prácticos de tus exámenes de laboratorio. Si aún tienes dudas, siempre puedes escribirnos en la sección de contacto.",
+    "items": [
+      {
+        "question": "¿Puedo realizarme exámenes sin cita previa?",
+        "answer": "Sí, atendemos sin cita en horario laboral. Sin embargo, agendar previamente te permite reducir tiempos de espera."
+      },
+      {
+        "question": "¿Atienden a niños y adultos mayores?",
+        "answer": "Sí, contamos con personal capacitado para la toma de muestras en pacientes de todas las edades."
+      },
+      {
+        "question": "¿Qué documentos debo presentar?",
+        "answer": "Generalmente solo necesitas un documento de identificación y la orden médica si tu examen lo requiere."
+      },
+      {
+        "question": "¿Necesito estar en ayunas para realizarme un examen?",
+        "answer": "Depende del tipo de análisis. Algunos estudios, como la glucosa o el perfil lipídico, requieren ayuno de 8 a 12 horas. Te recomendamos consultar previamente las indicaciones específicas."
+      },
+      {
+        "question": "¿Es necesario llevar orden médica?",
+        "answer": "Algunos exámenes requieren indicación médica, mientras que otros pueden realizarse por solicitud directa del paciente."
+      },
+      {
+        "question": "¿Cómo debo prepararme para mi examen?",
+        "answer": "Las indicaciones varían según el estudio. Nuestro equipo te brindará las recomendaciones necesarias al momento de agendar tu cita."
+      },
+      {
+        "question": "¿Puedo hacerme varios exámenes el mismo día?",
+        "answer": "Sí, en la mayoría de los casos es posible realizar múltiples estudios en una sola visita, siempre que se cumplan las indicaciones de preparación correspondientes."
+      },
+      {
+        "question": "¿Cuánto tiempo tardan en entregarse los resultados?",
+        "answer": "La mayoría de los exámenes se entregan el mismo día o dentro de 24 horas. Algunos estudios especializados pueden requerir más tiempo."
+      },
+      {
+        "question": "¿Cómo puedo recibir mis resultados?",
+        "answer": "Puedes recibirlos en nuestras instalaciones o, si el servicio está disponible, mediante envío digital al correo electrónico registrado."
+      },
+      {
+        "question": "¿La información de mis resultados es confidencial?",
+        "answer": "Sí, garantizamos la protección y confidencialidad de todos los datos y resultados conforme a los estándares de seguridad y ética profesional."
+      },
+      {
+        "question": "¿Aceptan seguros médicos?",
+        "answer": "Trabajamos con distintas aseguradoras. Te recomendamos consultar directamente para confirmar cobertura y requisitos."
+      },
+      {
+        "question": "¿Cada cuánto tiempo debo realizarme exámenes de rutina?",
+        "answer": "Se recomienda realizar un chequeo general al menos una vez al año. Sin embargo, la frecuencia puede variar según la edad, antecedentes médicos y recomendaciones de tu médico."
+      },
+      {
+        "question": "¿Qué tan importante es hacerse exámenes aunque me sienta bien?",
+        "answer": "Muchos padecimientos pueden desarrollarse sin síntomas visibles. Los análisis clínicos permiten detectar alteraciones de manera temprana y prevenir complicaciones futuras."
+      },
+      {
+        "question": "¿A partir de qué edad debo comenzar a realizarme chequeos preventivos?",
+        "answer": "Los controles pueden iniciarse desde la adolescencia, pero a partir de los 30 años se recomienda mayor seguimiento preventivo, especialmente si existen antecedentes familiares."
+      },
+      {
+        "question": "¿Qué exámenes forman parte de un chequeo básico?",
+        "answer": "Generalmente incluyen hemograma completo, glucosa, perfil lipídico y examen general de orina. El médico puede indicar estudios adicionales según cada caso."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Conversemos y coordinemos tu consulta",
+    "lead": "Teléfono, correo, horarios y ubicación. En la sección inferior puedes enviar tu consulta con el formulario.",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "schedule": "Horario",
+    "scheduleValue": "Lun–Sáb: 7:00–17:00",
+    "mapAria": "Ubicación del laboratorio",
+    "popupTitle": "Laboratorio Clínico",
+    "popupAddress": "Dirección: [Agregar dirección aquí]",
+    "howToGet": "Cómo llegar",
+    "mapHelp": "Ubicación del laboratorio y referencia de dirección.",
+    "messageEyebrow": "Mensaje",
+    "messageLead": "¿Dudas o comentarios? Usa el formulario de consultas más abajo o contáctanos por teléfono y correo.",
+    "chooserAria": "Seleccionar aplicación de mapas",
+    "chooserLead": "¿En qué aplicación deseas abrir la ubicación?"
+  },
+  "form": {
+    "eyebrow": "Consultas",
+    "title": "Envía tu consulta con tus datos",
+    "lead": "Nombre, teléfono, correo y comentarios. Te responderemos a la brevedad.",
+    "fullName": "Nombre completo *",
+    "phone": "Teléfono *",
+    "email": "Correo electrónico *",
+    "comments": "Comentarios (opcional)",
+    "fullNamePlaceholder": "Tu nombre y apellido",
+    "phonePlaceholder": "Ej. +503 0000 0000",
+    "emailPlaceholder": "tu@correo.com",
+    "commentsPlaceholder": "Déjanos un comentario breve si lo deseas.",
+    "commentsHelp": "No incluyas información sensible.",
+    "fillRequired": "Completa los campos obligatorios para enviar.",
+    "readyToSend": "Listo para enviar.",
+    "errors": {
+      "fullName": "Ingresa tu nombre completo.",
+      "phone": "Ingresa un teléfono válido.",
+      "email": "Ingresa un correo válido.",
+      "requiredFields": "Revisa los campos obligatorios.",
+      "missingCredentials": "Faltan credenciales de EmailJS. Configura las variables VITE_EMAILJS_* antes de enviar.",
+      "sendFailed": "No se pudo enviar la consulta. Verifica tu configuración de EmailJS e inténtalo de nuevo."
+    },
+    "success": "Consulta enviada. Te contactaremos pronto."
+  },
+  "footer": {
+    "navigation": "Navegación",
+    "contact": "Contacto",
+    "scheduleTitle": "Horario de atención",
+    "weekdays": "Lunes a viernes: 6:30 a.m. a 4:00 p.m.",
+    "saturday": "Sábado: 6:30 a.m. a 12:00 m.d.",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "address": "Dirección",
+    "addressValue": "Tu dirección aquí",
+    "replaceData": "Reemplaza estos datos por los reales.",
+    "copyright": "© {year} Laboratorio Clínico Divino Niño Jesus. Todos los derechos reservados."
+  },
+  "whatsapp": {
+    "defaultMessage": "Hola, quiero información sobre sus servicios.",
+    "ariaLabel": "Contactar por WhatsApp"
+  },
+  "catalog": {
+    "areas": {
+      "hematologia": "Hematología",
+      "quimica-clinica": "Química Clínica",
+      "uroanalisis": "Uroanálisis",
+      "coprologia": "Coprología",
+      "inmunologia-serologia": "Inmunología y Serología",
+      "hormonas-tiroides": "Hormonas y Tiroides",
+      "perfiles-preventivos": "Perfiles Preventivos"
+    },
+    "services": {
+      "hematologia": {
+        "title": "Hematología",
+        "desc": "Estudios de sangre para seguimiento y diagnóstico.",
+        "exams": [
+          {
+            "nombre": "Hemograma Completo",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Grupo Sanguíneo y RH",
+            "requisitos": [
+              "No requiere preparación."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Tiempo de Protrombina (TP / INR)",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          }
+        ]
+      },
+      "quimica-clinica": {
+        "title": "Química Clínica",
+        "desc": "Paneles metabólicos, glucosa, perfil lipídico y función renal y hepática.",
+        "exams": [
+          {
+            "nombre": "Glucosa en Ayunas",
+            "requisitos": [
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Perfil Lipídico",
+            "requisitos": [
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Creatinina y Urea",
+            "requisitos": [
+              "Ayuno recomendado 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Pruebas Hepáticas",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          }
+        ]
+      },
+      "uroanalisis": {
+        "title": "Uroanálisis",
+        "desc": "Análisis de orina y prueba de embarazo.",
+        "exams": [
+          {
+            "nombre": "Examen General de Orina",
+            "requisitos": [
+              "Primera orina de la mañana, muestra limpia en frasco estéril."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Prueba de Embarazo en Orina",
+            "requisitos": [
+              "Primera orina del día recomendada."
+            ],
+            "tiempoEntrega": "Mismo día"
+          }
+        ]
+      },
+      "coprologia": {
+        "title": "Coprología",
+        "desc": "Estudios de heces: general, parasitológico y sangre oculta.",
+        "exams": [
+          {
+            "nombre": "Examen General de Heces",
+            "requisitos": [
+              "Muestra reciente en recipiente limpio."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Parasitológico",
+            "requisitos": [
+              "Puede requerir muestra seriada (3 días)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Sangre Oculta en Heces",
+            "requisitos": [
+              "Evitar carnes rojas y ciertos medicamentos 48 horas antes."
+            ],
+            "tiempoEntrega": "24 horas"
+          }
+        ]
+      },
+      "inmunologia-serologia": {
+        "title": "Inmunología y Serología",
+        "desc": "VIH, hepatitis, sífilis y dengue.",
+        "exams": [
+          {
+            "nombre": "VIH",
+            "requisitos": [
+              "No requiere ayuno."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Hepatitis B y C",
+            "requisitos": [
+              "No requiere preparación especial."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "VDRL (Sífilis)",
+            "requisitos": [
+              "No requiere ayuno."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Dengue",
+            "requisitos": [
+              "No requiere preparación especial."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          }
+        ]
+      },
+      "hormonas-tiroides": {
+        "title": "Hormonas y Tiroides",
+        "desc": "TSH, T3, T4 e insulina.",
+        "exams": [
+          {
+            "nombre": "TSH",
+            "requisitos": [
+              "No requiere ayuno (preferible en la mañana)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "T3 y T4",
+            "requisitos": [
+              "No requiere preparación especial."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Insulina",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          }
+        ]
+      },
+      "perfiles-preventivos": {
+        "title": "Perfiles Preventivos",
+        "desc": "Chequeo general, perfil diabético y perfil tiroideo.",
+        "exams": [
+          {
+            "nombre": "Chequeo General",
+            "requisitos": [
+              "Incluye: Hemograma, glucosa, perfil lipídico y orina.",
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil Diabético",
+            "requisitos": [
+              "Incluye: Glucosa y HbA1c.",
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil Tiroideo",
+            "requisitos": [
+              "Incluye: TSH, T3 y T4.",
+              "No requiere ayuno."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "consultas": "Inquiries",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "mobileMenu": "Mobile menu",
+    "goHome": "Go to home",
+    "languageLabel": "Language"
+  },
+  "brand": {
+    "name": "Laboratorio Clínico Divino Niño Jesus",
+    "tagline": "Professional care and reliable results",
+    "footerTagline": "Clinical care with human warmth"
+  },
+  "common": {
+    "buttons": {
+      "consultas": "Inquiries",
+      "viewServices": "View services",
+      "viewMore": "View more",
+      "contact": "Contact",
+      "search": "Search exam",
+      "check": "Check",
+      "cancel": "Cancel",
+      "clear": "Clear",
+      "sendInquiry": "Send inquiry",
+      "sending": "Sending…",
+      "goToConsultas": "Go to inquiries",
+      "allServices": "View all services"
+    },
+    "labels": {
+      "service": "Service",
+      "examens": "Exams",
+      "requirements": "Requirements",
+      "deliveryTime": "Turnaround time",
+      "map": "Map",
+      "message": "Message"
+    }
+  },
+  "home": {
+    "heroTitle": "Clinical precision with a modern experience",
+    "heroLead": "Welcome to a place where precision and commitment come together to care for your health. We offer reliable clinical tests, modern technology, and close attention that gives you the peace of mind you need.",
+    "kpis": [
+      {
+        "title": "Close attention",
+        "desc": "Human and professional approach"
+      },
+      {
+        "title": "Clear processes",
+        "desc": "Direct and useful information"
+      },
+      {
+        "title": "Reliable results",
+        "desc": "Quality control and traceability"
+      }
+    ],
+    "featuredTitle": "Featured services",
+    "featuredLead": "Areas: Hematology, Clinical Chemistry, Urinalysis, Coprology, Immunology and Serology, Hormones and Thyroid, Preventive Profiles. Each service includes exams, requirements, and clear turnaround times.",
+    "featured": [
+      {
+        "title": "Hematology",
+        "desc": "Testing with quality control and timely delivery."
+      },
+      {
+        "title": "Clinical Chemistry",
+        "desc": "Metabolic panels, lipid profile, and blood glucose."
+      },
+      {
+        "title": "Immunology and Serology",
+        "desc": "Tests focused on prevention and follow-up."
+      },
+      {
+        "title": "Preventive Profiles",
+        "desc": "Basic and executive check-ups, plus profile packages."
+      }
+    ],
+    "ctaEyebrow": "Ready to assist you",
+    "ctaTitle": "Send your inquiry in under one minute",
+    "ctaLead": "Write your information and your inquiry. We will reply shortly.",
+    "heroImageLabel": "Laboratorio Clínico Divino Niño Jesus",
+    "ctaImageLabel": "Inquiries"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A laboratory with a human and professional approach",
+    "lead": "We are a laboratory committed to quality, human care, and timely result delivery. Learn about our history, mission, and team.",
+    "historyTitle": "History",
+    "history": [
+      "Our laboratory was founded to offer the community reliable, accessible clinical testing performed responsibly. From the beginning, we understood that behind every sample there is a person waiting for clear and timely answers to take care of their health.",
+      "Over time, we have grown by incorporating modern technology and strengthening our professional team, always keeping the same commitment: delivering accurate results with respectful and human care.",
+      "Today we continue to evolve, adapting to advances in healthcare while preserving what defines us: trust, ethics, and closeness with our patients."
+    ],
+    "missionVisionTitle": "Mission and vision",
+    "missionTitle": "Mission",
+    "mission": "To provide clinical testing services with high quality standards, combining reliable technology and a committed professional team, offering each patient respectful, clear, and close attention.",
+    "visionTitle": "Vision",
+    "vision": "To be a laboratory recognized for the accuracy of our results and the human care we provide, becoming a trusted benchmark of excellence in health care.",
+    "valuesEyebrow": "Our values",
+    "valuesTitle": "Values",
+    "valuesLead": "The principles that guide our daily work.",
+    "values": [
+      {
+        "title": "Precision",
+        "desc": "We work with scientific accuracy to ensure reliable results in every test."
+      },
+      {
+        "title": "Confidentiality",
+        "desc": "We protect our patients' information with complete discretion and security."
+      },
+      {
+        "title": "Responsibility",
+        "desc": "We approach every study with ethical commitment and strict compliance with health standards."
+      },
+      {
+        "title": "Professionalism",
+        "desc": "We have highly trained staff who act with ethics, respect, and technical excellence."
+      },
+      {
+        "title": "Innovation",
+        "desc": "We incorporate modern technology and updated processes to offer more accurate and timely diagnoses."
+      },
+      {
+        "title": "Commitment to health",
+        "desc": "We actively contribute to community well-being through a humane and reliable service."
+      }
+    ],
+    "teamTitle": "Team",
+    "teamLead": "Professionals dedicated to analytical quality and patient care.",
+    "team": [
+      {
+        "name": "Technical direction",
+        "role": "Clinical supervision",
+        "bio": "Experience and supervision of results."
+      },
+      {
+        "name": "Laboratory area",
+        "role": "Analysis and control",
+        "bio": "Quality control and standardized processes."
+      },
+      {
+        "name": "Patient care",
+        "role": "Guidance",
+        "bio": "Support and requirements for each test."
+      },
+      {
+        "name": "Reception",
+        "role": "Appointments and follow-up",
+        "bio": "Appointment management and result delivery."
+      }
+    ],
+    "historyImageLabel": "Our history",
+    "heroImageLabel": "Laboratorio Divino Niño Jesus",
+    "missionImageLabel": "Mission and vision"
+  },
+  "servicesPage": {
+    "eyebrow": "Services",
+    "title": "Service and exam catalog",
+    "lead": "Areas: Hematology, Clinical Chemistry, Urinalysis, Coprology, Immunology and Serology, Hormones and Thyroid, Preventive Profiles. Search for an exam by name or explore each area.",
+    "heroImageLabel": "Laboratory services",
+    "searchPlaceholder": "Ex: blood count, glucose, hematology, lipid profile, HIV...",
+    "noResults": "No exams found. Try other words or without accents.",
+    "areasTitle": "Laboratory Areas"
+  },
+  "serviceDetail": {
+    "backToServices": "Back to Services",
+    "lead": "Requirements and turnaround time per exam. Ask the laboratory about special conditions."
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "We answer your most common questions",
+    "lead": "Find clear answers about preparation, turnaround times, and practical aspects of your lab tests. If you still have questions, you can always contact us in the contact section.",
+    "items": [
+      {
+        "question": "Can I get tests done without an appointment?",
+        "answer": "Yes, we accept walk-ins during business hours. However, scheduling in advance helps reduce waiting times."
+      },
+      {
+        "question": "Do you attend children and older adults?",
+        "answer": "Yes, we have trained staff for sample collection in patients of all ages."
+      },
+      {
+        "question": "What documents should I bring?",
+        "answer": "Usually you only need an ID and a medical order if your test requires it."
+      },
+      {
+        "question": "Do I need to fast before a test?",
+        "answer": "It depends on the type of analysis. Some tests, such as glucose or lipid profile, require 8 to 12 hours of fasting. We recommend checking specific instructions in advance."
+      },
+      {
+        "question": "Is a medical order required?",
+        "answer": "Some tests require medical indication, while others can be done by direct patient request."
+      },
+      {
+        "question": "How should I prepare for my test?",
+        "answer": "Instructions vary by study. Our team will provide the required recommendations when scheduling your appointment."
+      },
+      {
+        "question": "Can I take several tests on the same day?",
+        "answer": "Yes, in most cases multiple tests can be done in a single visit, as long as preparation instructions are met."
+      },
+      {
+        "question": "How long does it take to get results?",
+        "answer": "Most tests are delivered the same day or within 24 hours. Some specialized studies may require more time."
+      },
+      {
+        "question": "How can I receive my results?",
+        "answer": "You can receive them at our facilities or, if available, via digital delivery to your registered email."
+      },
+      {
+        "question": "Is my result information confidential?",
+        "answer": "Yes, we guarantee protection and confidentiality of all data and results according to security and professional ethics standards."
+      },
+      {
+        "question": "Do you accept medical insurance?",
+        "answer": "We work with different insurers. We recommend contacting us directly to confirm coverage and requirements."
+      },
+      {
+        "question": "How often should I get routine tests?",
+        "answer": "A general check-up is recommended at least once a year. However, frequency may vary according to age, medical history, and your doctor's recommendations."
+      },
+      {
+        "question": "How important is it to get tests even if I feel fine?",
+        "answer": "Many conditions may develop without visible symptoms. Clinical tests help detect changes early and prevent future complications."
+      },
+      {
+        "question": "At what age should I start preventive check-ups?",
+        "answer": "Check-ups can start in adolescence, but from age 30 onward closer preventive follow-up is recommended, especially with family history."
+      },
+      {
+        "question": "Which tests are part of a basic check-up?",
+        "answer": "They usually include complete blood count, glucose, lipid profile, and general urine test. The doctor may request additional studies based on each case."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk and schedule your inquiry",
+    "lead": "Phone, email, hours, and location. In the section below you can send your inquiry through the form.",
+    "phone": "Phone",
+    "email": "Email",
+    "schedule": "Schedule",
+    "scheduleValue": "Mon–Sat: 7:00–17:00",
+    "mapAria": "Laboratory location",
+    "popupTitle": "Clinical Laboratory",
+    "popupAddress": "Address: [Add address here]",
+    "howToGet": "How to get there",
+    "mapHelp": "Laboratory location and address reference.",
+    "messageEyebrow": "Message",
+    "messageLead": "Questions or comments? Use the inquiry form below or contact us by phone and email.",
+    "chooserAria": "Choose map application",
+    "chooserLead": "Which app would you like to use to open this location?"
+  },
+  "form": {
+    "eyebrow": "Inquiries",
+    "title": "Send your inquiry with your details",
+    "lead": "Name, phone, email and comments. We will reply shortly.",
+    "fullName": "Full name *",
+    "phone": "Phone *",
+    "email": "Email *",
+    "comments": "Comments (optional)",
+    "fullNamePlaceholder": "Your first and last name",
+    "phonePlaceholder": "Ex. +503 0000 0000",
+    "emailPlaceholder": "you@email.com",
+    "commentsPlaceholder": "Leave us a brief comment if you wish.",
+    "commentsHelp": "Do not include sensitive information.",
+    "fillRequired": "Complete required fields before sending.",
+    "readyToSend": "Ready to send.",
+    "errors": {
+      "fullName": "Enter your full name.",
+      "phone": "Enter a valid phone number.",
+      "email": "Enter a valid email.",
+      "requiredFields": "Please review required fields.",
+      "missingCredentials": "Missing EmailJS credentials. Configure VITE_EMAILJS_* variables before sending.",
+      "sendFailed": "Could not send the inquiry. Check your EmailJS configuration and try again."
+    },
+    "success": "Inquiry sent. We will contact you soon."
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "scheduleTitle": "Business hours",
+    "weekdays": "Monday to Friday: 6:30 a.m. to 4:00 p.m.",
+    "saturday": "Saturday: 6:30 a.m. to 12:00 p.m.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Your address here",
+    "replaceData": "Replace this data with real information.",
+    "copyright": "© {year} Laboratorio Clínico Divino Niño Jesus. All rights reserved."
+  },
+  "whatsapp": {
+    "defaultMessage": "Hi, I would like information about your services.",
+    "ariaLabel": "Contact via WhatsApp"
+  },
+  "catalog": {
+    "areas": {
+      "hematologia": "Hematology",
+      "quimica-clinica": "Clinical Chemistry",
+      "uroanalisis": "Urinalysis",
+      "coprologia": "Coprology",
+      "inmunologia-serologia": "Immunology and Serology",
+      "hormonas-tiroides": "Hormones and Thyroid",
+      "perfiles-preventivos": "Preventive Profiles"
+    },
+    "services": {
+      "hematologia": {
+        "title": "Hematology",
+        "desc": "Blood studies for monitoring and diagnosis.",
+        "exams": [
+          {
+            "nombre": "Complete Blood Count",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Blood Group and RH",
+            "requisitos": [
+              "No preparation required."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Prothrombin Time (PT / INR)",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          }
+        ]
+      },
+      "quimica-clinica": {
+        "title": "Clinical Chemistry",
+        "desc": "Metabolic panels, glucose, lipid profile, and kidney and liver function.",
+        "exams": [
+          {
+            "nombre": "Fasting Glucose",
+            "requisitos": [
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Lipid Profile",
+            "requisitos": [
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Creatinine and Urea",
+            "requisitos": [
+              "8 hours fasting recommended."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Liver Function Tests",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          }
+        ]
+      },
+      "uroanalisis": {
+        "title": "Urinalysis",
+        "desc": "Urine analysis and pregnancy test.",
+        "exams": [
+          {
+            "nombre": "General Urine Test",
+            "requisitos": [
+              "First morning urine, clean sample in sterile container."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Urine Pregnancy Test",
+            "requisitos": [
+              "First urine of the day is recommended."
+            ],
+            "tiempoEntrega": "Same day"
+          }
+        ]
+      },
+      "coprologia": {
+        "title": "Coprology",
+        "desc": "Stool tests: general, parasitological, and occult blood.",
+        "exams": [
+          {
+            "nombre": "General Stool Test",
+            "requisitos": [
+              "Recent sample in a clean container."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Parasitological Test",
+            "requisitos": [
+              "Serial sample may be required (3 days)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Fecal Occult Blood",
+            "requisitos": [
+              "Avoid red meat and certain medications 48 hours before."
+            ],
+            "tiempoEntrega": "24 hours"
+          }
+        ]
+      },
+      "inmunologia-serologia": {
+        "title": "Immunology and Serology",
+        "desc": "HIV, hepatitis, syphilis, and dengue.",
+        "exams": [
+          {
+            "nombre": "HIV",
+            "requisitos": [
+              "No fasting required."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Hepatitis B and C",
+            "requisitos": [
+              "No special preparation required."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "VDRL (Syphilis)",
+            "requisitos": [
+              "No fasting required."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Dengue",
+            "requisitos": [
+              "No special preparation required."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          }
+        ]
+      },
+      "hormonas-tiroides": {
+        "title": "Hormones and Thyroid",
+        "desc": "TSH, T3, T4, and insulin.",
+        "exams": [
+          {
+            "nombre": "TSH",
+            "requisitos": [
+              "No fasting required (preferably in the morning)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "T3 and T4",
+            "requisitos": [
+              "No special preparation required."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Insulin",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          }
+        ]
+      },
+      "perfiles-preventivos": {
+        "title": "Preventive Profiles",
+        "desc": "General check-up, diabetic profile, and thyroid profile.",
+        "exams": [
+          {
+            "nombre": "General Check-up",
+            "requisitos": [
+              "Includes: Blood count, glucose, lipid profile, and urine test.",
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Diabetic Profile",
+            "requisitos": [
+              "Includes: Glucose and HbA1c.",
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Thyroid Profile",
+            "requisitos": [
+              "Includes: TSH, T3, and T4.",
+              "No fasting required."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          }
+        ]
+      }
+    }
+  }
+}

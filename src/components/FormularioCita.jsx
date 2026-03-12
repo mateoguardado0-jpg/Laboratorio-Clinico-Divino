@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { HiOutlineUser, HiOutlinePhone, HiOutlineMail, HiOutlineDocumentText } from 'react-icons/hi'
+import { useI18n } from '../i18n/useI18n.jsx'
 
 function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim())
@@ -11,6 +12,7 @@ function normalizePhone(value) {
 }
 
 export default function FormularioCita() {
+  const { t } = useI18n()
   const [form, setForm] = useState({
     nombreCompleto: '',
     telefono: '',
@@ -38,11 +40,11 @@ export default function FormularioCita() {
 
   const errors = useMemo(() => {
     const e = {}
-    if (!form.nombreCompleto.trim()) e.nombreCompleto = 'Ingresa tu nombre completo.'
-    if (!normalizePhone(form.telefono)) e.telefono = 'Ingresa un teléfono válido.'
-    if (!isEmail(form.email)) e.email = 'Ingresa un correo válido.'
+    if (!form.nombreCompleto.trim()) e.nombreCompleto = t('form.errors.fullName')
+    if (!normalizePhone(form.telefono)) e.telefono = t('form.errors.phone')
+    if (!isEmail(form.email)) e.email = t('form.errors.email')
     return e
-  }, [form])
+  }, [form, t])
 
   const hasErrors = Object.keys(errors).length > 0
 
@@ -56,15 +58,14 @@ export default function FormularioCita() {
     setStatus({ type: 'idle', message: '' })
 
     if (hasErrors) {
-      setStatus({ type: 'error', message: 'Revisa los campos obligatorios.' })
+      setStatus({ type: 'error', message: t('form.errors.requiredFields') })
       return
     }
 
     if (!emailJs.serviceId || !emailJs.templateId || !emailJs.publicKey) {
       setStatus({
         type: 'error',
-        message:
-          'Faltan credenciales de EmailJS. Configura las variables VITE_EMAILJS_* antes de enviar.',
+        message: t('form.errors.missingCredentials'),
       })
       return
     }
@@ -83,7 +84,7 @@ export default function FormularioCita() {
         { publicKey: emailJs.publicKey },
       )
 
-      setStatus({ type: 'success', message: 'Consulta enviada. Te contactaremos pronto.' })
+      setStatus({ type: 'success', message: t('form.success') })
       setForm({
         nombreCompleto: '',
         telefono: '',
@@ -93,8 +94,7 @@ export default function FormularioCita() {
     } catch {
       setStatus({
         type: 'error',
-        message:
-          'No se pudo enviar la consulta. Verifica tu configuración de EmailJS e inténtalo de nuevo.',
+        message: t('form.errors.sendFailed'),
       })
     } finally {
       setSubmitting(false)
@@ -106,11 +106,9 @@ export default function FormularioCita() {
       <div className="cardPad">
         <div className="stackLg">
           <div className="stack">
-            <div className="eyebrow">Consultas</div>
-            <h2 className="h2">Envía tu consulta con tus datos</h2>
-            <p className="lead muted">
-              Nombre, teléfono, correo y comentarios. Te responderemos a la brevedad.
-            </p>
+            <div className="eyebrow">{t('form.eyebrow')}</div>
+            <h2 className="h2">{t('form.title')}</h2>
+            <p className="lead muted">{t('form.lead')}</p>
           </div>
 
           {status.type !== 'idle' ? (
@@ -129,13 +127,13 @@ export default function FormularioCita() {
               <label className="label">
                 <span className="flexIcon">
                   <HiOutlineUser className="iconSm" aria-hidden />
-                  Nombre completo *
+                  {t('form.fullName')}
                 </span>
                 <input
                   className="input"
                   value={form.nombreCompleto}
                   onChange={onChange('nombreCompleto')}
-                  placeholder="Tu nombre y apellido"
+                  placeholder={t('form.fullNamePlaceholder')}
                   required
                   aria-invalid={Boolean(errors.nombreCompleto)}
                 />
@@ -145,13 +143,13 @@ export default function FormularioCita() {
               <label className="label">
                 <span className="flexIcon">
                   <HiOutlinePhone className="iconSm" aria-hidden />
-                  Teléfono *
+                  {t('form.phone')}
                 </span>
                 <input
                   className="input"
                   value={form.telefono}
                   onChange={onChange('telefono')}
-                  placeholder="Ej. +503 0000 0000"
+                  placeholder={t('form.phonePlaceholder')}
                   required
                   aria-invalid={Boolean(errors.telefono)}
                 />
@@ -163,13 +161,13 @@ export default function FormularioCita() {
               <label className="label">
                 <span className="flexIcon">
                   <HiOutlineMail className="iconSm" aria-hidden />
-                  Correo electrónico *
+                  {t('form.email')}
                 </span>
                 <input
                   className="input"
                   value={form.email}
                   onChange={onChange('email')}
-                  placeholder="tu@correo.com"
+                  placeholder={t('form.emailPlaceholder')}
                   required
                   aria-invalid={Boolean(errors.email)}
                 />
@@ -180,15 +178,15 @@ export default function FormularioCita() {
             <label className="label">
               <span className="flexIcon">
                 <HiOutlineDocumentText className="iconSm" aria-hidden />
-                Comentarios (opcional)
+                {t('form.comments')}
               </span>
               <textarea
                 className="input textarea"
                 value={form.comentarios}
                 onChange={onChange('comentarios')}
-                placeholder="Déjanos un comentario breve si lo deseas."
+                placeholder={t('form.commentsPlaceholder')}
               />
-              <span className="help">No incluyas información sensible.</span>
+              <span className="help">{t('form.commentsHelp')}</span>
             </label>
 
             <div className="btnRow">
@@ -198,7 +196,7 @@ export default function FormularioCita() {
                 disabled={submitting}
                 aria-disabled={submitting}
               >
-                {submitting ? 'Enviando…' : 'Enviar consulta'}
+                {submitting ? t('common.buttons.sending') : t('common.buttons.sendInquiry')}
               </button>
               <button
                 type="button"
@@ -212,10 +210,10 @@ export default function FormularioCita() {
                   })
                 }
               >
-                Limpiar
+                {t('common.buttons.clear')}
               </button>
               <span className="help">
-                {hasErrors ? 'Completa los campos obligatorios para enviar.' : 'Listo para enviar.'}
+                {hasErrors ? t('form.fillRequired') : t('form.readyToSend')}
               </span>
             </div>
           </form>

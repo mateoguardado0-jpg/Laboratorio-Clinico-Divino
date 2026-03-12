@@ -1,71 +1,44 @@
 import { Link } from 'react-router-dom'
 import { HiOutlineUserGroup, HiOutlineClipboardList, HiOutlineShieldCheck } from 'react-icons/hi'
-
-const featured = [
-  {
-    title: 'Hematología',
-    desc: 'Análisis con control de calidad y entrega oportuna.',
-  },
-  {
-    title: 'Química Clínica',
-    desc: 'Paneles metabólicos, perfil lipídico y glicemia.',
-  },
-  {
-    title: 'Inmunología y Serología',
-    desc: 'Pruebas orientadas a prevención y seguimiento.',
-  },
-  {
-    title: 'Perfiles Preventivos',
-    desc: 'Check-up básico, ejecutivo y perfiles por género.',
-  },
-]
+import { useI18n } from '../i18n/useI18n.jsx'
 
 export default function Home() {
+  const { t, get } = useI18n()
+  const kpis = get('home.kpis', [])
+  const featured = get('home.featured', [])
+
   return (
     <main className="page">
       <section className="section">
         <div className="container">
           <div className="grid2">
             <div className="stackLg heroContent">
-              <h1 className="h1">Precisión clínica con una experiencia moderna</h1>
-              <p className="lead">
-                Bienvenido a un espacio donde la precisión y el compromiso se unen para cuidar tu salud.
-                Ofrecemos análisis clínicos confiables, tecnología moderna y una atención cercana que
-                te brinda la tranquilidad que necesitas.
-              </p>
+              <h1 className="h1">{t('home.heroTitle')}</h1>
+              <p className="lead">{t('home.heroLead')}</p>
               <div className="kpiRow">
-                <div className="kpi">
-                  <span className="flexIcon">
-                    <HiOutlineUserGroup className="iconMd" aria-hidden />
-                    <strong>Atención cercana</strong>
-                  </span>
-                  <span>Enfoque humano y profesional</span>
-                </div>
-                <div className="kpi">
-                  <span className="flexIcon">
-                    <HiOutlineClipboardList className="iconMd" aria-hidden />
-                    <strong>Procesos claros</strong>
-                  </span>
-                  <span>Información directa y útil</span>
-                </div>
-                <div className="kpi">
-                  <span className="flexIcon">
-                    <HiOutlineShieldCheck className="iconMd" aria-hidden />
-                    <strong>Resultados confiables</strong>
-                  </span>
-                  <span>Control de calidad y trazabilidad</span>
-                </div>
+                {kpis.map((item, index) => {
+                  const Icon = [HiOutlineUserGroup, HiOutlineClipboardList, HiOutlineShieldCheck][index] || HiOutlineUserGroup
+                  return (
+                    <div className="kpi" key={item.title}>
+                      <span className="flexIcon">
+                        <Icon className="iconMd" aria-hidden />
+                        <strong>{item.title}</strong>
+                      </span>
+                      <span>{item.desc}</span>
+                    </div>
+                  )
+                })}
               </div>
               <div className="btnRow">
                 <Link to="/contacto#consultas" className="btn btnPrimary">
-                  Consultas
+                  {t('common.buttons.consultas')}
                 </Link>
                 <Link to="/servicios" className="btn btnSoft">
-                  Ver servicios
+                  {t('common.buttons.viewServices')}
                 </Link>
               </div>
             </div>
-            <div className="imgPlaceholder imgHero heroImage" aria-label="Laboratorio Clínico Divino Niño Jesus" />
+            <div className="imgPlaceholder imgHero heroImage" aria-label={t('home.heroImageLabel')} />
           </div>
         </div>
       </section>
@@ -73,11 +46,8 @@ export default function Home() {
       <section className="sectionTight">
         <div className="container">
           <div className="stackLg">
-            <h2 className="h2">Servicios destacados</h2>
-            <p className="lead muted">
-              Áreas: Hematología, Química Clínica, Uroanálisis, Coprología, Inmunología y Serología,
-              Hormonas y Tiroides, Perfiles Preventivos. Cada servicio con exámenes, requisitos y tiempos de entrega claros.
-            </p>
+            <h2 className="h2">{t('home.featuredTitle')}</h2>
+            <p className="lead muted">{t('home.featuredLead')}</p>
 
             <div className="gridCards">
               {featured.map((s) => (
@@ -90,10 +60,10 @@ export default function Home() {
                     </div>
                     <div className="btnRow">
                       <Link to="/servicios" className="btn btnSoft">
-                        Ver más
+                        {t('common.buttons.viewMore')}
                       </Link>
                       <Link to="/contacto#consultas" className="btn btnPrimary">
-                        Consultas
+                        {t('common.buttons.consultas')}
                       </Link>
                     </div>
                   </div>
@@ -109,19 +79,17 @@ export default function Home() {
           <div className="ctaSection card">
             <div className="cardPad">
               <div className="grid2Reverse">
-                <div className="imgPlaceholder imgWide" aria-label="Consultas" />
+                <div className="imgPlaceholder imgWide" aria-label={t('home.ctaImageLabel')} />
                 <div className="stackLg">
-                  <div className="eyebrow">Listo para atenderte</div>
-                  <h2 className="h2">Envía tu consulta en menos de un minuto</h2>
-                  <p className="lead">
-                    Escribe tus datos y tu consulta. Te responderemos a la brevedad.
-                  </p>
+                  <div className="eyebrow">{t('home.ctaEyebrow')}</div>
+                  <h2 className="h2">{t('home.ctaTitle')}</h2>
+                  <p className="lead">{t('home.ctaLead')}</p>
                   <div className="btnRow">
                     <Link to="/contacto#consultas" className="btn btnPrimary">
-                      Consultas
+                      {t('common.buttons.consultas')}
                     </Link>
                     <Link to="/contacto" className="btn">
-                      Contacto
+                      {t('common.buttons.contact')}
                     </Link>
                   </div>
                 </div>

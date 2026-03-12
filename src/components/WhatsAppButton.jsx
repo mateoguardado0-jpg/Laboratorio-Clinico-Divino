@@ -1,16 +1,18 @@
-const WHATSAPP_NUMBER = '50370864066'
-const DEFAULT_MESSAGE = 'Hola, quiero información sobre sus servicios.'
+import { useI18n } from '../i18n/useI18n.jsx'
 
-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`
+const WHATSAPP_NUMBER = '50370864066'
 
 export default function WhatsAppButton() {
+  const { t } = useI18n()
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('whatsapp.defaultMessage'))}`
+
   return (
     <a
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsappFloat"
-      aria-label="Contactar por WhatsApp"
+      aria-label={t('whatsapp.ariaLabel')}
     >
       <svg
         viewBox="0 0 24 24"

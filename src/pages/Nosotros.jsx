@@ -1,60 +1,23 @@
 import { HiOutlineHeart, HiOutlineBadgeCheck, HiOutlineFlag, HiOutlineHand } from 'react-icons/hi'
-
-const valores = [
-  {
-    titulo: 'Precisión',
-    desc: 'Trabajamos con exactitud científica para garantizar resultados confiables en cada análisis.',
-    icon: HiOutlineBadgeCheck,
-  },
-  {
-    titulo: 'Confidencialidad',
-    desc: 'Protegemos la información de nuestros pacientes con absoluta discreción y seguridad.',
-    icon: HiOutlineHand,
-  },
-  {
-    titulo: 'Responsabilidad',
-    desc: 'Asumimos cada estudio con compromiso ético y cumplimiento riguroso de los estándares sanitarios.',
-    icon: HiOutlineFlag,
-  },
-  {
-    titulo: 'Profesionalismo',
-    desc: 'Contamos con personal altamente capacitado que actúa con ética, respeto y excelencia técnica.',
-    icon: HiOutlineHeart,
-  },
-  {
-    titulo: 'Innovación',
-    desc: 'Incorporamos tecnología moderna y procesos actualizados para ofrecer diagnósticos más precisos y oportunos.',
-    icon: HiOutlineBadgeCheck,
-  },
-  {
-    titulo: 'Compromiso con la salud',
-    desc: 'Contribuimos activamente al bienestar de la comunidad a través de un servicio humano y confiable.',
-    icon: HiOutlineHeart,
-  },
-]
-
-const team = [
-  { name: 'Dirección técnica', role: 'Supervisión clínica', bio: 'Experiencia y supervisión de resultados.' },
-  { name: 'Área de laboratorio', role: 'Análisis y control', bio: 'Control de calidad y procesos estandarizados.' },
-  { name: 'Atención al paciente', role: 'Orientación', bio: 'Acompañamiento y requisitos de cada estudio.' },
-  { name: 'Recepción', role: 'Citas y seguimiento', bio: 'Gestión de citas y entrega de resultados.' },
-]
+import { useI18n } from '../i18n/useI18n.jsx'
 
 export default function Nosotros() {
+  const { t, get } = useI18n()
+  const valores = get('about.values', [])
+  const team = get('about.team', [])
+  const historia = get('about.history', [])
+
   return (
     <main className="page">
       <section className="section">
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
-              <div className="eyebrow">Nosotros</div>
-              <h1 className="h1">Un laboratorio con enfoque humano y profesional</h1>
-              <p className="lead">
-                Somos un laboratorio comprometido con la calidad, el trato humano y la entrega
-                oportuna de resultados. Conoce nuestra historia, misión y equipo.
-              </p>
+              <div className="eyebrow">{t('about.eyebrow')}</div>
+              <h1 className="h1">{t('about.title')}</h1>
+              <p className="lead">{t('about.lead')}</p>
             </div>
-            <div className="imgPlaceholder imgHero" aria-label="Laboratorio Divino Niño Jesus" />
+            <div className="imgPlaceholder imgHero" aria-label={t('about.heroImageLabel')} />
           </div>
         </div>
       </section>
@@ -62,31 +25,20 @@ export default function Nosotros() {
       <section className="sectionTight">
         <div className="container">
           <div className="grid2Reverse">
-            <div className="imgPlaceholder imgWide" aria-label="Nuestra historia" />
+            <div className="imgPlaceholder imgWide" aria-label={t('about.historyImageLabel')} />
             <div className="stackLg">
-              <h2 className="h2">Historia</h2>
-              <p className="lead">
-                Nuestro laboratorio nació con el propósito de ofrecer a la comunidad un servicio de
-                análisis clínicos confiable, accesible y realizado con responsabilidad. Desde
-                nuestros inicios, entendimos que detrás de cada muestra existe una persona que
-                espera respuestas claras y oportunas para cuidar su salud.
-              </p>
-              <p className="lead">
-                Con el paso del tiempo, hemos crecido incorporando tecnología moderna y
-                fortaleciendo nuestro equipo profesional, manteniendo siempre el mismo
-                compromiso: brindar resultados precisos con un trato humano y respetuoso.
-              </p>
-              <p className="lead">
-                Hoy continuamos evolucionando, adaptándonos a los avances del sector salud, pero
-                conservando la esencia que nos define: confianza, ética y cercanía con nuestros
-                pacientes.
-              </p>
+              <h2 className="h2">{t('about.historyTitle')}</h2>
+              {historia.map((p) => (
+                <p key={p} className="lead">
+                  {p}
+                </p>
+              ))}
               <div className="btnRow">
                 <a className="btn btnSoft" href="/contacto#consultas">
-                  Consultas
+                  {t('common.buttons.consultas')}
                 </a>
                 <a className="btn" href="/servicios">
-                  Ver servicios
+                  {t('common.buttons.viewServices')}
                 </a>
               </div>
             </div>
@@ -98,27 +50,19 @@ export default function Nosotros() {
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
-              <h2 className="h2">Misión y visión</h2>
+              <h2 className="h2">{t('about.missionVisionTitle')}</h2>
               <div className="stack">
                 <div className="card cardPad">
-                  <div className="eyebrow">Misión</div>
-                  <p className="lead">
-                    Ofrecer servicios de análisis clínicos con altos estándares de calidad, combinando
-                    tecnología confiable y un equipo profesional comprometido, brindando a cada
-                    paciente una atención respetuosa, clara y cercana.
-                  </p>
+                  <div className="eyebrow">{t('about.missionTitle')}</div>
+                  <p className="lead">{t('about.mission')}</p>
                 </div>
                 <div className="card cardPad">
-                  <div className="eyebrow">Visión</div>
-                  <p className="lead">
-                    Ser un laboratorio reconocido por la precisión de nuestros resultados y por el
-                    trato humano que ofrecemos, convirtiéndonos en un referente de confianza y
-                    excelencia en el cuidado de la salud.
-                  </p>
+                  <div className="eyebrow">{t('about.visionTitle')}</div>
+                  <p className="lead">{t('about.vision')}</p>
                 </div>
               </div>
             </div>
-            <div className="imgPlaceholder imgWide" aria-label="Misión y visión" />
+            <div className="imgPlaceholder imgWide" aria-label={t('about.missionImageLabel')} />
           </div>
         </div>
       </section>
@@ -126,20 +70,19 @@ export default function Nosotros() {
       <section className="sectionTight">
         <div className="container">
           <div className="stackLg">
-            <div className="eyebrow">Nuestros valores</div>
-            <h2 className="h2">Valores</h2>
-            <p className="lead muted">
-              Los principios que guían nuestro trabajo día a día.
-            </p>
+            <div className="eyebrow">{t('about.valuesEyebrow')}</div>
+            <h2 className="h2">{t('about.valuesTitle')}</h2>
+            <p className="lead muted">{t('about.valuesLead')}</p>
             <div className="gridCards">
-              {valores.map((v) => {
-                const Icon = v.icon
+              {valores.map((v, index) => {
+                const icons = [HiOutlineBadgeCheck, HiOutlineHand, HiOutlineFlag, HiOutlineHeart, HiOutlineBadgeCheck, HiOutlineHeart]
+                const Icon = icons[index] || HiOutlineBadgeCheck
                 return (
-                  <article key={v.titulo} className="card cardHover">
+                  <article key={v.title} className="card cardHover">
                     <div className="cardPad stack">
                       <span className="flexIcon">
                         <Icon className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-                        <div className="eyebrow" style={{ marginBottom: 0 }}>{v.titulo}</div>
+                        <div className="eyebrow" style={{ marginBottom: 0 }}>{v.title}</div>
                       </span>
                       <p className="lead muted">{v.desc}</p>
                     </div>
@@ -154,10 +97,8 @@ export default function Nosotros() {
       <section className="sectionTight">
         <div className="container">
           <div className="stackLg">
-            <h2 className="h2">Equipo</h2>
-            <p className="lead muted">
-              Profesionales dedicados a la calidad analítica y a la atención al paciente.
-            </p>
+            <h2 className="h2">{t('about.teamTitle')}</h2>
+            <p className="lead muted">{t('about.teamLead')}</p>
 
             <div className="gridTeam">
               {team.map((m) => (

@@ -1,9 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { HiOutlineBeaker, HiOutlineSearch } from 'react-icons/hi'
-import { servicios, areasLaboratorio } from '../data/servicios.js'
+import { getCatalogData } from '../data/servicios.js'
+import { useI18n } from '../i18n/useI18n.jsx'
 
-function serviciosPorArea() {
+function serviciosPorArea(servicios, areasLaboratorio) {
   const porArea = new Map()
   areasLaboratorio.forEach((a) => porArea.set(a.id, { area: a, servicios: [] }))
   servicios.forEach((s) => {
@@ -23,7 +24,7 @@ function normalizar(texto) {
 }
 
 /** Índice ampliado: examen + servicio + área + texto de requisitos (para "incluye", etc.). */
-function buildExamIndex() {
+function buildExamIndex(servicios, areasLaboratorio) {
   const list = []
   servicios.forEach((s) => {
     const area = areasLaboratorio.find((a) => a.id === s.areaId)
@@ -41,8 +42,6 @@ function buildExamIndex() {
   })
   return list
 }
-
-const examIndex = buildExamIndex()
 
 /** Puntuación de relevancia: mayor = mejor coincidencia. */
 function scoreMatch(item, qNorm, palabras) {
@@ -74,7 +73,7 @@ function scoreMatch(item, qNorm, palabras) {
   return score
 }
 
-function buscar(query) {
+function buscar(query, examIndex) {
   const q = query.trim()
   if (q.length < 1) return []
   const qNorm = normalizar(q)
@@ -95,18 +94,18 @@ function buscar(query) {
 
 export default function Servicios() {
   const navigate = useNavigate()
+  const { t } = useI18n()
+  const { servicios, areasLaboratorio } = useMemo(() => getCatalogData(t), [t])
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
   const [highlightedIndex, setHighlightedIndex] = useState(0)
   const wrapperRef = useRef(null)
   const listRef = useRef(null)
 
-  const matches = useMemo(() => buscar(query), [query])
+  const examIndex = useMemo(() => buildExamIndex(servicios, areasLaboratorio), [servicios, areasLaboratorio])
+  const groupedServices = useMemo(() => serviciosPorArea(servicios, areasLaboratorio), [servicios, areasLaboratorio])
+  const matches = useMemo(() => buscar(query, examIndex), [query, examIndex])
   const displayed = matches.slice(0, 12)
-
-  useEffect(() => {
-    setHighlightedIndex(0)
-  }, [query, matches.length])
 
   useEffect(() => {
     if (!open || !listRef.current || highlightedIndex < 0) return
@@ -162,15 +161,12 @@ export default function Servicios() {
             <div className="stackLg">
               <span className="flexIcon" style={{ marginBottom: '8px' }}>
                 <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-                <div className="eyebrow" style={{ marginBottom: 0 }}>Servicios</div>
+                <div className="eyebrow" style={{ marginBottom: 0 }}>{t('servicesPage.eyebrow')}</div>
               </span>
-              <h1 className="h1">Catálogo de servicios y exámenes</h1>
-              <p className="lead">
-                Áreas: Hematología, Química Clínica, Uroanálisis, Coprología, Inmunología y Serología,
-                Hormonas y Tiroides, Perfiles Preventivos. Busca un examen por nombre o explora cada área.
-              </p>
+              <h1 className="h1">{t('servicesPage.title')}</h1>
+              <p className="lead">{t('servicesPage.lead')}</p>
             </div>
-            <div className="imgPlaceholder imgHero" aria-label="Servicios del laboratorio" />
+            <div className="imgPlaceholder imgHero" aria-label={t('servicesPage.heroImageLabel')} />
           </div>
         </div>
       </section>
@@ -181,17 +177,18 @@ export default function Servicios() {
             <label className="label" htmlFor="buscar-examen">
               <span className="flexIcon">
                 <HiOutlineSearch className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-                Buscar examen
+                {t('common.buttons.search')}
               </span>
             </label>
             <input
               id="buscar-examen"
               type="search"
               className="input"
-              placeholder="Ej: hemograma, glucosa, hematología, perfil lipídico, VIH..."
+              placeholder={t('servicesPage.searchPlaceholder')}
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value)
+                setHighlightedIndex(0)
                 setOpen(true)
               }}
               onFocus={() => query.trim().length >= 1 && setOpen(true)}
@@ -251,15 +248,15 @@ export default function Servicios() {
               </ul>
             ) : null}
             {query.trim().length >= 1 && matches.length === 0 ? (
-              <p className="help" style={{ marginTop: '4px' }}>No se encontraron exámenes. Prueba con otras palabras o sin acentos (ej. hematologia, perfil lipidico).</p>
+              <p className="help" style={{ marginTop: '4px' }}>{t('servicesPage.noResults')}</p>
             ) : null}
           </div>
 
           <h2 className="h2" style={{ marginBottom: 'var(--space-4)' }}>
-            Áreas del Laboratorio
+            {t('servicesPage.areasTitle')}
           </h2>
           <div className="stackLg" style={{ gap: 'var(--space-8)' }}>
-            {serviciosPorArea().map(({ area, servicios: list }) => (
+            {groupedServices.map(({ area, servicios: list }) => (
               <section key={area.id} className="stackLg" aria-labelledby={`area-${area.id}`}>
                 <h3 id={`area-${area.id}`} className="h3" style={{ margin: 0 }}>
                   {area.label}
@@ -274,7 +271,7 @@ export default function Servicios() {
                           <p className="lead muted">{s.desc}</p>
                         </div>
                         <Link to={`/servicios/${s.slug}`} className="btn btnSoft">
-                          Consultar
+                          {t('common.buttons.check')}
                         </Link>
                       </div>
                     </article>

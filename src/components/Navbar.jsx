@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useEffect, useMemo, useState } from 'react'
 import logo from '../../imagenlogo.png'
+import { useI18n } from '../i18n/useI18n.jsx'
 
 function MenuIcon({ open }) {
   return (
@@ -32,18 +33,19 @@ function makeLinkClass({ isActive }) {
 
 export default function Navbar() {
   const navigate = useNavigate()
+  const { lang, setLang, t } = useI18n()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
   const links = useMemo(
     () => [
-      { to: '/', label: 'Inicio' },
-      { to: '/nosotros', label: 'Nosotros' },
-      { to: '/servicios', label: 'Servicios' },
-      { to: '/preguntas', label: 'Preguntas' },
-      { to: '/contacto', label: 'Contacto' },
+      { to: '/', label: t('nav.home') },
+      { to: '/nosotros', label: t('nav.about') },
+      { to: '/servicios', label: t('nav.services') },
+      { to: '/preguntas', label: t('nav.faq') },
+      { to: '/contacto', label: t('nav.contact') },
     ],
-    [],
+    [t],
   )
 
   useEffect(() => {
@@ -61,13 +63,13 @@ export default function Navbar() {
   return (
     <header className={`nav ${scrolled ? 'navScrolled' : ''}`.trim()}>
       <div className="container navInner">
-        <NavLink to="/" className="brand" aria-label="Ir al inicio" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Logo Laboratorio Clínico Divino Niño Jesus" className="brandLogo" />
-          <span className="brandName">Laboratorio Clínico Divino Niño Jesus</span>
-          <span className="brandTag">Atención profesional y resultados confiables</span>
+        <NavLink to="/" className="brand" aria-label={t('nav.goHome')} onClick={() => setOpen(false)}>
+          <img src={logo} alt={t('brand.name')} className="brandLogo" />
+          <span className="brandName">{t('brand.name')}</span>
+          <span className="brandTag">{t('brand.tagline')}</span>
         </NavLink>
 
-        <nav className="navLinks" aria-label="Navegación principal">
+        <nav className="navLinks" aria-label={t('nav.mainNav')}>
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} className={makeLinkClass} end={l.to === '/'}>
               {l.label}
@@ -76,10 +78,26 @@ export default function Navbar() {
         </nav>
 
         <div className="navActions">
+          <div className="langSwitch" role="group" aria-label={t('nav.languageLabel')}>
+            <button
+              type="button"
+              className={`langOption ${lang === 'es' ? 'langOptionActive' : ''}`.trim()}
+              onClick={() => setLang('es')}
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              className={`langOption ${lang === 'en' ? 'langOptionActive' : ''}`.trim()}
+              onClick={() => setLang('en')}
+            >
+              EN
+            </button>
+          </div>
           <button
             type="button"
             className="menuBtn"
-            aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+            aria-label={open ? t('nav.closeMenu') : t('nav.openMenu')}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -90,7 +108,24 @@ export default function Navbar() {
 
       {open ? (
         <div className="container">
-          <div className="mobilePanel" role="dialog" aria-label="Menú móvil">
+          <div className="mobilePanel" role="dialog" aria-label={t('nav.mobileMenu')}>
+            <div className="langSwitch" role="group" aria-label={t('nav.languageLabel')}>
+              <button
+                type="button"
+                className={`langOption ${lang === 'es' ? 'langOptionActive' : ''}`.trim()}
+                onClick={() => setLang('es')}
+              >
+                ES
+              </button>
+              <button
+                type="button"
+                className={`langOption ${lang === 'en' ? 'langOptionActive' : ''}`.trim()}
+                onClick={() => setLang('en')}
+              >
+                EN
+              </button>
+            </div>
+            <div className="dividerSoft" />
             {links.map((l) => (
               <NavLink
                 key={`m-${l.to}`}
@@ -104,7 +139,7 @@ export default function Navbar() {
             ))}
             <div className="dividerSoft" />
             <button type="button" className="btn btnPrimary" onClick={goToConsultas}>
-              Consultas
+              {t('nav.consultas')}
             </button>
           </div>
         </div>

@@ -1,71 +1,73 @@
 import { NavLink } from 'react-router-dom'
 import { HiOutlinePhone, HiOutlineMail, HiOutlineLocationMarker, HiOutlineClock } from 'react-icons/hi'
+import { useI18n } from '../i18n/useI18n.jsx'
 
 export default function Footer() {
+  const { t } = useI18n()
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footerGrid">
           <div className="stack">
             <div className="brand">
-              <span className="brandName">Laboratorio Clínico Divino Niño Jesus</span>
-              <span className="brandTag">Cuidado clínico con calidez humana</span>
+              <span className="brandName">{t('brand.name')}</span>
+              <span className="brandTag">{t('brand.footerTagline')}</span>
             </div>
             <div className="flexIcon footerSchedule">
               <HiOutlineClock className="iconSm" aria-hidden />
               <div>
-                <strong>Horario de atención</strong>
+                <strong>{t('footer.scheduleTitle')}</strong>
                 <br />
-                <span className="muted">Lunes a viernes: 6:30&nbsp;a.m. a 4:00&nbsp;p.m.</span>
+                <span className="muted">{t('footer.weekdays')}</span>
                 <br />
-                <span className="muted">Sábado: 6:30&nbsp;a.m. a 12:00&nbsp;m.d.</span>
+                <span className="muted">{t('footer.saturday')}</span>
               </div>
             </div>
           </div>
 
           <div className="stack">
-            <div className="eyebrow">Navegación</div>
+            <div className="eyebrow">{t('footer.navigation')}</div>
             <div className="stack">
               <NavLink className="navLink" to="/">
-                Inicio
+                {t('nav.home')}
               </NavLink>
               <NavLink className="navLink" to="/nosotros">
-                Nosotros
+                {t('nav.about')}
               </NavLink>
               <NavLink className="navLink" to="/servicios">
-                Servicios
+                {t('nav.services')}
               </NavLink>
               <NavLink className="navLink" to="/contacto">
-                Contacto
+                {t('nav.contact')}
               </NavLink>
             </div>
           </div>
 
           <div className="stack">
-            <div className="eyebrow">Contacto</div>
+            <div className="eyebrow">{t('footer.contact')}</div>
             <div className="stack" style={{ gap: '10px' }}>
               <div className="flexIcon">
                 <HiOutlinePhone className="iconSm" aria-hidden />
-                <div><strong>Teléfono</strong><br /><span className="muted">+503 0000 0000</span></div>
+                <div><strong>{t('footer.phone')}</strong><br /><span className="muted">+503 0000 0000</span></div>
               </div>
               <div className="flexIcon">
                 <HiOutlineMail className="iconSm" aria-hidden />
-                <div><strong>Correo</strong><br /><span className="muted">citas@tulaboratorio.com</span></div>
+                <div><strong>{t('footer.email')}</strong><br /><span className="muted">citas@tulaboratorio.com</span></div>
               </div>
               <div className="flexIcon">
                 <HiOutlineLocationMarker className="iconSm" aria-hidden />
-                <div><strong>Dirección</strong><br /><span className="muted">Tu dirección aquí</span></div>
+                <div><strong>{t('footer.address')}</strong><br /><span className="muted">{t('footer.addressValue')}</span></div>
               </div>
             </div>
             <p className="help" style={{ marginTop: '4px' }}>
-              Reemplaza estos datos por los reales.
+              {t('footer.replaceData')}
             </p>
           </div>
         </div>
 
         <div className="footerSmall">
-          © {new Date().getFullYear()} Laboratorio Clínico Divino Niño Jesus. Todos los derechos
-          reservados.
+          {t('footer.copyright', { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>
