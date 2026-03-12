@@ -6,6 +6,7 @@ import { useI18n } from '../i18n/useI18n.jsx'
 
 const LAB_POSITION = { lat: 14.106451, lng: -89.069418 }
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? ''
+const GOOGLE_MAPS_PLACE_URL = 'https://maps.app.goo.gl/GwLbPJVuAJdaemcD8'
 
 export default function Contacto() {
   const { t } = useI18n()
@@ -19,7 +20,7 @@ export default function Contacto() {
   const mapUrls = useMemo(() => {
     const { lat, lng } = LAB_POSITION
     return {
-      google: `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`,
+      google: GOOGLE_MAPS_PLACE_URL,
       waze: `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`,
     }
   }, [])
