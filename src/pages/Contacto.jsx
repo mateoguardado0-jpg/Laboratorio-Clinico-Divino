@@ -4,7 +4,7 @@ import { HiOutlinePhone, HiOutlineMail, HiOutlineClock, HiOutlineMap } from 'rea
 import { GoogleMap, InfoWindowF, MarkerF, useJsApiLoader } from '@react-google-maps/api'
 import { useI18n } from '../i18n/useI18n.jsx'
 
-const LAB_POSITION = { lat: 14.092553044052153, lng: -89.10661168928581 }
+const LAB_POSITION = { lat: 14.106451, lng: -89.069418 }
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? ''
 
 export default function Contacto() {
