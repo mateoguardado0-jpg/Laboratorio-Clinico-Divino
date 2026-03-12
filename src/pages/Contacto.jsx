@@ -1,32 +1,23 @@
 import { useMemo, useState } from 'react'
 import FormularioCita from '../components/FormularioCita.jsx'
 import { HiOutlinePhone, HiOutlineMail, HiOutlineClock, HiOutlineMap } from 'react-icons/hi'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
-import markerIcon from 'leaflet/dist/images/marker-icon.png'
-import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+import { GoogleMap, InfoWindowF, MarkerF, useJsApiLoader } from '@react-google-maps/api'
 import { useI18n } from '../i18n/useI18n.jsx'
 
-const LAB_POSITION = [14.092553044052153, -89.10661168928581]
-
-const defaultMarker = L.icon({
-  iconRetinaUrl: markerIcon2x,
-  iconUrl: markerIcon,
-  shadowUrl: markerShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-})
+const LAB_POSITION = { lat: 14.092553044052153, lng: -89.10661168928581 }
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? ''
 
 export default function Contacto() {
   const { t } = useI18n()
   const [showMapPlatformChooser, setShowMapPlatformChooser] = useState(false)
+  const [isInfoOpen, setIsInfoOpen] = useState(true)
+  const { isLoaded, loadError } = useJsApiLoader({
+    id: 'contact-google-map',
+    googleMapsApiKey: GOOGLE_MAPS_API_KEY,
+  })
 
   const mapUrls = useMemo(() => {
-    const [lat, lng] = LAB_POSITION
+    const { lat, lng } = LAB_POSITION
     return {
       google: `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`,
       waze: `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`,
@@ -97,32 +88,49 @@ export default function Contacto() {
                     <div className="eyebrow" style={{ marginBottom: 0 }}>{t('common.labels.map')}</div>
                   </div>
                   <div className="mapWrap" aria-label={t('contact.mapAria')}>
-                    <MapContainer
-                      center={LAB_POSITION}
-                      zoom={16}
-                      scrollWheelZoom
-                      className="leafletMap"
-                    >
-                      <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                      />
-                      <Marker position={LAB_POSITION} icon={defaultMarker}>
-                        <Popup>
-                          <strong>{t('contact.popupTitle')}</strong>
-                          <br />
-                          {t('contact.popupAddress')}
-                          <br />
-                          <button
-                            type="button"
-                            className="btn btnSoft mapActionBtn"
-                            onClick={handleOpenDirections}
-                          >
-                            {t('contact.howToGet')}
-                          </button>
-                        </Popup>
-                      </Marker>
-                    </MapContainer>
+                    {loadError ? (
+                      <div className="mapFallback">
+                        <p className="lead">{t('contact.mapHelp')}</p>
+                        <button type="button" className="btn btnSoft" onClick={handleOpenDirections}>
+                          {t('contact.howToGet')}
+                        </button>
+                      </div>
+                    ) : isLoaded ? (
+                      <GoogleMap
+                        mapContainerClassName="leafletMap"
+                        center={LAB_POSITION}
+                        zoom={16}
+                        options={{
+                          zoomControl: true,
+                          mapTypeControl: false,
+                          streetViewControl: false,
+                          fullscreenControl: true,
+                        }}
+                      >
+                        <MarkerF position={LAB_POSITION} onClick={() => setIsInfoOpen(true)} />
+                        {isInfoOpen && (
+                          <InfoWindowF position={LAB_POSITION} onCloseClick={() => setIsInfoOpen(false)}>
+                            <div>
+                              <strong>{t('contact.popupTitle')}</strong>
+                              <br />
+                              {t('contact.popupAddress')}
+                              <br />
+                              <button
+                                type="button"
+                                className="btn btnSoft mapActionBtn"
+                                onClick={handleOpenDirections}
+                              >
+                                {t('contact.howToGet')}
+                              </button>
+                            </div>
+                          </InfoWindowF>
+                        )}
+                      </GoogleMap>
+                    ) : (
+                      <div className="mapFallback">
+                        <p className="lead">{t('common.buttons.sending')}</p>
+                      </div>
+                    )}
                   </div>
                   <p className="help">{t('contact.mapHelp')}</p>
                 </div>

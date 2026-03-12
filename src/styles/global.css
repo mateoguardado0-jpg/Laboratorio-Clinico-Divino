@@ -444,19 +444,29 @@ select {
   height: 350px;
 }
 
+.mapFallback {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--bg-subtle);
+}
+
 @media (min-width: 900px) {
   .leafletMap {
     height: 390px;
   }
+
+  .mapFallback {
+    min-height: 390px;
+  }
 }
 
 .mapWrap .leaflet-control-zoom a {
-  color: var(--text-primary);
-}
-
-.mapWrap .leaflet-popup-content-wrapper,
-.mapWrap .leaflet-popup-tip {
-  background: var(--bg-elevated);
   color: var(--text-primary);
 }
 
