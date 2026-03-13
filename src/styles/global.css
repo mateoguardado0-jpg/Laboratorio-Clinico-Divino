@@ -370,8 +370,8 @@ select {
 .card {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  box-shadow: none;
   overflow: hidden;
   transition: box-shadow var(--duration) var(--ease-out), border-color var(--duration) var(--ease-out),
     transform var(--duration) var(--ease-out);
@@ -383,7 +383,8 @@ select {
 }
 
 .cardHover:hover {
-  box-shadow: var(--shadow-hover);
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.18);
   border-color: rgba(74, 144, 226, 0.2);
   transform: scale(1.01);
 }
@@ -525,13 +526,14 @@ select {
   padding: var(--space-5);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  box-shadow: var(--shadow-xs);
+  background: transparent;
+  box-shadow: none;
   transition: box-shadow var(--duration) var(--ease-out), transform var(--duration) var(--ease-out);
 }
 
 .kpi:hover {
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
 }
 

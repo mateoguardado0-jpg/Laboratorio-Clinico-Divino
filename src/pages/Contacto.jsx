@@ -52,7 +52,6 @@ export default function Contacto() {
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
-              <div className="eyebrow">{t('contact.eyebrow')}</div>
               <h1 className="h1">{t('contact.title')}</h1>
               <p className="lead">{t('contact.lead')}</p>
 

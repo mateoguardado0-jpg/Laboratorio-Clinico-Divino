@@ -66,7 +66,6 @@ export default function Navbar() {
         <NavLink to="/" className="brand" aria-label={t('nav.goHome')} onClick={() => setOpen(false)}>
           <img src={logo} alt={t('brand.name')} className="brandLogo" />
           <span className="brandName">{t('brand.name')}</span>
-          <span className="brandTag">{t('brand.tagline')}</span>
         </NavLink>
 
         <nav className="navLinks" aria-label={t('nav.mainNav')}>

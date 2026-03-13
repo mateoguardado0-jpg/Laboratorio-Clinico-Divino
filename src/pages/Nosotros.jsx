@@ -13,7 +13,6 @@ export default function Nosotros() {
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
-              <div className="eyebrow">{t('about.eyebrow')}</div>
               <h1 className="h1">{t('about.title')}</h1>
               <p className="lead">{t('about.lead')}</p>
             </div>
@@ -70,7 +69,6 @@ export default function Nosotros() {
       <section className="sectionTight">
         <div className="container">
           <div className="stackLg">
-            <div className="eyebrow">{t('about.valuesEyebrow')}</div>
             <h2 className="h2">{t('about.valuesTitle')}</h2>
             <p className="lead muted">{t('about.valuesLead')}</p>
             <div className="gridCards">

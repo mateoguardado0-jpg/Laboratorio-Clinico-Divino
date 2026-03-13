@@ -15,7 +15,6 @@ export default function Preguntas() {
       <section className="section">
         <div className="container">
           <div className="stackLg">
-            <div className="eyebrow">{t('faq.eyebrow')}</div>
             <h1 className="h1">{t('faq.title')}</h1>
             <p className="lead muted">{t('faq.lead')}</p>
 

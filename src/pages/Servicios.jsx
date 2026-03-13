@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useMemo, useState, useRef, useEffect } from 'react'
-import { HiOutlineBeaker, HiOutlineSearch } from 'react-icons/hi'
+import { HiOutlineSearch } from 'react-icons/hi'
 import { getCatalogData } from '../data/servicios.js'
 import { useI18n } from '../i18n/useI18n.jsx'
 
@@ -160,8 +160,7 @@ export default function Servicios() {
           <div className="grid2">
             <div className="stackLg">
               <span className="flexIcon" style={{ marginBottom: '8px' }}>
-                <HiOutlineBeaker className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-                <div className="eyebrow" style={{ marginBottom: 0 }}>{t('servicesPage.eyebrow')}</div>
+                <div className="eyebrow" style={{ marginBottom: 0, fontSize: '1rem' }}>{t('servicesPage.eyebrow')}</div>
               </span>
               <h1 className="h1">{t('servicesPage.title')}</h1>
               <p className="lead">{t('servicesPage.lead')}</p>
@@ -175,8 +174,8 @@ export default function Servicios() {
         <div className="container">
           <div ref={wrapperRef} className="stackLg" style={{ position: 'relative', marginBottom: 'var(--space-6)' }}>
             <label className="label" htmlFor="buscar-examen">
-              <span className="flexIcon">
-                <HiOutlineSearch className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
+              <span className="flexIcon" style={{ fontSize: '1.05rem' }}>
+                <HiOutlineSearch className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)', fontSize: '1.15rem' }} />
                 {t('common.buttons.search')}
               </span>
             </label>
