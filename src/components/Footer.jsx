@@ -49,7 +49,7 @@ export default function Footer() {
             <div className="stack" style={{ gap: '10px' }}>
               <div className="flexIcon">
                 <HiOutlinePhone className="iconSm" aria-hidden />
-                <div><strong>{t('footer.phone')}</strong><br /><span className="muted">+503 0000 0000</span></div>
+                <div><strong>{t('footer.phone')}</strong><br /><span className="muted">+503 7086 4066</span></div>
               </div>
               <div className="flexIcon">
                 <HiOutlineMail className="iconSm" aria-hidden />
@@ -60,9 +60,6 @@ export default function Footer() {
                 <div><strong>{t('footer.address')}</strong><br /><span className="muted">{t('footer.addressValue')}</span></div>
               </div>
             </div>
-            <p className="help" style={{ marginTop: '4px' }}>
-              {t('footer.replaceData')}
-            </p>
           </div>
         </div>
 

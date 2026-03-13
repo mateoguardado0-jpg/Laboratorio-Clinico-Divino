@@ -216,10 +216,6 @@
         "answer": "Sí, garantizamos la protección y confidencialidad de todos los datos y resultados conforme a los estándares de seguridad y ética profesional."
       },
       {
-        "question": "¿Aceptan seguros médicos?",
-        "answer": "Trabajamos con distintas aseguradoras. Te recomendamos consultar directamente para confirmar cobertura y requisitos."
-      },
-      {
         "question": "¿Cada cuánto tiempo debo realizarme exámenes de rutina?",
         "answer": "Se recomienda realizar un chequeo general al menos una vez al año. Sin embargo, la frecuencia puede variar según la edad, antecedentes médicos y recomendaciones de tu médico."
       },
@@ -247,7 +243,7 @@
     "scheduleValue": "Lun–Sáb: 7:00–17:00",
     "mapAria": "Ubicación del laboratorio",
     "popupTitle": "Laboratorio Clínico",
-    "popupAddress": "Dirección: Barrio el centro, calle El Calvario, Local Divina Providencia, El Paraíso 1312",
+    "popupAddress": "Dirección: Frente al ex local de la PNC, Barrio el centro, calle El Calvario, Local Divina Providencia, El Paraíso 1312",
     "howToGet": "Cómo llegar",
     "mapHelp": "Ubicación del laboratorio y referencia de dirección.",
     "messageEyebrow": "Mensaje",
@@ -289,7 +285,7 @@
     "phone": "Teléfono",
     "email": "Correo",
     "address": "Dirección",
-    "addressValue": "Tu dirección aquí",
+    "addressValue": "Frente al ex local de la PNC, Barrio el centro, calle El Calvario, Local Divina Providencia, El Paraíso 1312",
     "replaceData": "Reemplaza estos datos por los reales.",
     "copyright": "© {year} Laboratorio Clínico Divino Niño Jesus. Todos los derechos reservados."
   },

@@ -81,7 +81,6 @@ export default function Home() {
               <div className="grid2Reverse">
                 <div className="imgPlaceholder imgWide" aria-label={t('home.ctaImageLabel')} />
                 <div className="stackLg">
-                  <div className="eyebrow">{t('home.ctaEyebrow')}</div>
                   <h2 className="h2">{t('home.ctaTitle')}</h2>
                   <p className="lead">{t('home.ctaLead')}</p>
                   <div className="btnRow">
