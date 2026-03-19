@@ -12,7 +12,6 @@ export default function Footer() {
           <div className="stack">
             <div className="brand">
               <span className="brandName">{t('brand.name')}</span>
-              <span className="brandTag">{t('brand.footerTagline')}</span>
             </div>
             <div className="flexIcon footerSchedule">
               <HiOutlineClock className="iconSm" aria-hidden />
@@ -27,7 +26,6 @@ export default function Footer() {
           </div>
 
           <div className="stack">
-            <div className="eyebrow">{t('footer.navigation')}</div>
             <div className="stack">
               <NavLink className="navLink" to="/">
                 {t('nav.home')}

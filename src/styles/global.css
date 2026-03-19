@@ -929,28 +929,73 @@ select {
 }
 
 .alertOk {
-  background: rgba(74, 144, 226, 0.08);
-  border-color: rgba(74, 144, 226, 0.2);
+  background: linear-gradient(145deg, rgba(74, 144, 226, 0.12), rgba(74, 144, 226, 0.04));
+  border-color: rgba(74, 144, 226, 0.28);
 }
 
 .alertErr {
-  background: rgba(248, 200, 220, 0.2);
-  border-color: rgba(248, 200, 220, 0.5);
+  background: linear-gradient(145deg, rgba(248, 200, 220, 0.28), rgba(248, 200, 220, 0.14));
+  border-color: rgba(184, 107, 138, 0.35);
+}
+
+.formStatus {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.formStatusHead {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.formStatusIcon {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.formStatusIcon.isSuccess {
+  color: var(--c-blue);
+}
+
+.formStatusIcon.isError {
+  color: #9b3a62;
+}
+
+.formStatusTitle {
+  line-height: 1.4;
 }
 
 .alertList {
-  margin: var(--space-2) 0 0;
+  margin: 0 0 0 calc(var(--space-5) + 2px);
   padding-left: var(--space-5);
-  color: var(--text-secondary);
+  color: var(--text-muted);
+}
+
+.alertList li + li {
+  margin-top: var(--space-1);
 }
 
 .inputInvalid {
-  border-color: rgba(184, 107, 138, 0.75);
-  box-shadow: 0 0 0 3px rgba(184, 107, 138, 0.15);
+  border-color: rgba(184, 107, 138, 0.72);
+  background: linear-gradient(0deg, rgba(248, 200, 220, 0.09), rgba(248, 200, 220, 0.09)), var(--bg-elevated);
+  box-shadow: 0 0 0 2px rgba(184, 107, 138, 0.16);
+}
+
+.inputInvalid:focus {
+  border-color: rgba(184, 107, 138, 0.82);
+  box-shadow: 0 0 0 3px rgba(184, 107, 138, 0.2);
 }
 
 .errorText {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: #9b3a62;
+  font-weight: 500;
 }
 
 .srOnly {

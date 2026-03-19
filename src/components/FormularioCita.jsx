@@ -1,5 +1,12 @@
 import { useState } from 'react'
-import { HiOutlineUser, HiOutlinePhone, HiOutlineMail, HiOutlineDocumentText } from 'react-icons/hi'
+import {
+  HiOutlineUser,
+  HiOutlinePhone,
+  HiOutlineMail,
+  HiOutlineDocumentText,
+  HiOutlineCheckCircle,
+  HiOutlineExclamationCircle,
+} from 'react-icons/hi'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -129,12 +136,20 @@ export default function FormularioCita() {
 
           {status.type !== 'idle' ? (
             <div
-              className={`alert ${
+              className={`alert formStatus ${
                 status.type === 'success' ? 'alertOk' : status.type === 'error' ? 'alertErr' : ''
               }`}
               role={status.type === 'error' ? 'alert' : 'status'}
+              aria-live="polite"
             >
-              <strong>{status.message}</strong>
+              <div className="formStatusHead">
+                {status.type === 'success' ? (
+                  <HiOutlineCheckCircle className="formStatusIcon isSuccess" aria-hidden />
+                ) : (
+                  <HiOutlineExclamationCircle className="formStatusIcon isError" aria-hidden />
+                )}
+                <strong className="formStatusTitle">{status.message}</strong>
+              </div>
               {status.details?.length ? (
                 <ul className="alertList">
                   {status.details.map((detail) => (
@@ -186,7 +201,9 @@ export default function FormularioCita() {
                 />
                 {fieldErrors.telefono ? (
                   <span className="help errorText">{fieldErrors.telefono}</span>
-                ) : null}
+                ) : (
+                  <span className="help">Opcional. Puedes escribir 7777-8888.</span>
+                )}
               </label>
             </div>
 

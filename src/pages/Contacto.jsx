@@ -53,7 +53,6 @@ export default function Contacto() {
           <div className="grid2">
             <div className="stackLg">
               <h1 className="h1">{t('contact.title')}</h1>
-              <p className="lead">{t('contact.lead')}</p>
 
               <div className="gridCards">
                 <div className="card cardPad">
@@ -131,22 +130,6 @@ export default function Contacto() {
                         <p className="lead">{t('common.buttons.sending')}</p>
                       </div>
                     )}
-                  </div>
-                  <p className="help">{t('contact.mapHelp')}</p>
-                </div>
-              </div>
-
-              <div className="card">
-                <div className="cardPad stack">
-                  <div className="eyebrow">{t('contact.messageEyebrow')}</div>
-                  <p className="lead">{t('contact.messageLead')}</p>
-                  <div className="btnRow">
-                    <a className="btn btnSoft" href="#consultas">
-                      {t('common.buttons.goToConsultas')}
-                    </a>
-                    <a className="btn" href="/servicios">
-                      {t('common.buttons.viewServices')}
-                    </a>
                   </div>
                 </div>
               </div>
