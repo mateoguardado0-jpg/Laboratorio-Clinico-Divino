@@ -938,6 +938,21 @@ select {
   border-color: rgba(248, 200, 220, 0.5);
 }
 
+.alertList {
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-5);
+  color: var(--text-secondary);
+}
+
+.inputInvalid {
+  border-color: rgba(184, 107, 138, 0.75);
+  box-shadow: 0 0 0 3px rgba(184, 107, 138, 0.15);
+}
+
+.errorText {
+  color: #9b3a62;
+}
+
 .srOnly {
   position: absolute;
   width: 1px;

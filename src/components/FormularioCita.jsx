@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import { HiOutlineUser, HiOutlinePhone, HiOutlineMail, HiOutlineDocumentText } from 'react-icons/hi'
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function normalizePhone(value) {
+  return String(value || '').replace(/\D/g, '')
+}
+
 export default function FormularioCita() {
   const [form, setForm] = useState({
     nombre: '',
@@ -9,20 +15,49 @@ export default function FormularioCita() {
     mensaje: '',
   })
 
-  const [status, setStatus] = useState({ type: 'idle', message: '' })
+  const [status, setStatus] = useState({ type: 'idle', message: '', details: [] })
+  const [fieldErrors, setFieldErrors] = useState({})
   const [submitting, setSubmitting] = useState(false)
 
   const onChange = (key) => (ev) => {
     const value = ev.target.value
     setForm((f) => ({ ...f, [key]: value }))
+    setFieldErrors((prev) => {
+      if (!prev[key]) return prev
+      const next = { ...prev }
+      delete next[key]
+      return next
+    })
   }
 
   async function onSubmit(ev) {
     ev.preventDefault()
-    setStatus({ type: 'idle', message: '' })
+    setStatus({ type: 'idle', message: '', details: [] })
 
     const formElement = ev.currentTarget
     if (!formElement.reportValidity()) return
+
+    const nextFieldErrors = {}
+    const sanitizedPhone = normalizePhone(form.telefono)
+
+    if (form.telefono.trim() && sanitizedPhone.length !== 8) {
+      nextFieldErrors.telefono = 'El teléfono debe tener 8 dígitos.'
+    }
+    if (!EMAIL_REGEX.test(form.email.trim())) {
+      nextFieldErrors.email = 'Ingresa un correo válido que incluya @ y punto.'
+    }
+
+    if (Object.keys(nextFieldErrors).length > 0) {
+      setFieldErrors(nextFieldErrors)
+      setStatus({
+        type: 'error',
+        message: 'Por favor corrige los campos marcados antes de enviar.',
+        details: Object.values(nextFieldErrors),
+      })
+      return
+    }
+
+    setFieldErrors({})
     setSubmitting(true)
 
     try {
@@ -34,19 +69,30 @@ export default function FormularioCita() {
         },
         body: JSON.stringify({
           nombre: form.nombre.trim(),
-          telefono: form.telefono.trim(),
+          telefono: sanitizedPhone,
           email: form.email.trim(),
           mensaje: form.mensaje.trim(),
         }),
       })
 
       if (!response.ok) {
-        throw new Error('formspree-request-failed')
+        let remoteMessage = ''
+        try {
+          const data = await response.json()
+          if (Array.isArray(data?.errors) && data.errors.length > 0) {
+            remoteMessage = data.errors.map((item) => item.message).join(' ')
+          }
+        } catch {
+          remoteMessage = ''
+        }
+
+        throw new Error(remoteMessage || 'No se pudo procesar la solicitud.')
       }
 
       setStatus({
         type: 'success',
         message: '¡Gracias! Tu mensaje fue enviado. Te contactaremos pronto.',
+        details: [],
       })
       setForm({
         nombre: '',
@@ -54,10 +100,15 @@ export default function FormularioCita() {
         email: '',
         mensaje: '',
       })
-    } catch {
+    } catch (error) {
       setStatus({
         type: 'error',
-        message: 'No pudimos enviar tu mensaje. Por favor intenta nuevamente en unos minutos.',
+        message: 'No pudimos enviar tu mensaje en este momento.',
+        details: [
+          error instanceof Error && error.message
+            ? error.message
+            : 'Intenta nuevamente en unos minutos.',
+        ],
       })
     } finally {
       setSubmitting(false)
@@ -83,7 +134,14 @@ export default function FormularioCita() {
               }`}
               role={status.type === 'error' ? 'alert' : 'status'}
             >
-              {status.message}
+              <strong>{status.message}</strong>
+              {status.details?.length ? (
+                <ul className="alertList">
+                  {status.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           ) : null}
 
@@ -100,7 +158,7 @@ export default function FormularioCita() {
                   Nombre
                 </span>
                 <input
-                  className="input"
+                  className={`input ${fieldErrors.nombre ? 'inputInvalid' : ''}`}
                   type="text"
                   name="nombre"
                   value={form.nombre}
@@ -108,6 +166,7 @@ export default function FormularioCita() {
                   placeholder="Ej: María López"
                   required
                 />
+                {fieldErrors.nombre ? <span className="help errorText">{fieldErrors.nombre}</span> : null}
               </label>
 
               <label className="label">
@@ -116,13 +175,18 @@ export default function FormularioCita() {
                   Teléfono
                 </span>
                 <input
-                  className="input"
+                  className={`input ${fieldErrors.telefono ? 'inputInvalid' : ''}`}
                   type="tel"
                   name="telefono"
                   value={form.telefono}
                   onChange={onChange('telefono')}
                   placeholder="Ej: 7777-8888"
+                  pattern="^\d{4}-?\d{4}$"
+                  title="Ingresa un teléfono de 8 dígitos (ejemplo: 7777-8888)."
                 />
+                {fieldErrors.telefono ? (
+                  <span className="help errorText">{fieldErrors.telefono}</span>
+                ) : null}
               </label>
             </div>
 
@@ -133,14 +197,17 @@ export default function FormularioCita() {
                   Correo
                 </span>
                 <input
-                  className="input"
+                  className={`input ${fieldErrors.email ? 'inputInvalid' : ''}`}
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={onChange('email')}
                   placeholder="Ej: maria@correo.com"
                   required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                  title="Ingresa un correo válido que incluya @ y punto."
                 />
+                {fieldErrors.email ? <span className="help errorText">{fieldErrors.email}</span> : null}
               </label>
             </div>
 
