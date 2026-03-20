@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useI18n } from '../i18n/useI18n.jsx'
 import {
   Accordion,
@@ -7,12 +8,18 @@ import {
 } from '@/components/ui/accordion'
 
 function AccordionFAQ({ items }) {
+  const defaultValue = items[0]?.value ?? ''
+  const [selectedValue, setSelectedValue] = useState(defaultValue)
+  const [hoveredValue, setHoveredValue] = useState(null)
+
   return (
     <Accordion
       type="single"
       collapsible
       className="faqAccordion"
-      defaultValue={items[0]?.value}
+      value={hoveredValue ?? selectedValue}
+      onValueChange={setSelectedValue}
+      onMouseLeave={() => setHoveredValue(null)}
     >
       {items.map((item) => (
         <AccordionItem
@@ -20,7 +27,10 @@ function AccordionFAQ({ items }) {
           value={item.value}
           className="faqAccordionItem"
         >
-          <AccordionTrigger className="faqAccordionTrigger">
+          <AccordionTrigger
+            className="faqAccordionTrigger"
+            onMouseEnter={() => setHoveredValue(item.value)}
+          >
             {item.trigger}
           </AccordionTrigger>
           <AccordionContent className="faqAccordionContent">

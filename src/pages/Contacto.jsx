@@ -89,6 +89,9 @@ export default function Contacto() {
                       referrerPolicy="no-referrer-when-downgrade"
                     />
                   </div>
+                  <button type="button" className="btn btnSoft mapActionBtn" onClick={handleOpenDirections}>
+                    {t('contact.howToGet')}
+                  </button>
                 </div>
               </div>
             </div>

@@ -1432,7 +1432,7 @@ select {
   max-width: 52rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: var(--bg-elevated);
+  background: var(--bg-page);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
@@ -1444,11 +1444,11 @@ select {
 }
 
 .faqAccordionItem:hover {
-  background: rgba(74, 144, 226, 0.03);
+  background: rgba(253, 246, 236, 0.98);
 }
 
 .faqAccordionItem[data-state='open'] {
-  background: var(--bg-accent-subtle);
+  background: var(--c-cream);
 }
 
 .faqAccordionTrigger {
