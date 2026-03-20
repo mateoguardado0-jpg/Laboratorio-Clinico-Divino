@@ -1,13 +1,19 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n/useI18n.jsx'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 export default function Preguntas() {
   const { t, get } = useI18n()
   const faqs = get('faq.items', [])
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState('0')
 
-  const handleToggle = (index) => {
-    setActiveIndex((current) => (current === index ? null : index))
+  const handleToggle = (value) => {
+    setActiveIndex((current) => (current === value ? '' : value))
   }
 
   return (
@@ -18,33 +24,34 @@ export default function Preguntas() {
             <h1 className="h1">{t('faq.title')}</h1>
             <p className="lead muted">{t('faq.lead')}</p>
 
-            <div className="faqList">
+            <Accordion
+              type="single"
+              collapsible
+              value={activeIndex}
+              onValueChange={(value) => setActiveIndex(value)}
+              className="max-w-lg rounded-lg border"
+            >
               {faqs.map((item, index) => {
-                const isOpen = activeIndex === index
+                const value = String(index)
                 return (
-                  <article
+                  <AccordionItem
                     key={item.question}
-                    className={`faqItem card ${isOpen ? 'faqItemOpen' : ''}`.trim()}
+                    value={value}
+                    className="border-b px-4 last:border-b-0"
                   >
-                    <button
-                      type="button"
-                      className="faqHeader"
-                      onClick={() => handleToggle(index)}
-                      onMouseEnter={() => setActiveIndex(index)}
-                      aria-expanded={isOpen}
+                    <AccordionTrigger
+                      onClick={() => handleToggle(value)}
+                      onMouseEnter={() => setActiveIndex(value)}
                     >
-                      <span className="faqTitle">{item.question}</span>
-                      <span className="faqIcon" aria-hidden>
-                        ˅
-                      </span>
-                    </button>
-                    <div className="faqBody">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent>
                       <p className="lead muted">{item.answer}</p>
-                    </div>
-                  </article>
+                    </AccordionContent>
+                  </AccordionItem>
                 )
               })}
-            </div>
+            </Accordion>
           </div>
         </div>
       </section>
