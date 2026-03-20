@@ -5,13 +5,48 @@ import {
   HiOutlineMail,
   HiOutlineDocumentText,
   HiOutlineCheckCircle,
-  HiOutlineExclamationCircle,
+  HiOutlineXCircle,
+  HiOutlineExclamation,
 } from 'react-icons/hi'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 function normalizePhone(value) {
   return String(value || '').replace(/\D/g, '')
+}
+
+function validateForm(form) {
+  const errors = {}
+
+  if (!form.nombre.trim()) {
+    errors.nombre = 'El nombre es obligatorio.'
+  }
+
+  if (!form.email.trim()) {
+    errors.email = 'El correo es obligatorio.'
+  } else if (!EMAIL_REGEX.test(form.email.trim())) {
+    errors.email = 'Ingresa un correo válido que incluya @ y punto.'
+  }
+
+  if (!form.mensaje.trim()) {
+    errors.mensaje = 'El mensaje es obligatorio.'
+  }
+
+  const sanitizedPhone = normalizePhone(form.telefono)
+  if (form.telefono.trim() && sanitizedPhone.length !== 8) {
+    errors.telefono = 'El teléfono debe tener 8 dígitos (ej: 7777-8888).'
+  }
+
+  return { errors, sanitizedPhone }
+}
+
+function FieldError({ id, message }) {
+  return (
+    <span id={id} className="fieldError" role="alert">
+      <HiOutlineExclamation className="fieldErrorIcon" aria-hidden />
+      {message}
+    </span>
+  )
 }
 
 export default function FormularioCita() {
@@ -41,25 +76,19 @@ export default function FormularioCita() {
     ev.preventDefault()
     setStatus({ type: 'idle', message: '', details: [] })
 
-    const formElement = ev.currentTarget
-    if (!formElement.reportValidity()) return
-
-    const nextFieldErrors = {}
-    const sanitizedPhone = normalizePhone(form.telefono)
-
-    if (form.telefono.trim() && sanitizedPhone.length !== 8) {
-      nextFieldErrors.telefono = 'El teléfono debe tener 8 dígitos.'
-    }
-    if (!EMAIL_REGEX.test(form.email.trim())) {
-      nextFieldErrors.email = 'Ingresa un correo válido que incluya @ y punto.'
-    }
+    const { errors: nextFieldErrors, sanitizedPhone } = validateForm(form)
 
     if (Object.keys(nextFieldErrors).length > 0) {
       setFieldErrors(nextFieldErrors)
       setStatus({
         type: 'error',
-        message: 'Por favor corrige los campos marcados antes de enviar.',
-        details: Object.values(nextFieldErrors),
+        message: 'Hay campos que necesitan tu atención.',
+        details: [
+          nextFieldErrors.nombre,
+          nextFieldErrors.telefono,
+          nextFieldErrors.email,
+          nextFieldErrors.mensaje,
+        ].filter(Boolean),
       })
       return
     }
@@ -92,21 +121,15 @@ export default function FormularioCita() {
         } catch {
           remoteMessage = ''
         }
-
         throw new Error(remoteMessage || 'No se pudo procesar la solicitud.')
       }
 
       setStatus({
         type: 'success',
-        message: '¡Gracias! Tu mensaje fue enviado. Te contactaremos pronto.',
-        details: [],
+        message: '¡Gracias! Tu mensaje fue enviado correctamente.',
+        details: ['Nuestro equipo te contactará a la brevedad.'],
       })
-      setForm({
-        nombre: '',
-        telefono: '',
-        email: '',
-        mensaje: '',
-      })
+      setForm({ nombre: '', telefono: '', email: '', mensaje: '' })
     } catch (error) {
       setStatus({
         type: 'error',
@@ -134,37 +157,38 @@ export default function FormularioCita() {
             </p>
           </div>
 
-          {status.type !== 'idle' ? (
+          {status.type !== 'idle' && (
             <div
-              className={`alert formStatus ${
-                status.type === 'success' ? 'alertOk' : status.type === 'error' ? 'alertErr' : ''
-              }`}
+              className={`formBanner ${status.type === 'success' ? 'formBannerOk' : 'formBannerErr'}`}
               role={status.type === 'error' ? 'alert' : 'status'}
               aria-live="polite"
             >
-              <div className="formStatusHead">
+              <div className="formBannerIcon">
                 {status.type === 'success' ? (
-                  <HiOutlineCheckCircle className="formStatusIcon isSuccess" aria-hidden />
+                  <HiOutlineCheckCircle aria-hidden />
                 ) : (
-                  <HiOutlineExclamationCircle className="formStatusIcon isError" aria-hidden />
+                  <HiOutlineXCircle aria-hidden />
                 )}
-                <strong className="formStatusTitle">{status.message}</strong>
               </div>
-              {status.details?.length ? (
-                <ul className="alertList">
-                  {status.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-              ) : null}
+              <div className="formBannerBody">
+                <p className="formBannerTitle">{status.message}</p>
+                {status.details?.length > 0 && (
+                  <ul className="formBannerList">
+                    {status.details.map((d) => (
+                      <li key={d}>{d}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
-          ) : null}
+          )}
 
           <form
             onSubmit={onSubmit}
             className="stackLg"
             action="https://formspree.io/f/mvzwlwkj"
             method="POST"
+            noValidate
           >
             <div className="grid2">
               <label className="label">
@@ -173,36 +197,41 @@ export default function FormularioCita() {
                   Nombre
                 </span>
                 <input
-                  className={`input ${fieldErrors.nombre ? 'inputInvalid' : ''}`}
+                  className={`input${fieldErrors.nombre ? ' inputInvalid' : ''}`}
                   type="text"
                   name="nombre"
                   value={form.nombre}
                   onChange={onChange('nombre')}
                   placeholder="Ej: María López"
-                  required
+                  aria-invalid={fieldErrors.nombre ? 'true' : 'false'}
+                  aria-describedby={fieldErrors.nombre ? 'error-nombre' : undefined}
                 />
-                {fieldErrors.nombre ? <span className="help errorText">{fieldErrors.nombre}</span> : null}
+                {fieldErrors.nombre && (
+                  <FieldError id="error-nombre" message={fieldErrors.nombre} />
+                )}
               </label>
 
               <label className="label">
                 <span className="flexIcon">
                   <HiOutlinePhone className="iconSm" aria-hidden />
-                  Teléfono
+                  Teléfono <span className="fieldOptional">Opcional</span>
                 </span>
                 <input
-                  className={`input ${fieldErrors.telefono ? 'inputInvalid' : ''}`}
+                  className={`input${fieldErrors.telefono ? ' inputInvalid' : ''}`}
                   type="tel"
                   name="telefono"
                   value={form.telefono}
                   onChange={onChange('telefono')}
                   placeholder="Ej: 7777-8888"
-                  pattern="^\d{4}-?\d{4}$"
-                  title="Ingresa un teléfono de 8 dígitos (ejemplo: 7777-8888)."
+                  inputMode="numeric"
+                  maxLength={9}
+                  aria-invalid={fieldErrors.telefono ? 'true' : 'false'}
+                  aria-describedby={fieldErrors.telefono ? 'error-telefono' : 'help-telefono'}
                 />
                 {fieldErrors.telefono ? (
-                  <span className="help errorText">{fieldErrors.telefono}</span>
+                  <FieldError id="error-telefono" message={fieldErrors.telefono} />
                 ) : (
-                  <span className="help">Opcional. Puedes escribir 7777-8888.</span>
+                  <span id="help-telefono" className="help">8 dígitos, ej: 7777-8888.</span>
                 )}
               </label>
             </div>
@@ -211,20 +240,21 @@ export default function FormularioCita() {
               <label className="label">
                 <span className="flexIcon">
                   <HiOutlineMail className="iconSm" aria-hidden />
-                  Correo
+                  Correo electrónico
                 </span>
                 <input
-                  className={`input ${fieldErrors.email ? 'inputInvalid' : ''}`}
+                  className={`input${fieldErrors.email ? ' inputInvalid' : ''}`}
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={onChange('email')}
                   placeholder="Ej: maria@correo.com"
-                  required
-                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-                  title="Ingresa un correo válido que incluya @ y punto."
+                  aria-invalid={fieldErrors.email ? 'true' : 'false'}
+                  aria-describedby={fieldErrors.email ? 'error-email' : undefined}
                 />
-                {fieldErrors.email ? <span className="help errorText">{fieldErrors.email}</span> : null}
+                {fieldErrors.email && (
+                  <FieldError id="error-email" message={fieldErrors.email} />
+                )}
               </label>
             </div>
 
@@ -234,13 +264,17 @@ export default function FormularioCita() {
                 Mensaje
               </span>
               <textarea
-                className="input textarea"
+                className={`input textarea${fieldErrors.mensaje ? ' inputInvalid' : ''}`}
                 name="mensaje"
                 value={form.mensaje}
                 onChange={onChange('mensaje')}
                 placeholder="Cuéntanos en qué podemos ayudarte."
-                required
+                aria-invalid={fieldErrors.mensaje ? 'true' : 'false'}
+                aria-describedby={fieldErrors.mensaje ? 'error-mensaje' : undefined}
               />
+              {fieldErrors.mensaje && (
+                <FieldError id="error-mensaje" message={fieldErrors.mensaje} />
+              )}
             </label>
 
             <div className="btnRow">
@@ -255,14 +289,7 @@ export default function FormularioCita() {
               <button
                 type="button"
                 className="btn btnSoft"
-                onClick={() =>
-                  setForm({
-                    nombre: '',
-                    telefono: '',
-                    email: '',
-                    mensaje: '',
-                  })
-                }
+                onClick={() => setForm({ nombre: '', telefono: '', email: '', mensaje: '' })}
                 disabled={submitting}
               >
                 Limpiar
@@ -274,4 +301,3 @@ export default function FormularioCita() {
     </div>
   )
 }
-
