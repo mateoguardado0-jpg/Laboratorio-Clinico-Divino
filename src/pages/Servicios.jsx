@@ -214,6 +214,9 @@ export default function Servicios() {
                   overflowY: 'auto',
                   zIndex: 20,
                   gap: 0,
+                  background: 'var(--bg-elevated)',
+                  borderColor: 'rgba(74, 144, 226, 0.28)',
+                  boxShadow: 'var(--shadow-md)',
                 }}
               >
                 {displayed.map((item, i) => (

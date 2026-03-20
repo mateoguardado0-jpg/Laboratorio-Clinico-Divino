@@ -570,7 +570,7 @@ select {
   opacity: 0;
   transform: translateY(-12px);
   border-bottom: 1px solid transparent;
-  background: rgba(253, 246, 236, 0.65);
+  background: rgba(253, 246, 236, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition:
@@ -596,7 +596,7 @@ select {
 }
 
 .navScrolled {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(253, 246, 236, 0.98);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 16px rgba(30, 58, 95, 0.08);
 }
