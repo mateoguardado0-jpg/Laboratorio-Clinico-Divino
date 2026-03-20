@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useI18n } from '../i18n/useI18n.jsx'
 import {
   Accordion,
@@ -7,14 +6,40 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+function AccordionFAQ({ items }) {
+  return (
+    <Accordion
+      type="single"
+      collapsible
+      className="faqAccordion"
+      defaultValue={items[0]?.value}
+    >
+      {items.map((item) => (
+        <AccordionItem
+          key={item.value}
+          value={item.value}
+          className="faqAccordionItem"
+        >
+          <AccordionTrigger className="faqAccordionTrigger">
+            {item.trigger}
+          </AccordionTrigger>
+          <AccordionContent className="faqAccordionContent">
+            <p className="muted">{item.content}</p>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  )
+}
+
 export default function Preguntas() {
   const { t, get } = useI18n()
   const faqs = get('faq.items', [])
-  const [activeIndex, setActiveIndex] = useState('0')
-
-  const handleToggle = (value) => {
-    setActiveIndex((current) => (current === value ? '' : value))
-  }
+  const items = faqs.map((item, index) => ({
+    value: `faq-${index + 1}`,
+    trigger: item.question,
+    content: item.answer,
+  }))
 
   return (
     <main className="page">
@@ -24,34 +49,7 @@ export default function Preguntas() {
             <h1 className="h1">{t('faq.title')}</h1>
             <p className="lead muted">{t('faq.lead')}</p>
 
-            <Accordion
-              type="single"
-              collapsible
-              value={activeIndex}
-              onValueChange={(value) => setActiveIndex(value)}
-              className="max-w-lg rounded-lg border"
-            >
-              {faqs.map((item, index) => {
-                const value = String(index)
-                return (
-                  <AccordionItem
-                    key={item.question}
-                    value={value}
-                    className="border-b px-4 last:border-b-0"
-                  >
-                    <AccordionTrigger
-                      onClick={() => handleToggle(value)}
-                      onMouseEnter={() => setActiveIndex(value)}
-                    >
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <p className="lead muted">{item.answer}</p>
-                    </AccordionContent>
-                  </AccordionItem>
-                )
-              })}
-            </Accordion>
+            <AccordionFAQ items={items} />
           </div>
         </div>
       </section>

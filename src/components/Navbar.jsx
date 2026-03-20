@@ -5,25 +5,11 @@ import { useI18n } from '../i18n/useI18n.jsx'
 
 function MenuIcon({ open }) {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      focusable="false"
-    >
-      {open ? (
-        <path
-          fill="currentColor"
-          d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.71 2.88 18.29 9.17 12 2.88 5.71 4.29 4.29l6.3 6.31 6.3-6.31z"
-        />
-      ) : (
-        <path
-          fill="currentColor"
-          d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"
-        />
-      )}
-    </svg>
+    <span className={`hamburgerIcon ${open ? 'hamburgerOpen' : ''}`} aria-hidden>
+      <span className="hamburgerLine" />
+      <span className="hamburgerLine" />
+      <span className="hamburgerLine" />
+    </span>
   )
 }
 
@@ -31,11 +17,14 @@ function makeLinkClass({ isActive }) {
   return `navLink ${isActive ? 'navLinkActive' : ''}`.trim()
 }
 
+const SCROLL_THRESHOLD = 50
+
 export default function Navbar() {
   const navigate = useNavigate()
   const { lang, setLang, t } = useI18n()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   const links = useMemo(
     () => [
@@ -49,7 +38,11 @@ export default function Navbar() {
   )
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -60,8 +53,17 @@ export default function Navbar() {
     navigate('/contacto#consultas')
   }
 
+  const headerClass = [
+    'nav',
+    mounted && 'navMounted',
+    scrolled && 'navScrolled',
+    scrolled && 'navCompact',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <header className={`nav ${scrolled ? 'navScrolled' : ''}`.trim()}>
+    <header className={headerClass}>
       <div className="container navInner">
         <NavLink to="/" className="brand" aria-label={t('nav.goHome')} onClick={() => setOpen(false)}>
           <img src={logo} alt={t('brand.name')} className="brandLogo" />
@@ -77,6 +79,13 @@ export default function Navbar() {
         </nav>
 
         <div className="navActions">
+          <button
+            type="button"
+            className="navCta btn btnPrimary"
+            onClick={goToConsultas}
+          >
+            {t('nav.consultas')}
+          </button>
           <div className="langSwitch" role="group" aria-label={t('nav.languageLabel')}>
             <button
               type="button"
@@ -105,44 +114,56 @@ export default function Navbar() {
         </div>
       </div>
 
-      {open ? (
-        <div className="container">
-          <div className="mobilePanel" role="dialog" aria-label={t('nav.mobileMenu')}>
-            <div className="langSwitch" role="group" aria-label={t('nav.languageLabel')}>
-              <button
-                type="button"
-                className={`langOption ${lang === 'es' ? 'langOptionActive' : ''}`.trim()}
-                onClick={() => setLang('es')}
-              >
-                ES
-              </button>
-              <button
-                type="button"
-                className={`langOption ${lang === 'en' ? 'langOptionActive' : ''}`.trim()}
-                onClick={() => setLang('en')}
-              >
-                EN
-              </button>
+      {open && (
+        <>
+          <button
+            type="button"
+            className="navOverlay"
+            aria-label={t('nav.closeMenu')}
+            onClick={() => setOpen(false)}
+          />
+          <div className="mobileMenuWrap">
+            <div className="container">
+              <div className="mobilePanel" role="dialog" aria-label={t('nav.mobileMenu')}>
+                <div className="langSwitch" role="group" aria-label={t('nav.languageLabel')}>
+                  <button
+                    type="button"
+                    className={`langOption ${lang === 'es' ? 'langOptionActive' : ''}`.trim()}
+                    onClick={() => setLang('es')}
+                  >
+                    ES
+                  </button>
+                  <button
+                    type="button"
+                    className={`langOption ${lang === 'en' ? 'langOptionActive' : ''}`.trim()}
+                    onClick={() => setLang('en')}
+                  >
+                    EN
+                  </button>
+                </div>
+                <div className="dividerSoft" />
+                {links.map((l) => (
+                  <NavLink
+                    key={`m-${l.to}`}
+                    to={l.to}
+                    className={({ isActive }) =>
+                      `navLink ${isActive ? 'navLinkActive' : ''} mobileNavLink`.trim()
+                    }
+                    end={l.to === '/'}
+                    onClick={() => setOpen(false)}
+                  >
+                    {l.label}
+                  </NavLink>
+                ))}
+                <div className="dividerSoft" />
+                <button type="button" className="btn btnPrimary navCtaMobile" onClick={goToConsultas}>
+                  {t('nav.consultas')}
+                </button>
+              </div>
             </div>
-            <div className="dividerSoft" />
-            {links.map((l) => (
-              <NavLink
-                key={`m-${l.to}`}
-                to={l.to}
-                className={makeLinkClass}
-                end={l.to === '/'}
-                onClick={() => setOpen(false)}
-              >
-                {l.label}
-              </NavLink>
-            ))}
-            <div className="dividerSoft" />
-            <button type="button" className="btn btnPrimary" onClick={goToConsultas}>
-              {t('nav.consultas')}
-            </button>
           </div>
-        </div>
-      ) : null}
+        </>
+      )}
     </header>
   )
 }

@@ -1,21 +1,15 @@
 import { useMemo, useState } from 'react'
 import FormularioCita from '../components/FormularioCita.jsx'
 import { HiOutlinePhone, HiOutlineMail, HiOutlineClock, HiOutlineMap } from 'react-icons/hi'
-import { GoogleMap, InfoWindowF, MarkerF, useJsApiLoader } from '@react-google-maps/api'
 import { useI18n } from '../i18n/useI18n.jsx'
 
 const LAB_POSITION = { lat: 14.106451, lng: -89.069418 }
-const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? ''
 const GOOGLE_MAPS_PLACE_URL = 'https://maps.app.goo.gl/GwLbPJVuAJdaemcD8'
+const GOOGLE_MAPS_EMBED_URL = `https://maps.google.com/maps?q=${LAB_POSITION.lat},${LAB_POSITION.lng}&z=16&output=embed`
 
 export default function Contacto() {
   const { t } = useI18n()
   const [showMapPlatformChooser, setShowMapPlatformChooser] = useState(false)
-  const [isInfoOpen, setIsInfoOpen] = useState(true)
-  const { isLoaded, loadError } = useJsApiLoader({
-    id: 'contact-google-map',
-    googleMapsApiKey: GOOGLE_MAPS_API_KEY,
-  })
 
   const mapUrls = useMemo(() => {
     const { lat, lng } = LAB_POSITION
@@ -87,49 +81,13 @@ export default function Contacto() {
                     <div className="eyebrow" style={{ marginBottom: 0 }}>{t('common.labels.map')}</div>
                   </div>
                   <div className="mapWrap" aria-label={t('contact.mapAria')}>
-                    {loadError ? (
-                      <div className="mapFallback">
-                        <p className="lead">{t('contact.mapHelp')}</p>
-                        <button type="button" className="btn btnSoft" onClick={handleOpenDirections}>
-                          {t('contact.howToGet')}
-                        </button>
-                      </div>
-                    ) : isLoaded ? (
-                      <GoogleMap
-                        mapContainerClassName="leafletMap"
-                        center={LAB_POSITION}
-                        zoom={16}
-                        options={{
-                          zoomControl: true,
-                          mapTypeControl: false,
-                          streetViewControl: false,
-                          fullscreenControl: true,
-                        }}
-                      >
-                        <MarkerF position={LAB_POSITION} onClick={() => setIsInfoOpen(true)} />
-                        {isInfoOpen && (
-                          <InfoWindowF position={LAB_POSITION} onCloseClick={() => setIsInfoOpen(false)}>
-                            <div>
-                              <strong>{t('contact.popupTitle')}</strong>
-                              <br />
-                              {t('contact.popupAddress')}
-                              <br />
-                              <button
-                                type="button"
-                                className="btn btnSoft mapActionBtn"
-                                onClick={handleOpenDirections}
-                              >
-                                {t('contact.howToGet')}
-                              </button>
-                            </div>
-                          </InfoWindowF>
-                        )}
-                      </GoogleMap>
-                    ) : (
-                      <div className="mapFallback">
-                        <p className="lead">{t('common.buttons.sending')}</p>
-                      </div>
-                    )}
+                    <iframe
+                      title={t('contact.mapAria')}
+                      src={GOOGLE_MAPS_EMBED_URL}
+                      className="leafletMap"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
                   </div>
                 </div>
               </div>
