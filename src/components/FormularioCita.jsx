@@ -97,7 +97,7 @@ export default function FormularioCita() {
     setSubmitting(true)
 
     try {
-      const response = await fetch('https://formspree.io/f/mvzwlwkj', {
+      const response = await fetch('https://formspree.io/f/xjgpoqgq', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -186,7 +186,7 @@ export default function FormularioCita() {
           <form
             onSubmit={onSubmit}
             className="stackLg"
-            action="https://formspree.io/f/mvzwlwkj"
+            action="https://formspree.io/f/xjgpoqgq"
             method="POST"
             noValidate
           >
