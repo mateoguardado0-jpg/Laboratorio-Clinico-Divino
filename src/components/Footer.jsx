@@ -47,11 +47,11 @@ export default function Footer() {
             <div className="stack" style={{ gap: '10px' }}>
               <div className="flexIcon">
                 <HiOutlinePhone className="iconSm" aria-hidden />
-                <div><strong>{t('footer.phone')}</strong><br /><span className="muted">+503 7086 4066</span></div>
+                <div><strong>{t('footer.phone')}</strong><br /><span className="muted">7086-4066, 7069-0219, 2356-0111</span></div>
               </div>
               <div className="flexIcon">
                 <HiOutlineMail className="iconSm" aria-hidden />
-                <div><strong>{t('footer.email')}</strong><br /><span className="muted">citas@tulaboratorio.com</span></div>
+                <div><strong>{t('footer.email')}</strong><br /><span className="muted">divinonjesus.lab@gmail.com</span></div>
               </div>
               <div className="flexIcon">
                 <HiOutlineLocationMarker className="iconSm" aria-hidden />

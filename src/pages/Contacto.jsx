@@ -54,14 +54,14 @@ export default function Contacto() {
                     <HiOutlinePhone className="iconMd" aria-hidden />
                     <div className="eyebrow" style={{ marginBottom: 0 }}>{t('contact.phone')}</div>
                   </div>
-                  <p className="lead">+503 0000 0000</p>
+                  <p className="lead">7086-4066, 7069-0219, 2356-0111</p>
                 </div>
                 <div className="card cardPad">
                   <div className="flexIcon" style={{ marginBottom: '6px' }}>
                     <HiOutlineMail className="iconMd" aria-hidden />
                     <div className="eyebrow" style={{ marginBottom: 0 }}>{t('contact.email')}</div>
                   </div>
-                  <p className="lead">citas@laboratoriodivinojesus.com</p>
+                  <p className="lead">divinonjesus.lab@gmail.com</p>
                 </div>
                 <div className="card cardPad">
                   <div className="flexIcon" style={{ marginBottom: '6px' }}>
