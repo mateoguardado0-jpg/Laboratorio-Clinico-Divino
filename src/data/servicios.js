@@ -1,21 +1,31 @@
 const AREA_IDS = [
-  'hematologia',
   'quimica-clinica',
+  'hematologia',
+  'coagulacion',
+  'quimica-urinaria',
+  'inmunohematologia',
   'uroanalisis',
   'coprologia',
   'inmunologia-serologia',
+  'microbiologia',
   'hormonas-tiroides',
   'perfiles-preventivos',
+  'pruebas-especiales',
 ]
 
 const SERVICE_SPECS = [
-  { areaId: 'hematologia', slug: 'hematologia' },
   { areaId: 'quimica-clinica', slug: 'quimica-clinica' },
+  { areaId: 'hematologia', slug: 'hematologia' },
+  { areaId: 'coagulacion', slug: 'coagulacion' },
+  { areaId: 'quimica-urinaria', slug: 'quimica-urinaria' },
+  { areaId: 'inmunohematologia', slug: 'inmunohematologia' },
   { areaId: 'uroanalisis', slug: 'uroanalisis' },
   { areaId: 'coprologia', slug: 'coprologia' },
   { areaId: 'inmunologia-serologia', slug: 'inmunologia-serologia' },
+  { areaId: 'microbiologia', slug: 'microbiologia' },
   { areaId: 'hormonas-tiroides', slug: 'hormonas-tiroides' },
   { areaId: 'perfiles-preventivos', slug: 'perfiles-preventivos' },
+  { areaId: 'pruebas-especiales', slug: 'pruebas-especiales' },
 ]
 
 /**

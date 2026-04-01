@@ -295,45 +295,23 @@
   },
   "catalog": {
     "areas": {
-      "hematologia": "Hematology",
       "quimica-clinica": "Clinical Chemistry",
+      "hematologia": "Hematology",
+      "coagulacion": "Coagulation",
+      "quimica-urinaria": "Urinary Chemistry",
+      "inmunohematologia": "Immunohematology",
       "uroanalisis": "Urinalysis",
       "coprologia": "Coprology",
       "inmunologia-serologia": "Immunology and Serology",
+      "microbiologia": "Microbiology",
       "hormonas-tiroides": "Hormones and Thyroid",
-      "perfiles-preventivos": "Preventive Profiles"
+      "perfiles-preventivos": "Preventive Profiles",
+      "pruebas-especiales": "Special Tests"
     },
     "services": {
-      "hematologia": {
-        "title": "Hematology",
-        "desc": "Blood studies for monitoring and diagnosis.",
-        "exams": [
-          {
-            "nombre": "Complete Blood Count",
-            "requisitos": [
-              "No fasting required (unless medically indicated)."
-            ],
-            "tiempoEntrega": "Same day or 24 hours"
-          },
-          {
-            "nombre": "Blood Group and RH",
-            "requisitos": [
-              "No preparation required."
-            ],
-            "tiempoEntrega": "Same day"
-          },
-          {
-            "nombre": "Prothrombin Time (PT / INR)",
-            "requisitos": [
-              "Inform us if you are taking anticoagulants."
-            ],
-            "tiempoEntrega": "Same day"
-          }
-        ]
-      },
       "quimica-clinica": {
         "title": "Clinical Chemistry",
-        "desc": "Metabolic panels, glucose, lipid profile, and kidney and liver function.",
+        "desc": "Blood chemistry: metabolic panels, glucose, lipids, electrolytes, and renal, hepatic, and pancreatic function.",
         "exams": [
           {
             "nombre": "Fasting Glucose",
@@ -341,6 +319,223 @@
               "8–12 hours fasting."
             ],
             "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Total Cholesterol",
+            "requisitos": [
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Triglycerides",
+            "requisitos": [
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "HDL Cholesterol",
+            "requisitos": [
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "LDL Cholesterol",
+            "requisitos": [
+              "8–12 hours fasting."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Creatinine",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Blood Urea Nitrogen",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Uric Acid",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "ALT (Transaminase)",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "AST (Transaminase)",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Alkaline Phosphatase",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Gamma-Glutamyl Transpeptidase (GGT)",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Sodium",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Potassium",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Chloride",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Phosphorus",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Calcium",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Magnesium",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Bilirubin",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Total CPK",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "CK-MB Fraction",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Albumin",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Total Protein",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Amylase",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Lipase",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Lactate Dehydrogenase (LDH)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Postprandial Glucose",
+            "requisitos": [
+              "Ask at reception for meal timing."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "O'Sullivan Test",
+            "requisitos": [
+              "Fasting and timing per protocol; ask at reception."
+            ],
+            "tiempoEntrega": "Per protocol"
+          },
+          {
+            "nombre": "2-Hour Glucose Tolerance",
+            "requisitos": [
+              "Fasting and timing per protocol; ask at reception."
+            ],
+            "tiempoEntrega": "Per protocol"
+          },
+          {
+            "nombre": "3-Hour Glucose Tolerance",
+            "requisitos": [
+              "Fasting and timing per protocol; ask at reception."
+            ],
+            "tiempoEntrega": "Per protocol"
+          },
+          {
+            "nombre": "5-Hour Glucose Tolerance",
+            "requisitos": [
+              "Fasting and timing per protocol; ask at reception."
+            ],
+            "tiempoEntrega": "Per protocol"
+          },
+          {
+            "nombre": "Glycated Hemoglobin (HbA1c)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
           },
           {
             "nombre": "Lipid Profile",
@@ -365,12 +560,225 @@
           }
         ]
       },
+      "hematologia": {
+        "title": "Hematology",
+        "desc": "Blood studies for monitoring and diagnosis.",
+        "exams": [
+          {
+            "nombre": "Complete Blood Count",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Hematocrit - Hemoglobin",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "White Cell Count (Differential)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Platelet Count",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Reticulocytes",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Erythrocyte Sedimentation Rate",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Peripheral Blood Smear",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Thick Smear",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Strout Concentrate",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "L.E. Cells",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Blood Group and RH",
+            "requisitos": [
+              "No preparation required."
+            ],
+            "tiempoEntrega": "Same day"
+          }
+        ]
+      },
+      "coagulacion": {
+        "title": "Coagulation",
+        "desc": "Coagulation times and hemostasis studies.",
+        "exams": [
+          {
+            "nombre": "Prothrombin Time and Value",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Partial Thromboplastin Time",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Thrombin Time",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Bleeding Time",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Clotting Time",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Clot Retraction",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Fibrinogen",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "Same day"
+          }
+        ]
+      },
+      "quimica-urinaria": {
+        "title": "Urinary Chemistry",
+        "desc": "24-hour urine determinations and clearance.",
+        "exams": [
+          {
+            "nombre": "Creatinine Clearance (24-Hour Urine)",
+            "requisitos": [
+              "24-hour urine collection per protocol given at reception."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Proteins in 24-Hour Urine",
+            "requisitos": [
+              "24-hour urine collection per protocol given at reception."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Electrolytes in 24-Hour Urine (specify)",
+            "requisitos": [
+              "24-hour urine collection per protocol given at reception."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Uric Acid in 24-Hour Urine",
+            "requisitos": [
+              "24-hour urine collection per protocol given at reception."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Blood Urea Nitrogen in 24-Hour Urine",
+            "requisitos": [
+              "24-hour urine collection per protocol given at reception."
+            ],
+            "tiempoEntrega": "24 hours"
+          }
+        ]
+      },
+      "inmunohematologia": {
+        "title": "Immunohematology",
+        "desc": "Blood typing and compatibility testing.",
+        "exams": [
+          {
+            "nombre": "Blood Typing",
+            "requisitos": [
+              "No preparation required."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Direct Coombs",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Indirect Coombs",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "24 hours"
+          }
+        ]
+      },
       "uroanalisis": {
         "title": "Urinalysis",
-        "desc": "Urine analysis and pregnancy test.",
+        "desc": "Urine analysis and urine pregnancy test.",
         "exams": [
           {
             "nombre": "General Urine Test",
+            "requisitos": [
+              "First morning urine, clean sample in sterile container."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Random Urine Albumin",
             "requisitos": [
               "First morning urine, clean sample in sterile container."
             ],
@@ -387,7 +795,7 @@
       },
       "coprologia": {
         "title": "Coprology",
-        "desc": "Stool tests: general, parasitological, and occult blood.",
+        "desc": "Stool tests: general, parasitological, microbiology, and occult blood.",
         "exams": [
           {
             "nombre": "General Stool Test",
@@ -409,17 +817,143 @@
               "Avoid red meat and certain medications 48 hours before."
             ],
             "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Methylene Blue Test",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Quantitative Fecal Occult Blood",
+            "requisitos": [
+              "Avoid red meat and certain medications 48 hours before."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Reducing Substances",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Helicobacter Pylori",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Quantitative Helicobacter Pylori",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Salmonella Typhi Antigen",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24–48 hours"
           }
         ]
       },
       "inmunologia-serologia": {
         "title": "Immunology and Serology",
-        "desc": "HIV, hepatitis, syphilis, and dengue.",
+        "desc": "Inflammatory markers, infectious disease screening, and serology.",
         "exams": [
+          {
+            "nombre": "C-Reactive Protein",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "High-Sensitivity C-Reactive Protein (hs-CRP)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Antistreptolysin O",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Latex R.A.",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Febrile Antigens",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Blood Pregnancy Test",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Syphilis Test (RPR)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "HIV (Rapid Test)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Monospot Test",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Dengue Antibodies IgG/IgM",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Dengue Antigen",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "Same day or 24 hours"
+          },
+          {
+            "nombre": "Salmonella Typhi Antigen (blood)",
+            "requisitos": [
+              "Blood sample as indicated."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
           {
             "nombre": "HIV",
             "requisitos": [
-              "No fasting required."
+              "No fasting required (unless medically indicated)."
             ],
             "tiempoEntrega": "24 hours"
           },
@@ -433,7 +967,7 @@
           {
             "nombre": "VDRL (Syphilis)",
             "requisitos": [
-              "No fasting required."
+              "No fasting required (unless medically indicated)."
             ],
             "tiempoEntrega": "24 hours"
           },
@@ -443,6 +977,68 @@
               "No special preparation required."
             ],
             "tiempoEntrega": "Same day or 24 hours"
+          }
+        ]
+      },
+      "microbiologia": {
+        "title": "Microbiology",
+        "desc": "Cultures, stains, and direct microbiological studies.",
+        "exams": [
+          {
+            "nombre": "Urine Culture",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "Stool Culture",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "Blood Culture",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Per growth"
+          },
+          {
+            "nombre": "Culture (Other Site)",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Per culture"
+          },
+          {
+            "nombre": "Fungal Culture",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "7–14 days"
+          },
+          {
+            "nombre": "Gram Stain",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Acid-Fast Bacilli Smear",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Direct KOH",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Same day"
           }
         ]
       },
@@ -475,7 +1071,7 @@
       },
       "perfiles-preventivos": {
         "title": "Preventive Profiles",
-        "desc": "General check-up, diabetic profile, and thyroid profile.",
+        "desc": "Goal-oriented panels: routine, preoperative, prenatal, renal, thyroid, coagulation, liver, cardiac, newborn, rheumatologic, oncology, and executive.",
         "exams": [
           {
             "nombre": "General Check-up",
@@ -496,10 +1092,351 @@
           {
             "nombre": "Thyroid Profile",
             "requisitos": [
-              "Includes: TSH, T3, and T4.",
+              "Includes: T3, T4, and TSH.",
               "No fasting required."
             ],
             "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Routine Profile",
+            "requisitos": [
+              "Includes: Complete blood count, glucose, total cholesterol, triglycerides, creatinine, uric acid, general urine test, and general stool test.",
+              "8–12 hours fasting unless medically indicated."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Preoperative Profile",
+            "requisitos": [
+              "Includes: Complete blood count, blood typing, glucose, prothrombin time and value, partial thromboplastin time, general urine test, HIV (rapid test).",
+              "Inform us if you are taking anticoagulants.",
+              "Fasting per medical indication (ask at reception)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Prenatal Profile",
+            "requisitos": [
+              "Includes: Complete blood count, blood typing, glucose, RPR (syphilis serology), HIV (rapid test), Toxoplasma IgM, general urine test, general stool test, urine culture.",
+              "Ask at reception for preparation."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "Renal Profile",
+            "requisitos": [
+              "Includes: Complete blood count, creatinine, blood urea nitrogen, sodium, potassium, uric acid, general urine test.",
+              "Fasting per medical indication (ask at reception)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Coagulation Profile",
+            "requisitos": [
+              "Includes: Prothrombin time and value, partial thromboplastin time, thrombin time, fibrinogen, platelet count.",
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Liver Profile",
+            "requisitos": [
+              "Includes: Bilirubin, alkaline phosphatase, AST, ALT, total proteins, gamma-glutamyl transpeptidase.",
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Cardiac Profile",
+            "requisitos": [
+              "Includes: Total CPK, CK-MB fraction, ALT, lactate dehydrogenase (LDH), high-sensitivity C-reactive protein.",
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Newborn Profile",
+            "requisitos": [
+              "Includes: Complete blood count, bilirubin, blood typing.",
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Rheumatologic Profile",
+            "requisitos": [
+              "Includes: Uric acid, erythrocyte sedimentation rate, latex R.A., antistreptolysin O, C-reactive protein, L.E. cells, antinuclear antibodies (ANA).",
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Oncology Profile",
+            "requisitos": [
+              "Includes: Alpha-fetoprotein (AFP), quantitative beta hCG, carcinoembryonic antigen (CEA), CA 15-3 (breast), CA 19-9 (pancreas), CA 125 (ovary).",
+              "Fasting per medical indication (ask at reception)."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "Executive Profile",
+            "requisitos": [
+              "Includes: Complete blood count, glucose, total cholesterol, HDL, LDL, triglycerides, uric acid, creatinine, blood urea nitrogen, bilirubin, alkaline phosphatase, AST, ALT, lactate dehydrogenase (LDH), potassium, sodium, calcium, general urine test, general stool test, urine culture, HIV (rapid test), T3, T4, TSH, prostate-specific antigen (PSA), carcinoembryonic antigen (CEA), RPR (syphilis serology).",
+              "8–12 hours fasting unless medically indicated.",
+              "Inform us if you are taking anticoagulants when applicable."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          }
+        ]
+      },
+      "pruebas-especiales": {
+        "title": "Special Tests",
+        "desc": "Tumor markers, hormones, drugs, infectious disease, and specialized studies.",
+        "exams": [
+          {
+            "nombre": "Prostate-Specific Antigen (PSA)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Free PSA",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "HIV by ELISA",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Hepatitis A IgM Antibodies",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Hepatitis C Antibodies",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Australian Antigen (HBsAg)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Toxoplasma IgG Antibodies",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "Toxoplasma IgM Antibodies",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "Antinuclear Antibodies (ANA)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "Lupus Anticoagulant",
+            "requisitos": [
+              "Inform us if you are taking anticoagulants."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "Anticardiolipin IgG / IgM",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "T3",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "T4",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "TSH",
+            "requisitos": [
+              "No fasting required (preferably in the morning)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Testosterone",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Progesterone",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Follicle-Stimulating Hormone (FSH)",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Luteinizing Hormone (LH)",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Prolactin",
+            "requisitos": [
+              "Morning sample; ask for preparation."
+            ],
+            "tiempoEntrega": "24–48 hours"
+          },
+          {
+            "nombre": "Insulin",
+            "requisitos": [
+              "8 hours fasting."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Cortisol",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Carcinoembryonic Antigen (CEA)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "CA 15-3 (Breast)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "CA 19-9 (Pancreas)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "CA 125 (Ovary)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "Alpha-Fetoprotein (AFP)",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48 hours"
+          },
+          {
+            "nombre": "Valproic Acid",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Phenytoin (Epamin)",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Drug Screen: Cocaine",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Drug Screen: Marijuana",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Drug Abuse Panel",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "Beta hCG",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "Same day"
+          },
+          {
+            "nombre": "Quantitative Beta hCG",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "24 hours"
+          },
+          {
+            "nombre": "FTA-ABS",
+            "requisitos": [
+              "No fasting required (unless medically indicated)."
+            ],
+            "tiempoEntrega": "48–72 hours"
+          },
+          {
+            "nombre": "DNA Testing",
+            "requisitos": [
+              "Ask at reception for instructions."
+            ],
+            "tiempoEntrega": "Per study"
           }
         ]
       }

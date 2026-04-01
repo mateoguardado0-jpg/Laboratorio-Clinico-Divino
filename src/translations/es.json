@@ -295,45 +295,23 @@
   },
   "catalog": {
     "areas": {
-      "hematologia": "Hematología",
       "quimica-clinica": "Química Clínica",
+      "hematologia": "Hematología",
+      "coagulacion": "Coagulación",
+      "quimica-urinaria": "Química Urinaria",
+      "inmunohematologia": "Inmunohematología",
       "uroanalisis": "Uroanálisis",
       "coprologia": "Coprología",
       "inmunologia-serologia": "Inmunología y Serología",
+      "microbiologia": "Microbiología",
       "hormonas-tiroides": "Hormonas y Tiroides",
-      "perfiles-preventivos": "Perfiles Preventivos"
+      "perfiles-preventivos": "Perfiles Preventivos",
+      "pruebas-especiales": "Pruebas Especiales"
     },
     "services": {
-      "hematologia": {
-        "title": "Hematología",
-        "desc": "Estudios de sangre para seguimiento y diagnóstico.",
-        "exams": [
-          {
-            "nombre": "Hemograma Completo",
-            "requisitos": [
-              "No requiere ayuno (salvo indicación médica)."
-            ],
-            "tiempoEntrega": "Mismo día o 24 horas"
-          },
-          {
-            "nombre": "Grupo Sanguíneo y RH",
-            "requisitos": [
-              "No requiere preparación."
-            ],
-            "tiempoEntrega": "Mismo día"
-          },
-          {
-            "nombre": "Tiempo de Protrombina (TP / INR)",
-            "requisitos": [
-              "Informar si toma anticoagulantes."
-            ],
-            "tiempoEntrega": "Mismo día"
-          }
-        ]
-      },
       "quimica-clinica": {
         "title": "Química Clínica",
-        "desc": "Paneles metabólicos, glucosa, perfil lipídico y función renal y hepática.",
+        "desc": "Química sanguínea: paneles metabólicos, glucosa, lípidos, electrolitos y función renal, hepática y pancreática.",
         "exams": [
           {
             "nombre": "Glucosa en Ayunas",
@@ -341,6 +319,223 @@
               "Ayuno de 8–12 horas."
             ],
             "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Colesterol total",
+            "requisitos": [
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Triglicéridos",
+            "requisitos": [
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Colesterol HDL",
+            "requisitos": [
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Colesterol LDL",
+            "requisitos": [
+              "Ayuno de 8–12 horas."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Creatinina",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Nitrógeno Uréico",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Ácido Úrico",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Transaminasa ALT",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Transaminasa AST",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Fosfatasa Alcalina",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Gamma Glutamil Transpeptidasa",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Sodio",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Potasio",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Cloro",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Fósforo",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Calcio",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Magnesio",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Bilirrubina",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "CPK Total",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "CK Fracción MB",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Albúmina",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Proteínas Totales",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Amilasa",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Lipasa",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Deshidrogenasa Láctica (LDH)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Glucosa Post-Prandial",
+            "requisitos": [
+              "Consultar horario de ingesta en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Test O'Sullivan",
+            "requisitos": [
+              "Ayuno y tiempos según protocolo; consultar en recepción."
+            ],
+            "tiempoEntrega": "Según protocolo"
+          },
+          {
+            "nombre": "Tolerancia Glucosa 2 Horas",
+            "requisitos": [
+              "Ayuno y tiempos según protocolo; consultar en recepción."
+            ],
+            "tiempoEntrega": "Según protocolo"
+          },
+          {
+            "nombre": "Tolerancia Glucosa 3 Horas",
+            "requisitos": [
+              "Ayuno y tiempos según protocolo; consultar en recepción."
+            ],
+            "tiempoEntrega": "Según protocolo"
+          },
+          {
+            "nombre": "Tolerancia Glucosa 5 Horas",
+            "requisitos": [
+              "Ayuno y tiempos según protocolo; consultar en recepción."
+            ],
+            "tiempoEntrega": "Según protocolo"
+          },
+          {
+            "nombre": "Hemoglobina Glicosilada",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
           },
           {
             "nombre": "Perfil Lipídico",
@@ -365,12 +560,225 @@
           }
         ]
       },
+      "hematologia": {
+        "title": "Hematología",
+        "desc": "Estudios de sangre para seguimiento y diagnóstico.",
+        "exams": [
+          {
+            "nombre": "Hemograma Completo",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Hematócrito - Hemoglobina",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Leucograma",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Recuento de Plaquetas",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Reticulocitos",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Eritrosedimentación",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Frotis de Sangre Periférica",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Gota Gruesa",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Concentrado de Strout",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Células L.E.",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Grupo Sanguíneo y RH",
+            "requisitos": [
+              "No requiere preparación."
+            ],
+            "tiempoEntrega": "Mismo día"
+          }
+        ]
+      },
+      "coagulacion": {
+        "title": "Coagulación",
+        "desc": "Tiempos de coagulación y estudios hemostáticos.",
+        "exams": [
+          {
+            "nombre": "Tiempo y Valor de Protrombina",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Tiempo de Tromboplastina Parcial",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Tiempo de Trombina",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Tiempo de Sangramiento",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Tiempo de Coagulación",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Retracción del Coágulo",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Fibrinógeno",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "Mismo día"
+          }
+        ]
+      },
+      "quimica-urinaria": {
+        "title": "Química Urinaria",
+        "desc": "Determinaciones en orina de 24 horas y depuración.",
+        "exams": [
+          {
+            "nombre": "Depuración de Creatinina en Orina de 24 Horas",
+            "requisitos": [
+              "Recolección de orina de 24 horas según protocolo indicado en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Proteínas en Orina de 24 Horas",
+            "requisitos": [
+              "Recolección de orina de 24 horas según protocolo indicado en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Electrólitos en Orina de 24 Horas (especificar)",
+            "requisitos": [
+              "Recolección de orina de 24 horas según protocolo indicado en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Ácido Úrico en Orina de 24 Horas",
+            "requisitos": [
+              "Recolección de orina de 24 horas según protocolo indicado en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Nitrógeno Uréico en Orina de 24 Horas",
+            "requisitos": [
+              "Recolección de orina de 24 horas según protocolo indicado en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          }
+        ]
+      },
+      "inmunohematologia": {
+        "title": "Inmunohematología",
+        "desc": "Grupo sanguíneo y pruebas de compatibilidad.",
+        "exams": [
+          {
+            "nombre": "Tipeo Sanguíneo",
+            "requisitos": [
+              "No requiere preparación."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Coombs Directo",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Coombs Indirecto",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "24 horas"
+          }
+        ]
+      },
       "uroanalisis": {
         "title": "Uroanálisis",
-        "desc": "Análisis de orina y prueba de embarazo.",
+        "desc": "Análisis de orina y prueba de embarazo en orina.",
         "exams": [
           {
             "nombre": "Examen General de Orina",
+            "requisitos": [
+              "Primera orina de la mañana, muestra limpia en frasco estéril."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Albúmina en Orina al Azar",
             "requisitos": [
               "Primera orina de la mañana, muestra limpia en frasco estéril."
             ],
@@ -387,7 +795,7 @@
       },
       "coprologia": {
         "title": "Coprología",
-        "desc": "Estudios de heces: general, parasitológico y sangre oculta.",
+        "desc": "Estudios de heces: general, parasitológico, microbiología y sangre oculta.",
         "exams": [
           {
             "nombre": "Examen General de Heces",
@@ -409,17 +817,143 @@
               "Evitar carnes rojas y ciertos medicamentos 48 horas antes."
             ],
             "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Prueba Azul de Metileno",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Sangre oculta en heces cuantitativa",
+            "requisitos": [
+              "Evitar carnes rojas y ciertos medicamentos 48 horas antes."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Sustancias Reductoras",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Helicobacter Pylori",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Helicobacter Pylori cuantitativo",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Antígeno para Salmonella Typhi",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24–48 horas"
           }
         ]
       },
       "inmunologia-serologia": {
         "title": "Inmunología y Serología",
-        "desc": "VIH, hepatitis, sífilis y dengue.",
+        "desc": "Marcadores inflamatorios, infecciosos y pruebas de tamizaje.",
         "exams": [
+          {
+            "nombre": "Proteína C Reactiva",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Proteína C Ultrasensitiva",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Antiestreptolisina O",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Látex R.A.",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Antígenos Febriles",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Prueba de Embarazo en Sangre",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Prueba para Sífilis (RPR)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "HIV (Prueba Rápida)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Monotest",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Anticuerpos para Dengue IgG/IgM",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Antígeno para Dengue",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "Mismo día o 24 horas"
+          },
+          {
+            "nombre": "Antígeno Salmonella Typhi (en sangre)",
+            "requisitos": [
+              "Muestra de sangre según indicación."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
           {
             "nombre": "VIH",
             "requisitos": [
-              "No requiere ayuno."
+              "No requiere ayuno (salvo indicación médica)."
             ],
             "tiempoEntrega": "24 horas"
           },
@@ -433,7 +967,7 @@
           {
             "nombre": "VDRL (Sífilis)",
             "requisitos": [
-              "No requiere ayuno."
+              "No requiere ayuno (salvo indicación médica)."
             ],
             "tiempoEntrega": "24 horas"
           },
@@ -443,6 +977,68 @@
               "No requiere preparación especial."
             ],
             "tiempoEntrega": "Mismo día o 24 horas"
+          }
+        ]
+      },
+      "microbiologia": {
+        "title": "Microbiología",
+        "desc": "Cultivos, tinciones y estudios microbiológicos directos.",
+        "exams": [
+          {
+            "nombre": "Urocultivo",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Coprocultivo",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Hemocultivo",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Según crecimiento"
+          },
+          {
+            "nombre": "Cultivo Otro Origen",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Según cultivo"
+          },
+          {
+            "nombre": "Cultivo de Hongos",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "7–14 días"
+          },
+          {
+            "nombre": "Coloración de Gram",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Baciloscopia",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Directo KOH",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
           }
         ]
       },
@@ -475,7 +1071,7 @@
       },
       "perfiles-preventivos": {
         "title": "Perfiles Preventivos",
-        "desc": "Chequeo general, perfil diabético y perfil tiroideo.",
+        "desc": "Chequeos por objetivo clínico: rutina, preoperatorio, prenatal, renal, tiroideo, coagulación, hepático, cardíaco, recién nacido, reumatoide, oncológico y ejecutivo.",
         "exams": [
           {
             "nombre": "Chequeo General",
@@ -496,10 +1092,351 @@
           {
             "nombre": "Perfil Tiroideo",
             "requisitos": [
-              "Incluye: TSH, T3 y T4.",
+              "Incluye: T3, T4 y TSH.",
               "No requiere ayuno."
             ],
             "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Perfil de Rutina",
+            "requisitos": [
+              "Incluye: Hemograma completo, glucosa, colesterol total, triglicéridos, creatinina, ácido úrico, examen general de orina y examen general de heces.",
+              "Ayuno de 8–12 horas salvo indicación médica."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil Preoperatorio",
+            "requisitos": [
+              "Incluye: Hemograma completo, tipeo sanguíneo, glucosa, tiempo y valor de protrombina, tiempo de tromboplastina parcial, examen general de orina, HIV (prueba rápida).",
+              "Informar si toma anticoagulantes.",
+              "Ayuno según indicación médica (consultar en recepción)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Perfil Prenatal",
+            "requisitos": [
+              "Incluye: Hemograma completo, tipeo sanguíneo, glucosa, RPR (serología de sífilis), HIV (prueba rápida), Toxoplasma IgM, examen general de orina, examen general de heces, urocultivo.",
+              "Consultar preparación en recepción."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Perfil Renal",
+            "requisitos": [
+              "Incluye: Hemograma completo, creatinina, nitrógeno uréico, sodio, potasio, ácido úrico, examen general de orina.",
+              "Ayuno según indicación médica (consultar en recepción)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil de Coagulación",
+            "requisitos": [
+              "Incluye: Tiempo y valor de protrombina, tiempo de tromboplastina parcial, tiempo de trombina, fibrinógeno, recuento de plaquetas.",
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil Hepático",
+            "requisitos": [
+              "Incluye: Bilirrubina, fosfatasa alcalina, transaminasa AST, transaminasa ALT, proteínas totales, gamma glutamil transpeptidasa.",
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil Cardíaco",
+            "requisitos": [
+              "Incluye: CPK total, CK fracción MB, transaminasa ALT, deshidrogenasa láctica (LDH), proteína C ultrasensitiva.",
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil de Recién Nacido",
+            "requisitos": [
+              "Incluye: Hemograma completo, bilirrubina, tipeo sanguíneo.",
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Perfil Reumatoideo",
+            "requisitos": [
+              "Incluye: Ácido úrico, eritrosedimentación, látex R.A., antiestreptolisina O, proteína C reactiva, células L.E., anticuerpos antinucleares (ANA).",
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Perfil Oncológico",
+            "requisitos": [
+              "Incluye: Alfa feto proteína (AFP), B-HCG cuantitativa, antígeno carcinoembrionario (CEA), CA 15-3 (mama), CA 19-9 (páncreas), CA 125 (ovario).",
+              "Ayuno según indicación médica (consultar en recepción)."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Perfil Ejecutivo",
+            "requisitos": [
+              "Incluye: Hemograma completo, glucosa, colesterol total, colesterol HDL, colesterol LDL, triglicéridos, ácido úrico, creatinina, nitrógeno uréico, bilirrubina, fosfatasa alcalina, transaminasa AST, transaminasa ALT, deshidrogenasa láctica (LDH), potasio, sodio, calcio, examen general de orina, examen general de heces, urocultivo, HIV (prueba rápida), T3, T4, TSH, antígeno prostático específico (PSA), antígeno carcinoembrionario (CEA), RPR (serología de sífilis).",
+              "Ayuno de 8–12 horas salvo indicación médica.",
+              "Informar si toma anticoagulantes cuando aplique."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          }
+        ]
+      },
+      "pruebas-especiales": {
+        "title": "Pruebas Especiales",
+        "desc": "Marcadores tumorales, hormonas, fármacos, infecciones y estudios especializados.",
+        "exams": [
+          {
+            "nombre": "Antígeno Prostático Específico (PSA)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Antígeno Prostático Específico Libre (PSA Libre)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "HIV por Método de ELISA",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Anticuerpos IgM para Hepatitis A",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Anticuerpos Hepatitis C",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Antígeno Australiano (HBs Ag)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Anticuerpos para Toxoplasma IgG",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "Anticuerpos para Toxoplasma IgM",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "Anticuerpos Antinucleares (ANA)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Anticoagulante Lúpico",
+            "requisitos": [
+              "Informar si toma anticoagulantes."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Anticardiolipinas IgG / IgM",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "T3",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "T4",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "TSH",
+            "requisitos": [
+              "No requiere ayuno (preferible en la mañana)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Testosterona",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Progesterona",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Hormona Folículo Estimulante (FSH)",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Hormona Luteinizante (LH)",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Prolactina",
+            "requisitos": [
+              "Muestra en la mañana; consultar preparación."
+            ],
+            "tiempoEntrega": "24–48 horas"
+          },
+          {
+            "nombre": "Insulina",
+            "requisitos": [
+              "Ayuno de 8 horas."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Cortisol",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Antígeno Carcinoembrionario (CEA)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "CA 15-3 (Seno)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "CA 19-9 (Páncreas)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "CA 125 (Ovario)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "Alfa Feto Proteína (AFP)",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48 horas"
+          },
+          {
+            "nombre": "Ácido Valproico",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Epamín",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Antidoping Cocaína",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Antidoping Marihuana",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "Kit Drogas de Abuso",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "Beta HCG",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "Mismo día"
+          },
+          {
+            "nombre": "B-HCG Cuantitativa",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "24 horas"
+          },
+          {
+            "nombre": "FTA-Abs",
+            "requisitos": [
+              "No requiere ayuno (salvo indicación médica)."
+            ],
+            "tiempoEntrega": "48–72 horas"
+          },
+          {
+            "nombre": "Pruebas de ADN",
+            "requisitos": [
+              "Consultar indicaciones en recepción."
+            ],
+            "tiempoEntrega": "Según estudio"
           }
         ]
       }
