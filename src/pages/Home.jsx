@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { HiOutlineUserGroup, HiOutlineClipboardList, HiOutlineShieldCheck } from 'react-icons/hi'
 import { useI18n } from '../i18n/useI18n.jsx'
+import ScrollRevealSection from '../components/ScrollRevealSection.jsx'
 
 export default function Home() {
   const { t, get } = useI18n()
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     <main className="page">
-      <section className="section">
+      <ScrollRevealSection className="section heroSection">
         <div className="container">
           <div className="grid2">
             <div className="stackLg heroContent">
@@ -41,19 +42,25 @@ export default function Home() {
             <div className="imgPlaceholder imgHero heroImage" aria-label={t('home.heroImageLabel')} />
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="sectionTight">
+      <ScrollRevealSection className="sectionTight">
         <div className="container">
           <div className="stackLg">
             <h2 className="h2">{t('home.featuredTitle')}</h2>
             <p className="lead muted">{t('home.featuredLead')}</p>
 
             <div className="gridCards">
-              {featured.map((s) => (
+              {featured.map((s, index) => (
                 <article key={s.title} className="card cardHover">
                   <div className="cardPad stack">
                     <div className="imgPlaceholder imgWide" aria-hidden="true" />
+                    <div
+                      className="cardCategoryStrip"
+                      aria-hidden="true"
+                    >
+                      <span className={`cardCategoryDot cardCategoryDot--${index % 3}`} />
+                    </div>
                     <div className="stack">
                       <div className="eyebrow">{s.title}</div>
                       <p className="lead">{s.desc}</p>
@@ -72,9 +79,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="section">
+      <ScrollRevealSection className="section">
         <div className="container">
           <div className="ctaSection card">
             <div className="cardPad">
@@ -96,7 +103,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
     </main>
   )
 }

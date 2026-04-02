@@ -1,4 +1,5 @@
 import { HiOutlineHeart, HiOutlineBadgeCheck, HiOutlineFlag, HiOutlineHand } from 'react-icons/hi'
+import ScrollRevealSection from '../components/ScrollRevealSection.jsx'
 import { useI18n } from '../i18n/useI18n.jsx'
 
 export default function Nosotros() {
@@ -9,7 +10,7 @@ export default function Nosotros() {
 
   return (
     <main className="page">
-      <section className="section">
+      <ScrollRevealSection className="section">
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
@@ -19,9 +20,9 @@ export default function Nosotros() {
             <div className="imgPlaceholder imgHero" aria-label={t('about.heroImageLabel')} />
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="sectionTight">
+      <ScrollRevealSection className="sectionTight">
         <div className="container">
           <div className="grid2Reverse">
             <div className="imgPlaceholder imgWide" aria-label={t('about.historyImageLabel')} />
@@ -43,9 +44,9 @@ export default function Nosotros() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="section">
+      <ScrollRevealSection className="section">
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
@@ -64,9 +65,9 @@ export default function Nosotros() {
             <div className="imgPlaceholder imgWide" aria-label={t('about.missionImageLabel')} />
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="sectionTight">
+      <ScrollRevealSection className="sectionTight">
         <div className="container">
           <div className="stackLg">
             <h2 className="h2">{t('about.valuesTitle')}</h2>
@@ -78,9 +79,9 @@ export default function Nosotros() {
                 return (
                   <article key={v.title} className="card cardHover">
                     <div className="cardPad stack">
-                      <span className="flexIcon">
-                        <Icon className="iconLg" aria-hidden style={{ color: 'var(--c-pink-soft)' }} />
-                        <div className="eyebrow" style={{ marginBottom: 0 }}>{v.title}</div>
+                      <span className="flexIcon contactEyebrowRow">
+                        <Icon className="iconLg valueIconAccent" aria-hidden />
+                        <div className="eyebrow">{v.title}</div>
                       </span>
                       <p className="lead muted">{v.desc}</p>
                     </div>
@@ -90,9 +91,9 @@ export default function Nosotros() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="sectionTight">
+      <ScrollRevealSection className="sectionTight">
         <div className="container">
           <div className="stackLg">
             <h2 className="h2">{t('about.teamTitle')}</h2>
@@ -105,7 +106,7 @@ export default function Nosotros() {
                     <div className="imgPlaceholder imgSquare" aria-hidden="true" />
                     <div className="stack">
                       <div className="eyebrow">{m.role}</div>
-                      <div className="lead" style={{ fontWeight: 800 }}>
+                      <div className="lead teamMemberName">
                         {m.name}
                       </div>
                       <p className="lead muted">{m.bio}</p>
@@ -116,8 +117,7 @@ export default function Nosotros() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
     </main>
   )
 }
-

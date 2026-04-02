@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useMemo, useState, useRef, useEffect } from 'react'
 import { HiOutlineSearch } from 'react-icons/hi'
+import ScrollRevealSection from '../components/ScrollRevealSection.jsx'
 import { getCatalogData } from '../data/servicios.js'
 import { useI18n } from '../i18n/useI18n.jsx'
 
@@ -155,12 +156,12 @@ export default function Servicios() {
 
   return (
     <main className="page">
-      <section className="section">
+      <ScrollRevealSection className="section">
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
-              <span className="flexIcon" style={{ marginBottom: '8px' }}>
-                <div className="eyebrow" style={{ marginBottom: 0, fontSize: '1rem' }}>{t('servicesPage.eyebrow')}</div>
+              <span className="flexIcon contactEyebrowRow">
+                <div className="eyebrow servicesPageEyebrow">{t('servicesPage.eyebrow')}</div>
               </span>
               <h1 className="h1">{t('servicesPage.title')}</h1>
               <p className="lead">{t('servicesPage.lead')}</p>
@@ -168,14 +169,14 @@ export default function Servicios() {
             <div className="imgPlaceholder imgHero" aria-label={t('servicesPage.heroImageLabel')} />
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="sectionTight">
+      <ScrollRevealSection className="sectionTight">
         <div className="container">
-          <div ref={wrapperRef} className="stackLg" style={{ position: 'relative', marginBottom: 'var(--space-6)' }}>
+          <div ref={wrapperRef} className="stackLg searchFieldWrap">
             <label className="label" htmlFor="buscar-examen">
-              <span className="flexIcon" style={{ fontSize: '1.05rem' }}>
-                <HiOutlineSearch className="iconSm" aria-hidden style={{ color: 'var(--c-pink-soft)', fontSize: '1.15rem' }} />
+              <span className="flexIcon searchLabelRow">
+                <HiOutlineSearch className="iconSm searchLabelIcon" aria-hidden />
                 {t('common.buttons.search')}
               </span>
             </label>
@@ -203,21 +204,7 @@ export default function Servicios() {
                 ref={listRef}
                 id="buscar-examen-list"
                 role="listbox"
-                className="card cardPad stack"
-                style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: 0,
-                  right: 0,
-                  marginTop: '4px',
-                  maxHeight: '280px',
-                  overflowY: 'auto',
-                  zIndex: 20,
-                  gap: 0,
-                  background: 'var(--bg-elevated)',
-                  borderColor: 'rgba(74, 144, 226, 0.28)',
-                  boxShadow: 'var(--shadow-md)',
-                }}
+                className="card cardPad stack searchDropdown"
               >
                 {displayed.map((item, i) => (
                   <li
@@ -228,48 +215,47 @@ export default function Servicios() {
                   >
                     <button
                       type="button"
-                      className="btn"
-                      style={{
-                        width: '100%',
-                        justifyContent: 'flex-start',
-                        textAlign: 'left',
-                        padding: 'var(--space-3) var(--space-4)',
-                        borderRadius: 'var(--radius-sm)',
-                        border: 'none',
-                        background: i === highlightedIndex ? 'var(--c-pink-soft)' : 'transparent',
-                        color: i === highlightedIndex ? 'var(--c-pink-dark)' : undefined,
-                      }}
+                      className="btn searchOptionBtn"
                       onMouseEnter={() => setHighlightedIndex(i)}
                       onClick={() => handleSelect(item.slug)}
                     >
-                      <span className="lead" style={{ fontWeight: 500 }}>{item.examNombre}</span>
-                      <span className="muted" style={{ fontSize: 13 }}> — {item.serviceTitle}{item.areaLabel && item.areaLabel !== item.serviceTitle ? ` · ${item.areaLabel}` : ''}</span>
+                      <span className="lead searchOptionLead">{item.examNombre}</span>
+                      <span className="muted searchOptionMeta">
+                        — {item.serviceTitle}
+                        {item.areaLabel && item.areaLabel !== item.serviceTitle ? ` · ${item.areaLabel}` : ''}
+                      </span>
                     </button>
                   </li>
                 ))}
               </ul>
             ) : null}
             {query.trim().length >= 1 && matches.length === 0 ? (
-              <p className="help" style={{ marginTop: '4px' }}>{t('servicesPage.noResults')}</p>
+              <p className="help searchNoResults">{t('servicesPage.noResults')}</p>
             ) : null}
           </div>
 
-          <h2 className="h2" style={{ marginBottom: 'var(--space-4)' }}>
+          <h2 className="h2 servicesAreasHeading">
             {t('servicesPage.areasTitle')}
           </h2>
-          <div className="stackLg" style={{ gap: 'var(--space-8)' }}>
+          <div className="stackLg servicesAreasStack">
             {groupedServices.map(({ area, servicios: list }) => (
               <section key={area.id} className="stackLg" aria-labelledby={`area-${area.id}`}>
-                <h3 id={`area-${area.id}`} className="h3" style={{ margin: 0 }}>
+                <h3 id={`area-${area.id}`} className="h3 servicesAreaTitle">
                   {area.label}
                 </h3>
                 <div className="gridCardsWrap">
-                  {list.map((s) => (
+                  {list.map((s, i) => (
                     <article key={s.slug} className="card cardHover">
                       <div className="cardPad stack">
                         <div className="imgPlaceholder imgWide" aria-hidden="true" />
+                        <div
+                          className="cardCategoryStrip"
+                          aria-hidden="true"
+                        >
+                          <span className={`cardCategoryDot cardCategoryDot--${i % 3}`} />
+                        </div>
                         <div className="stack">
-                          <div className="eyebrow" style={{ marginBottom: 0 }}>{s.title}</div>
+                          <div className="eyebrow">{s.title}</div>
                           <p className="lead muted">{s.desc}</p>
                         </div>
                         <Link to={`/servicios/${s.slug}`} className="btn btnSoft">
@@ -283,7 +269,7 @@ export default function Servicios() {
             ))}
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
     </main>
   )
 }

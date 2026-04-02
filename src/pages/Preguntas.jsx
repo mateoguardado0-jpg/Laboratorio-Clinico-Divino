@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n/useI18n.jsx'
+import ScrollRevealSection from '../components/ScrollRevealSection.jsx'
 import {
   Accordion,
   AccordionContent,
@@ -53,7 +54,7 @@ export default function Preguntas() {
 
   return (
     <main className="page">
-      <section className="section">
+      <ScrollRevealSection className="section">
         <div className="container">
           <div className="stackLg">
             <h1 className="h1">{t('faq.title')}</h1>
@@ -62,7 +63,7 @@ export default function Preguntas() {
             <AccordionFAQ items={items} />
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
     </main>
   )
 }

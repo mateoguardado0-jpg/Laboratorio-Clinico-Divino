@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import FormularioCita from '../components/FormularioCita.jsx'
+import ScrollRevealSection from '../components/ScrollRevealSection.jsx'
 import { HiOutlinePhone, HiOutlineMail, HiOutlineClock, HiOutlineMap } from 'react-icons/hi'
 import { useI18n } from '../i18n/useI18n.jsx'
 
@@ -42,31 +43,31 @@ export default function Contacto() {
 
   return (
     <main className="page">
-      <section className="section">
+      <ScrollRevealSection className="section">
         <div className="container">
           <div className="grid2">
             <div className="stackLg">
               <h1 className="h1">{t('contact.title')}</h1>
 
               <div className="gridCards">
-                <div className="card cardPad">
-                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                <div className="card cardPad contactCard">
+                  <div className="flexIcon contactEyebrowRow">
                     <HiOutlinePhone className="iconMd" aria-hidden />
-                    <div className="eyebrow" style={{ marginBottom: 0 }}>{t('contact.phone')}</div>
+                    <div className="eyebrow">{t('contact.phone')}</div>
                   </div>
                   <p className="lead">7086-4066, 7069-0219, 2356-0111</p>
                 </div>
-                <div className="card cardPad">
-                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                <div className="card cardPad contactCard">
+                  <div className="flexIcon contactEyebrowRow">
                     <HiOutlineMail className="iconMd" aria-hidden />
-                    <div className="eyebrow" style={{ marginBottom: 0 }}>{t('contact.email')}</div>
+                    <div className="eyebrow">{t('contact.email')}</div>
                   </div>
                   <p className="lead">divinonjesus.lab@gmail.com</p>
                 </div>
-                <div className="card cardPad">
-                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                <div className="card cardPad contactCard">
+                  <div className="flexIcon contactEyebrowRow">
                     <HiOutlineClock className="iconMd" aria-hidden />
-                    <div className="eyebrow" style={{ marginBottom: 0 }}>{t('contact.schedule')}</div>
+                    <div className="eyebrow">{t('contact.schedule')}</div>
                   </div>
                   <p className="lead">{t('contact.scheduleValue')}</p>
                 </div>
@@ -76,9 +77,9 @@ export default function Contacto() {
             <div className="stackLg">
               <div className="card">
                 <div className="cardPad stack">
-                  <div className="flexIcon" style={{ marginBottom: '6px' }}>
+                  <div className="flexIcon contactEyebrowRow">
                     <HiOutlineMap className="iconMd" aria-hidden />
-                    <div className="eyebrow" style={{ marginBottom: 0 }}>{t('common.labels.map')}</div>
+                    <div className="eyebrow">{t('common.labels.map')}</div>
                   </div>
                   <div className="mapWrap" aria-label={t('contact.mapAria')}>
                     <iframe
@@ -97,13 +98,13 @@ export default function Contacto() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollRevealSection>
 
-      <section className="sectionTight" id="consultas">
+      <ScrollRevealSection className="sectionTight" id="consultas">
         <div className="container">
           <FormularioCita />
         </div>
-      </section>
+      </ScrollRevealSection>
 
       {showMapPlatformChooser && (
         <div

@@ -44,7 +44,7 @@ export default function Footer() {
 
           <div className="stack">
             <div className="eyebrow">{t('footer.contact')}</div>
-            <div className="stack" style={{ gap: '10px' }}>
+            <div className="stack footerContactStack">
               <div className="flexIcon">
                 <HiOutlinePhone className="iconSm" aria-hidden />
                 <div><strong>{t('footer.phone')}</strong><br /><span className="muted">7086-4066, 7069-0219, 2356-0111</span></div>
